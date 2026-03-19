@@ -1,0 +1,28 @@
+<svg width="920" height="280" viewBox="0 0 920 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panel" x1="40" y1="22" x2="245" y2="246" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#281C59"/>
+      <stop offset="1" stop-color="#3A2E74"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="66" y1="74" x2="204" y2="208" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#85C79A"/>
+      <stop offset="1" stop-color="#4E8D9C"/>
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="232" height="232" rx="56" fill="url(#panel)"/>
+  <path d="M72 86H129" stroke="#EDF7BD" stroke-width="12" stroke-linecap="round"/>
+  <path d="M100 86V184" stroke="#EDF7BD" stroke-width="12" stroke-linecap="round"/>
+  <path d="M183 85C156.49 85 135 106.49 135 133C135 159.51 156.49 181 183 181C202.215 181 218.79 169.692 226.5 153.5" stroke="#EDF7BD" stroke-width="12" stroke-linecap="round"/>
+  <path d="M213 142H183" stroke="#EDF7BD" stroke-width="12" stroke-linecap="round"/>
+  <path d="M64 60L100 86L136 67L183 85L225 66" stroke="url(#signal)" stroke-width="7.5" stroke-linecap="round" opacity="0.92"/>
+  <path d="M100 86V184L143 212L197 178L225 118" stroke="url(#signal)" stroke-width="7.5" stroke-linecap="round" opacity="0.92"/>
+  <circle cx="64" cy="60" r="10" fill="#85C79A"/>
+  <circle cx="136" cy="67" r="10" fill="#4E8D9C"/>
+  <circle cx="225" cy="66" r="10" fill="#85C79A"/>
+  <circle cx="143" cy="212" r="10" fill="#4E8D9C"/>
+  <circle cx="197" cy="178" r="10" fill="#85C79A"/>
+  <circle cx="225" cy="118" r="10" fill="#4E8D9C"/>
+  <text x="308" y="126" fill="#281C59" font-size="88" font-weight="700" font-family="Arial, sans-serif" letter-spacing="6">TGTC</text>
+  <text x="312" y="176" fill="#4E8D9C" font-size="28" font-weight="600" font-family="Arial, sans-serif" letter-spacing="7">TG TECH CONSULTING</text>
+  <text x="312" y="219" fill="#5A6380" font-size="22" font-weight="500" font-family="Arial, sans-serif" letter-spacing="1.8">NETSUITE • AI • AUTOMATION • INTEGRATIONS</text>
+</svg>

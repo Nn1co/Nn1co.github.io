@@ -1,0 +1,19 @@
+<svg width="960" height="260" viewBox="0 0 960 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="frame-fill" x1="32" y1="36" x2="220" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#281C59"/>
+      <stop offset="1" stop-color="#4E8D9C"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="30" width="200" height="200" rx="40" fill="#F5F7FB" stroke="#281C59" stroke-width="10"/>
+  <rect x="56" y="56" width="148" height="148" rx="30" fill="url(#frame-fill)"/>
+  <rect x="74" y="74" width="42" height="42" rx="12" fill="#EDF7BD"/>
+  <rect x="126" y="74" width="60" height="42" rx="12" fill="#85C79A"/>
+  <rect x="74" y="126" width="112" height="22" rx="11" fill="#4E8D9C"/>
+  <rect x="74" y="158" width="42" height="28" rx="10" fill="#85C79A"/>
+  <rect x="126" y="158" width="60" height="28" rx="10" fill="#EDF7BD"/>
+  <path d="M74 168H186" stroke="#281C59" stroke-width="5" stroke-linecap="round" opacity="0.28"/>
+  <text x="292" y="112" fill="#281C59" font-size="74" font-weight="700" font-family="Arial, sans-serif" letter-spacing="-1">TGTC</text>
+  <text x="294" y="154" fill="#281C59" font-size="24" font-weight="700" font-family="Arial, sans-serif" letter-spacing="3.1">PLATFORM CONSULTING</text>
+  <text x="294" y="190" fill="#5D637A" font-size="18" font-weight="500" font-family="Arial, sans-serif" letter-spacing="1.2">NETSUITE  CLOUD  APIs  AI SYSTEMS</text>
+</svg>

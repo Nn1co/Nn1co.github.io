@@ -1,0 +1,26 @@
+<svg width="960" height="260" viewBox="0 0 960 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orbit-ring" x1="44" y1="44" x2="214" y2="214" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#85C79A"/>
+      <stop offset="1" stop-color="#4E8D9C"/>
+    </linearGradient>
+    <linearGradient id="orbit-core" x1="66" y1="58" x2="194" y2="192" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#281C59"/>
+      <stop offset="1" stop-color="#3B2E77"/>
+    </linearGradient>
+  </defs>
+  <circle cx="130" cy="130" r="92" stroke="url(#orbit-ring)" stroke-width="12"/>
+  <circle cx="130" cy="130" r="64" fill="url(#orbit-core)"/>
+  <path d="M96 98H164" stroke="#EDF7BD" stroke-width="10" stroke-linecap="round"/>
+  <path d="M130 98V172" stroke="#EDF7BD" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="130" cy="38" r="10" fill="#85C79A"/>
+  <circle cx="208" cy="88" r="10" fill="#4E8D9C"/>
+  <circle cx="208" cy="172" r="10" fill="#85C79A"/>
+  <circle cx="130" cy="222" r="10" fill="#4E8D9C"/>
+  <circle cx="52" cy="172" r="10" fill="#85C79A"/>
+  <circle cx="52" cy="88" r="10" fill="#4E8D9C"/>
+  <path d="M130 38L208 88L208 172L130 222L52 172L52 88L130 38Z" stroke="#281C59" stroke-width="3" opacity="0.18"/>
+  <text x="292" y="112" fill="#281C59" font-size="74" font-weight="700" font-family="Arial, sans-serif" letter-spacing="-1">TGTC</text>
+  <text x="294" y="154" fill="#4E8D9C" font-size="24" font-weight="700" font-family="Arial, sans-serif" letter-spacing="3.2">AI  ERP  INTEGRATION</text>
+  <text x="294" y="190" fill="#5D637A" font-size="18" font-weight="500" font-family="Arial, sans-serif" letter-spacing="1.2">A MODERN NETSUITE EXTENSION PARTNER</text>
+</svg>
