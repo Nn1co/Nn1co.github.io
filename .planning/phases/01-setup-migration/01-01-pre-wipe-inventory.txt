@@ -1,0 +1,101 @@
+# Pre-wipe inventory — 2026-04-27T12:57:49Z
+
+## git ls-files (tracked)
+.nojekyll
+.planning/PROJECT.md
+.planning/REQUIREMENTS.md
+.planning/ROADMAP.md
+.planning/STATE.md
+.planning/phases/01-setup-migration/01-01-flutter-wipe-PLAN.md
+.planning/phases/01-setup-migration/01-02-nextjs-scaffold-PLAN.md
+.planning/phases/01-setup-migration/01-03-vercel-connect-PLAN.md
+.planning/phases/01-setup-migration/01-CONTEXT.md
+404.html
+assets/AssetManifest.bin
+assets/AssetManifest.bin.json
+assets/FontManifest.json
+assets/NOTICES
+assets/assets/branding/logo_concepts.md
+assets/assets/branding/tgtc_logo.png
+assets/assets/branding/tgtc_logo.svg
+assets/assets/branding/tgtc_logo_concept_frame.svg
+assets/assets/branding/tgtc_logo_concept_monoline.svg
+assets/assets/branding/tgtc_logo_concept_orbit.svg
+assets/assets/branding/tgtc_logo_concept_signal.svg
+assets/assets/branding/tgtc_mark.png
+assets/assets/branding/tgtc_mark.svg
+assets/assets/demo/activities-table.png
+assets/assets/demo/return-builder.png
+assets/assets/demo/returns-map.png
+assets/assets/fonts/RobotoCondensed-Bold.ttf
+assets/assets/fonts/RobotoCondensed-Regular.ttf
+assets/assets/fonts/RobotoSlab-VariableFont_wght.ttf
+assets/fonts/MaterialIcons-Regular.otf
+assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+assets/shaders/ink_sparkle.frag
+assets/shaders/stretch_effect.frag
+canvaskit/canvaskit.js
+canvaskit/canvaskit.js.symbols
+canvaskit/canvaskit.wasm
+canvaskit/chromium/canvaskit.js
+canvaskit/chromium/canvaskit.js.symbols
+canvaskit/chromium/canvaskit.wasm
+canvaskit/skwasm.js
+canvaskit/skwasm.js.symbols
+canvaskit/skwasm.wasm
+canvaskit/skwasm_heavy.js
+canvaskit/skwasm_heavy.js.symbols
+canvaskit/skwasm_heavy.wasm
+canvaskit/wimp.js
+canvaskit/wimp.js.symbols
+canvaskit/wimp.wasm
+docs/superpowers/specs/2026-04-27-tgtc-website-redesign-design.md
+favicon.png
+flutter.js
+flutter_bootstrap.js
+flutter_service_worker.js
+icons/Icon-192.png
+icons/Icon-512.png
+icons/Icon-maskable-192.png
+icons/Icon-maskable-512.png
+index.html
+main.dart.js
+manifest.json
+media/demo/activities-table.png
+media/demo/return-builder.png
+media/demo/returns-map.png
+media/returns-assistant.mov
+media/tgtc-demo.mov
+version.json
+
+## ls -la root
+total 5992
+drwxr-xr-x@ 20 nicolaslobonieuwenhuys  staff      640 Apr 27 14:37 .
+drwxr-xr-x   6 nicolaslobonieuwenhuys  staff      192 Apr 27 13:36 ..
+-rw-r--r--@  1 nicolaslobonieuwenhuys  staff     6148 Apr 27 14:57 .DS_Store
+drwxr-xr-x@ 13 nicolaslobonieuwenhuys  staff      416 Apr 27 14:57 .git
+-rw-r--r--@  1 nicolaslobonieuwenhuys  staff        0 Mar 26 16:48 .nojekyll
+drwxr-xr-x@  7 nicolaslobonieuwenhuys  staff      224 Apr 27 14:53 .planning
+-rw-r--r--@  1 nicolaslobonieuwenhuys  staff     2114 Mar 26 15:05 404.html
+drwxr-xr-x@ 10 nicolaslobonieuwenhuys  staff      320 Mar 26 16:48 assets
+drwxr-xr-x@ 15 nicolaslobonieuwenhuys  staff      480 Mar 26 16:48 canvaskit
+drwxr-xr-x@  3 nicolaslobonieuwenhuys  staff       96 Apr 27 14:21 docs
+-rw-r--r--@  1 nicolaslobonieuwenhuys  staff     5210 Mar 19 18:24 favicon.png
+-rw-r--r--@  1 nicolaslobonieuwenhuys  staff     9553 Mar 17 14:02 flutter.js
+-rw-r--r--@  1 nicolaslobonieuwenhuys  staff     9973 Mar 26 16:45 flutter_bootstrap.js
+-rw-r--r--@  1 nicolaslobonieuwenhuys  staff      784 Mar 26 16:46 flutter_service_worker.js
+drwxr-xr-x@  6 nicolaslobonieuwenhuys  staff      192 Mar 26 16:48 icons
+-rw-r--r--@  1 nicolaslobonieuwenhuys  staff     2114 Mar 26 16:45 index.html
+-rw-r--r--@  1 nicolaslobonieuwenhuys  staff  3003118 Mar 26 16:45 main.dart.js
+-rw-r--r--@  1 nicolaslobonieuwenhuys  staff     1007 Mar 19 18:24 manifest.json
+drwxr-xr-x@  5 nicolaslobonieuwenhuys  staff      160 Mar 26 16:48 media
+-rw-r--r--@  1 nicolaslobonieuwenhuys  staff       78 Mar 26 16:46 version.json
+
+## du -sh top-level dirs
+7.4M	assets
+ 31M	canvaskit
+192K	icons
+111M	media
+ 28K	docs
+120K	.planning
+121M	.git
