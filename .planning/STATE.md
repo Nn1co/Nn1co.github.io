@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-last_updated: "2026-04-27T12:53:51.640Z"
-last_activity: 2026-04-27 -- Phase 1 planning complete
+status: verifying
+last_updated: "2026-04-27T13:05:48.993Z"
+last_activity: 2026-04-27
 progress:
   total_phases: 9
   completed_phases: 0
   total_plans: 3
-  completed_plans: 0
-  percent: 0
+  completed_plans: 2
+  percent: 67
 ---
 
 # Project State
@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-04-27)
 
 Phase: 1 of 9 (Setup & migration)
 Plan: 0 of 0 in current phase
-Status: Ready to execute
-Last activity: 2026-04-27 -- Phase 1 planning complete
+Status: Phase complete — ready for verification
+Last activity: 2026-04-27
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -51,6 +51,8 @@ Progress: [░░░░░░░░░░] 0%
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01 P01 | 3min | 3 tasks | 1 files |
+| Phase 01 P02 | 5min | 3 tasks | 14 files |
 
 ## Accumulated Context
 
@@ -65,6 +67,8 @@ Recent decisions affecting current work:
 - 2026-04-27 — Locales: EN + FR (NL dropped, may return on demand)
 - 2026-04-27 — No legacy/flutter branch — user has external backup
 - 2026-04-27 — Mailto + LinkedIn only (no contact form, no Calendly)
+- [Phase 01]: Pinned create-next-app@14 to land Next.js 14 + React 18 + Tailwind 3 (latest scaffolder ships v16/v19/v4)
+- [Phase 01]: Scaffolded via temp dir then copied because create-next-app rejects the repo name 'Nn1co.github.io' (uppercase)
 
 ### Pending Todos
 

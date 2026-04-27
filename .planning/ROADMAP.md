@@ -45,8 +45,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Wipe Flutter web build from main (preserve docs/, .planning/, .git/)
-- [ ] 01-02-PLAN.md — Scaffold Next.js 14 + TS strict + Tailwind, install P2-P7 deps, placeholder + README
+- [x] 01-01-PLAN.md — Wipe Flutter web build from main (preserve docs/, .planning/, .git/)
+- [x] 01-02-PLAN.md — Scaffold Next.js 14 + TS strict + Tailwind, install P2-P7 deps, placeholder + README
 - [ ] 01-03-PLAN.md — Connect Vercel project, push to main, smoke-test *.vercel.app deploy
 
 ### Phase 2: Design system

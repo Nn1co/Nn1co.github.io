@@ -9,7 +9,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Site Foundation (SITE)
 
-- [ ] **SITE-01**: Site rendered via Next.js 14 (App Router) with TypeScript strict mode, deployed on Vercel
+- [x] **SITE-01**: Site rendered via Next.js 14 (App Router) with TypeScript strict mode, deployed on Vercel
 - [ ] **SITE-02**: Lighthouse Performance score ≥ 95 mobile across all 4 main pages
 - [ ] **SITE-03**: Initial JS bundle ≤ 100kb gzipped on Home page
 - [ ] **SITE-04**: LCP < 1.5s mobile, CLS < 0.05, TBT < 100ms on Home
@@ -57,8 +57,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Migration & Deployment (MIG)
 
-- [ ] **MIG-01**: Flutter source files removed from `main` branch (user has external backup, no archival branch)
-- [ ] **MIG-02**: Next.js scaffolded in place via `create-next-app` with TS + Tailwind + App Router
+- [x] **MIG-01**: Flutter source files removed from `main` branch (user has external backup, no archival branch)
+- [x] **MIG-02**: Next.js scaffolded in place via `create-next-app` with TS + Tailwind + App Router
 - [ ] **MIG-03**: Vercel project configured, repo connected, automatic deploy on push to `main`
 - [ ] **MIG-04**: Custom domain `tgtechconsulting.com` connected to Vercel
 - [ ] **MIG-05**: GitHub Pages disabled in repo settings after Vercel propagation confirmed
@@ -103,9 +103,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SITE-01 | Phase 1 | Pending |
-| MIG-01 | Phase 1 | Pending |
-| MIG-02 | Phase 1 | Pending |
+| SITE-01 | Phase 1 | Complete |
+| MIG-01 | Phase 1 | Complete |
+| MIG-02 | Phase 1 | Complete |
 | MIG-03 | Phase 1 | Pending |
 | VIS-01 | Phase 2 | Pending |
 | VIS-02 | Phase 2 | Pending |
