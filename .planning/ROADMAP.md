@@ -42,10 +42,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `npm run build` completes without errors
   4. Pushing to `main` triggers a successful Vercel deploy reachable via the project's `*.vercel.app` URL
   5. The repo's `docs/superpowers/specs/` design spec is preserved through the wipe
-**Plans**: TBD (decided during /gsd-plan-phase 1)
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: TBD
+- [ ] 01-01-PLAN.md — Wipe Flutter web build from main (preserve docs/, .planning/, .git/)
+- [ ] 01-02-PLAN.md — Scaffold Next.js 14 + TS strict + Tailwind, install P2-P7 deps, placeholder + README
+- [ ] 01-03-PLAN.md — Connect Vercel project, push to main, smoke-test *.vercel.app deploy
 
 ### Phase 2: Design system
 **Goal**: Lay down the visual foundation — Tailwind palette tokens, self-hosted fonts, and reusable shared primitives (Eyebrow, Headline, Rule, CTAs, Frame) — so all subsequent pages compose from a consistent kit.
@@ -180,7 +182,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Setup & migration | 0/0 | Not started | - |
+| 1. Setup & migration | 0/3 | Planned | - |
 | 2. Design system | 0/0 | Not started | - |
 | 3. Global layout | 0/0 | Not started | - |
 | 4. Home page | 0/0 | Not started | - |
