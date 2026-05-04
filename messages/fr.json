@@ -25,5 +25,128 @@
   "common": {
     "email": "thibaut.gendebien@tgtechconsulting.com",
     "linkedinUrl": "https://www.linkedin.com/in/thibaut-gendebien-7b777297"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "№ 01 · Practice · Benelux",
+      "h1Before": "NetSuite, réellement ",
+      "h1Emphasis": "habitable",
+      "h1After": ".",
+      "lede": "Conseil indépendant pour les organisations qui ne veulent plus subir leur ERP — et qui souhaitent y greffer l’intelligence dont leurs métiers ont besoin.",
+      "ctaPrimary": "Engager une discussion",
+      "ctaSecondary": "Voir les services",
+      "indexTitle": "Index · ce que l’on couvre",
+      "indexItems": [
+        "Audit & architecture NetSuite",
+        "Développement SuiteScript & RESTlets",
+        "Automatisation des workflows métier",
+        "Copilotes IA dans l’ERP",
+        "Peppol e-invoicing"
+      ]
+    },
+    "partners": {
+      "eyebrow": "№ 02 · Practice partners",
+      "headline": "Confiance accordée par.",
+      "items": [
+        {
+          "name": "BOLLÉ",
+          "caption": "Eyewear · NetSuite OneWorld · Multi-subsidiaries"
+        },
+        {
+          "name": "CLINISYS",
+          "caption": "HealthTech · NetSuite Time Tracking · SuiteScript 2.1"
+        }
+      ]
+    },
+    "netsuite": {
+      "eyebrow": "№ 03 · Pilier I",
+      "h2Before": "Faire de NetSuite une plateforme ",
+      "h2Emphasis": "opérationnelle",
+      "h2After": ".",
+      "lede": "Auditer ce qui frotte, dessiner l’architecture utile, livrer le code que vos équipes utiliseront vraiment.",
+      "blocks": [
+        {
+          "label": "I",
+          "title": "Audit & architecture",
+          "body": "Cartographier l’existant, identifier les ruptures, recommander une trajectoire qui tient en production."
+        },
+        {
+          "label": "II",
+          "title": "Développement custom",
+          "body": "SuiteScript 2.1, RESTlets, Suitelets, Map/Reduce, User Events. Code lisible, testé, livré sans surprise."
+        },
+        {
+          "label": "III",
+          "title": "Automatisation des workflows",
+          "body": "Standardiser les flux récurrents, supprimer les ressaisies, libérer du temps métier pour ce qui compte."
+        }
+      ],
+      "cta": "Détails du pilier NetSuite"
+    },
+    "ai": {
+      "eyebrow": "№ 04 · Pilier II",
+      "h2Before": "Étendre l’ERP avec de ",
+      "h2Emphasis": "l’intelligence",
+      "h2After": ".",
+      "lede": "L’IA n’est pas un produit : c’est une couche qu’il faut intégrer aux processus existants, avec rigueur et contexte métier.",
+      "blocks": [
+        {
+          "label": "I",
+          "title": "Copilotes métier",
+          "body": "Assistants encastrés dans NetSuite (et au-delà) qui répondent avec vos données, votre langage, vos règles."
+        },
+        {
+          "label": "II",
+          "title": "Workflows IA",
+          "body": "Décisions automatisées, classifications, extractions documentaires. Toujours auditables, jamais des boîtes noires."
+        },
+        {
+          "label": "III",
+          "title": "Decision support",
+          "body": "Synthèses de données, alertes intelligentes, agents qui creusent à votre place avant chaque arbitrage."
+        }
+      ],
+      "cta": "Détails du pilier IA"
+    },
+    "approach": {
+      "eyebrow": "№ 05 · Approach",
+      "h2Before": "Comment l’on ",
+      "h2Emphasis": "travaille",
+      "h2After": ".",
+      "items": [
+        {
+          "label": "I",
+          "title": "Discovery",
+          "body": "Une à deux semaines à comprendre les opérations, les contraintes réelles, les enjeux non-dits. Avant la moindre ligne de code."
+        },
+        {
+          "label": "II",
+          "title": "Build",
+          "body": "Itérations courtes, livraisons hebdomadaires, démonstrations sur vos données. Pas de slideware."
+        },
+        {
+          "label": "III",
+          "title": "Operate",
+          "body": "Mise en service accompagnée, transfert de connaissance, runbook précis. Vos équipes prennent le relais."
+        }
+      ]
+    },
+    "peppol": {
+      "eyebrow": "№ 06 · Adjacent capability",
+      "body": "Pour la Belgique, Peppol est désormais incontournable. La pratique couvre la mise en conformité e-invoicing — Peppol BIS 3.0, intégration NetSuite, archivage légal — comme prolongement naturel du pilier ERP."
+    },
+    "manifesto": {
+      "quote": "On ne livre pas un projet. On livre un outil que vos équipes ouvrent chaque matin sans grincer des dents.",
+      "signature": "— TG TECH CONSULTING"
+    },
+    "finalCta": {
+      "eyebrow": "№ 08 · Engage",
+      "h2Before": "Parlons de votre ",
+      "h2Emphasis": "NetSuite",
+      "h2After": ".",
+      "lede": "Une heure offerte pour comprendre ce qui frotte. Ni démo formatée, ni argumentaire — juste une discussion technique honnête.",
+      "ctaPrimary": "Écrire un mail",
+      "ctaSecondary": "LinkedIn"
+    }
   }
 }
