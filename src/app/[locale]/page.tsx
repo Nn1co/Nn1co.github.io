@@ -7,6 +7,7 @@ import { ApproachSection } from '@/components/home/ApproachSection'
 import { PeppolMention } from '@/components/home/PeppolMention'
 import { ManifestoQuote } from '@/components/home/ManifestoQuote'
 import { FinalCtaSection } from '@/components/home/FinalCtaSection'
+import { TreeOfLife } from '@/components/decorative/TreeOfLife'
 import { buildMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -19,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: '/',
     title: t('title'),
     description: t('metaDescription'),
-    ogTitle: 'NetSuite, truly habitable.',
+    ogTitle: locale === 'fr' ? 'NetSuite + Claude. Natif.' : 'NetSuite + Claude. Native.',
     ogSubtitle:
       locale === 'fr'
-        ? 'Conseil NetSuite et intégration IA · Benelux'
-        : 'NetSuite consulting and AI integration · Benelux',
+        ? 'Conseil NetSuite et Claude embarqué · Benelux'
+        : 'NetSuite consulting and Claude embedded · Benelux',
   })
 }
 
@@ -32,7 +33,8 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale)
 
   return (
-    <>
+    <div className="relative">
+      <TreeOfLife />
       <HeroSection />
       <PartnersSection />
       <PillarSection
@@ -50,6 +52,6 @@ export default async function HomePage({ params }: Props) {
       <PeppolMention />
       <ManifestoQuote />
       <FinalCtaSection />
-    </>
+    </div>
   )
 }
