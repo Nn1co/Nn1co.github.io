@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Fermer"
+  },
+  "footer": {
+    "brand": "TG TECH · CONSULTING",
+    "tagline": "Conseil NetSuite et automatisation IA · Benelux",
+    "contact": "Contact",
+    "navigation": "Navigation",
+    "legal": "Légal",
+    "privacy": "Confidentialité",
+    "notice": "Mentions légales",
+    "copyright": "© TG TECH CONSULTING · BENELUX",
+    "linkedin": "LinkedIn"
+  },
+  "lang": {
+    "fr": "FR",
+    "en": "EN",
+    "switchTo": "Passer en"
+  },
+  "common": {
+    "email": "thibaut.gendebien@tgtechconsulting.com",
+    "linkedinUrl": "https://www.linkedin.com/in/thibaut-gendebien-7b777297"
+  }
+}
