@@ -31,7 +31,6 @@
     border-radius: 2px;
   }
 
-  /* Default link reset — links opt-in to styles via components */
   a {
     color: inherit;
     text-decoration: none;
@@ -54,7 +53,7 @@
   }
 }
 
-/* Scroll-revealed sections */
+/* ─── Scroll-revealed sections ────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -69,19 +68,207 @@
   transform: translateY(0);
 }
 
-/* Ink-diffusion gold CTA */
+/* ─── Ink-diffusion gold CTA ──────────────────────── */
 .ink-button {
   background: linear-gradient(110deg, #D4A55F 0%, #E5BE7E 45%, #D4A55F 100%);
   background-size: 220% 100%;
   background-position: 0% 50%;
   transition:
     background-position 0.5s ease-in-out,
-    color 0.3s ease-out;
+    color 0.3s ease-out,
+    transform 0.3s ease-out;
 }
 
 .ink-button:hover,
 .ink-button:focus-visible {
   background-position: 100% 50%;
+}
+
+/* ─── Section watermark numerals ──────────────────── */
+.section-watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-display), serif;
+  font-size: clamp(220px, 38vw, 520px);
+  line-height: 0.85;
+  color: rgba(232, 226, 207, 0.025);
+  letter-spacing: -0.04em;
+  z-index: 0;
+}
+
+.section-watermark--right {
+  justify-content: flex-end;
+}
+
+.section-watermark--center {
+  justify-content: center;
+}
+
+/* ─── Marquee ticker ──────────────────────────────── */
+.marquee {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+  will-change: transform;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ─── Breathing letter-spacing on the manifesto ───── */
+.breathe {
+  animation: breathe 7s ease-in-out infinite;
+  will-change: letter-spacing;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    letter-spacing: 0em;
+  }
+  50% {
+    letter-spacing: 0.02em;
+  }
+}
+
+/* ─── Hover lift on pillar cards ──────────────────── */
+.lift-card {
+  position: relative;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.3s ease-out;
+}
+
+.lift-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  width: 0;
+  background: linear-gradient(90deg, #D4A55F, transparent);
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lift-card:hover::before {
+  width: 100%;
+}
+
+@media (hover: hover) {
+  .lift-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* ─── Cursor spotlight (hero) ─────────────────────── */
+.cursor-spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    480px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(212, 165, 95, 0.07),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+  z-index: 0;
+}
+
+.cursor-spotlight--active {
+  opacity: 1;
+}
+
+/* ─── Numerical glyph reveal animation ─────────────── */
+@keyframes glyph-rise {
+  from {
+    opacity: 0;
+    transform: translateY(40%) skewY(8deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) skewY(0);
+  }
+}
+
+.glyph-rise {
+  animation: glyph-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+/* ─── Underline grow on hover (for body links) ────── */
+.under-grow {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.under-grow:hover {
+  background-size: 100% 1px;
+}
+
+/* ─── Diagonal slash decoration ───────────────────── */
+.slash::before {
+  content: '/';
+  display: inline-block;
+  margin-right: 0.3em;
+  color: #D4A55F;
+  font-style: italic;
+}
+
+/* ─── Pulse dot indicator ─────────────────────────── */
+.pulse-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #D4A55F;
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0.5;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -102,5 +289,21 @@
 
   .reveal--visible {
     opacity: 1;
+  }
+
+  .marquee-track,
+  .breathe,
+  .pulse-dot,
+  .glyph-rise,
+  .cursor-spotlight {
+    animation: none !important;
+  }
+
+  .cursor-spotlight {
+    display: none;
+  }
+
+  .lift-card:hover {
+    transform: none;
   }
 }

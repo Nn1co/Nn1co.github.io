@@ -6,6 +6,9 @@ import { Rule } from '@/components/shared/Rule'
 import { CtaSecondary } from '@/components/shared/CtaSecondary'
 import { InkButton } from '@/components/motion/InkButton'
 import { Typewriter } from '@/components/motion/Typewriter'
+import { MagneticCta } from '@/components/motion/MagneticCta'
+import { CursorSpotlight } from '@/components/decorative/CursorSpotlight'
+import { SectionWatermark } from '@/components/decorative/SectionWatermark'
 
 export function HeroSection() {
   const t = useTranslations('home.hero')
@@ -13,10 +16,16 @@ export function HeroSection() {
 
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 pt-32 md:pt-48 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
+      <SectionWatermark>01</SectionWatermark>
+      <CursorSpotlight />
+
+      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 pt-32 md:pt-48 lg:grid-cols-[1.25fr_0.75fr] lg:gap-20">
         <div className="flex flex-col gap-8">
-          <Eyebrow>{t('eyebrow')}</Eyebrow>
-          <h1 className="font-display text-3xl text-cream md:text-4xl lg:text-5xl">
+          <Eyebrow className="glyph-rise" >{t('eyebrow')}</Eyebrow>
+          <h1
+            className="font-display text-4xl leading-[1.05] text-cream md:text-5xl lg:text-[5.5rem]"
+            style={{ animation: 'glyph-rise 1.1s cubic-bezier(0.22,1,0.36,1) backwards', animationDelay: '0.1s' }}
+          >
             <Typewriter
               segments={[
                 { text: t('h1Before') },
@@ -25,31 +34,35 @@ export function HeroSection() {
               ]}
             />
           </h1>
-          <p className="max-w-prose text-lg text-cream-dim md:text-xl">{t('lede')}</p>
-          <div className="flex flex-wrap items-center gap-6 pt-4">
-            <InkButton href="/contact">{t('ctaPrimary')}</InkButton>
+          <p className="max-w-prose text-xl text-cream-dim md:text-2xl">{t('lede')}</p>
+          <div className="flex flex-wrap items-center gap-8 pt-4">
+            <MagneticCta>
+              <InkButton href="/contact">{t('ctaPrimary')}</InkButton>
+            </MagneticCta>
             <CtaSecondary href="/services">{t('ctaSecondary')}</CtaSecondary>
           </div>
         </div>
 
         <aside
           aria-label={t('indexTitle')}
-          className="relative self-start border border-rule-soft bg-ink-soft/40 p-6 shadow-inset-glow lg:mt-12"
+          className="relative self-start border border-rule-soft bg-ink-soft/40 p-6 shadow-inset-glow lg:mt-24"
         >
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-2 border border-rule-soft"
           />
           <div className="relative">
-            <Eyebrow className="text-cream-muted">{t('indexTitle')}</Eyebrow>
+            <Eyebrow className="text-cream-muted" dot={false}>
+              <span className="slash">{t('indexTitle')}</span>
+            </Eyebrow>
             <Rule variant="dotted" className="my-4" />
             <ol className="space-y-3 font-body text-base text-cream-dim">
               {indexItems.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-4">
+                <li key={idx} className="group flex items-start gap-4">
                   <span className="mt-0.5 inline-block w-6 shrink-0 font-mono text-xs uppercase tracking-widest text-gold">
                     {romanize(idx + 1)}
                   </span>
-                  <span>{item}</span>
+                  <span className="under-grow">{item}</span>
                 </li>
               ))}
             </ol>

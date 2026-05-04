@@ -35,11 +35,16 @@ export default async function HomePage({ params }: Props) {
     <>
       <HeroSection />
       <PartnersSection />
-      <PillarSection namespace="home.netsuite" href="/services#netsuite" />
+      <PillarSection
+        namespace="home.netsuite"
+        href="/services#netsuite"
+        watermark="03"
+      />
       <PillarSection
         namespace="home.ai"
         href="/services#ai"
         alignment="right"
+        watermark="04"
       />
       <ApproachSection />
       <PeppolMention />

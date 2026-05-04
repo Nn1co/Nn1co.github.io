@@ -8,7 +8,7 @@
   },
   "footer": {
     "brand": "TG TECH · CONSULTING",
-    "tagline": "Conseil NetSuite et automatisation IA · Benelux",
+    "tagline": "NetSuite. IA. Benelux.",
     "contact": "Contact",
     "navigation": "Navigation",
     "legal": "Légal",
@@ -28,10 +28,24 @@
   },
   "consent": {
     "label": "Préférence cookies",
-    "message": "Le site utilise Vercel Analytics (sans cookie). Avec votre accord, Google Analytics 4 mesure également l’audience.",
-    "learnMore": "Confidentialité",
+    "message": "Vercel Analytics tourne sans cookie. GA4 attend votre accord.",
+    "learnMore": "En savoir plus",
     "accept": "Accepter",
     "refuse": "Refuser"
+  },
+  "marquee": {
+    "items": [
+      "NetSuite OneWorld",
+      "SuiteScript 2.1",
+      "RESTlets",
+      "AI copilots",
+      "Peppol BIS 3.0",
+      "Workflow automation",
+      "RAG search",
+      "Decision support",
+      "Map / Reduce",
+      "User Events"
+    ]
   },
   "home": {
     "page": {
@@ -43,81 +57,81 @@
       "h1Before": "NetSuite, réellement ",
       "h1Emphasis": "habitable",
       "h1After": ".",
-      "lede": "Conseil indépendant pour les organisations qui ne veulent plus subir leur ERP — et qui souhaitent y greffer l’intelligence dont leurs métiers ont besoin.",
-      "ctaPrimary": "Engager une discussion",
+      "lede": "ERP qui sert. IA branchée au métier. Sans démo, sans slideware.",
+      "ctaPrimary": "Engager",
       "ctaSecondary": "Voir les services",
-      "indexTitle": "Index · ce que l’on couvre",
+      "indexTitle": "Index",
       "indexItems": [
-        "Audit & architecture NetSuite",
-        "Développement SuiteScript & RESTlets",
-        "Automatisation des workflows métier",
-        "Copilotes IA dans l’ERP",
-        "Peppol e-invoicing"
+        "Audit & architecture",
+        "SuiteScript & RESTlets",
+        "Workflows métier",
+        "Copilotes IA",
+        "Peppol"
       ]
     },
     "partners": {
-      "eyebrow": "№ 02 · Practice partners",
-      "headline": "Confiance accordée par.",
+      "eyebrow": "№ 02 · Trusted by",
+      "headline": "Deux signatures, déjà.",
       "items": [
         {
           "name": "BOLLÉ",
-          "caption": "Eyewear · NetSuite OneWorld · Multi-subsidiaries"
+          "caption": "Eyewear · OneWorld"
         },
         {
           "name": "CLINISYS",
-          "caption": "HealthTech · NetSuite Time Tracking · SuiteScript 2.1"
+          "caption": "HealthTech · Time Tracking"
         }
       ]
     },
     "netsuite": {
       "eyebrow": "№ 03 · Pilier I",
-      "h2Before": "Faire de NetSuite une plateforme ",
-      "h2Emphasis": "opérationnelle",
+      "h2Before": "NetSuite, ",
+      "h2Emphasis": "opérationnel",
       "h2After": ".",
-      "lede": "Auditer ce qui frotte, dessiner l’architecture utile, livrer le code que vos équipes utiliseront vraiment.",
+      "lede": "Auditer. Architecturer. Livrer.",
       "blocks": [
         {
           "label": "I",
           "title": "Audit & architecture",
-          "body": "Cartographier l’existant, identifier les ruptures, recommander une trajectoire qui tient en production."
+          "body": "Cartographier. Prioriser. Recommander."
         },
         {
           "label": "II",
-          "title": "Développement custom",
-          "body": "SuiteScript 2.1, RESTlets, Suitelets, Map/Reduce, User Events. Code lisible, testé, livré sans surprise."
+          "title": "Custom dev",
+          "body": "SuiteScript 2.1. Code propre, livré sans surprise."
         },
         {
           "label": "III",
-          "title": "Automatisation des workflows",
-          "body": "Standardiser les flux récurrents, supprimer les ressaisies, libérer du temps métier pour ce qui compte."
+          "title": "Automation",
+          "body": "Standardiser, supprimer les ressaisies, libérer du temps."
         }
       ],
-      "cta": "Détails du pilier NetSuite"
+      "cta": "Détails NetSuite"
     },
     "ai": {
       "eyebrow": "№ 04 · Pilier II",
-      "h2Before": "Étendre l’ERP avec de ",
-      "h2Emphasis": "l’intelligence",
+      "h2Before": "L’IA, ",
+      "h2Emphasis": "dans le flux",
       "h2After": ".",
-      "lede": "L’IA n’est pas un produit : c’est une couche qu’il faut intégrer aux processus existants, avec rigueur et contexte métier.",
+      "lede": "Pas un produit. Une couche. Branchée au métier.",
       "blocks": [
         {
           "label": "I",
-          "title": "Copilotes métier",
-          "body": "Assistants encastrés dans NetSuite (et au-delà) qui répondent avec vos données, votre langage, vos règles."
+          "title": "Copilotes",
+          "body": "Vos données. Votre langage. Vos règles."
         },
         {
           "label": "II",
           "title": "Workflows IA",
-          "body": "Décisions automatisées, classifications, extractions documentaires. Toujours auditables, jamais des boîtes noires."
+          "body": "Classifications, extractions, décisions auditables."
         },
         {
           "label": "III",
           "title": "Decision support",
-          "body": "Synthèses de données, alertes intelligentes, agents qui creusent à votre place avant chaque arbitrage."
+          "body": "Synthèses, alertes, agents qui creusent à votre place."
         }
       ],
-      "cta": "Détails du pilier IA"
+      "cta": "Détails IA"
     },
     "approach": {
       "eyebrow": "№ 05 · Approach",
@@ -128,23 +142,23 @@
         {
           "label": "I",
           "title": "Discovery",
-          "body": "Une à deux semaines à comprendre les opérations, les contraintes réelles, les enjeux non-dits. Avant la moindre ligne de code."
+          "body": "Comprendre. Avant tout code."
         },
         {
           "label": "II",
           "title": "Build",
-          "body": "Itérations courtes, livraisons hebdomadaires, démonstrations sur vos données. Pas de slideware."
+          "body": "Itérations courtes. Démos sur vos données."
         },
         {
           "label": "III",
           "title": "Operate",
-          "body": "Mise en service accompagnée, transfert de connaissance, runbook précis. Vos équipes prennent le relais."
+          "body": "Transfert, runbook, vos équipes prennent le relais."
         }
       ]
     },
     "peppol": {
-      "eyebrow": "№ 06 · Adjacent capability",
-      "body": "Pour la Belgique, Peppol est désormais incontournable. La pratique couvre la mise en conformité e-invoicing — Peppol BIS 3.0, intégration NetSuite, archivage légal — comme prolongement naturel du pilier ERP."
+      "eyebrow": "№ 06 · Adjacent",
+      "body": "Peppol BIS 3.0, intégration NetSuite, archivage légal. En extension naturelle de l’ERP."
     },
     "manifesto": {
       "quote": "On ne livre pas un projet. On livre un outil que vos équipes ouvrent chaque matin sans grincer des dents.",
@@ -152,11 +166,11 @@
     },
     "finalCta": {
       "eyebrow": "№ 08 · Engage",
-      "h2Before": "Parlons de votre ",
+      "h2Before": "Parlons ",
       "h2Emphasis": "NetSuite",
       "h2After": ".",
-      "lede": "Une heure offerte pour comprendre ce qui frotte. Ni démo formatée, ni argumentaire — juste une discussion technique honnête.",
-      "ctaPrimary": "Écrire un mail",
+      "lede": "Une heure offerte. Pas de pitch.",
+      "ctaPrimary": "Écrire",
       "ctaSecondary": "LinkedIn"
     }
   },
@@ -170,94 +184,94 @@
       "h1Before": "Deux pratiques, ",
       "h1Emphasis": "une rigueur",
       "h1After": ".",
-      "lede": "Conseil NetSuite et intégration IA. Deux piliers, une même exigence — comprendre avant de livrer, livrer ce qui sera utilisé.",
+      "lede": "Comprendre avant de livrer. Livrer ce qui sera utilisé.",
       "anchors": [
-        { "href": "#netsuite", "label": "NetSuite & automatisation" },
-        { "href": "#ai", "label": "Intégration IA" }
+        { "href": "#netsuite", "label": "NetSuite" },
+        { "href": "#ai", "label": "IA" }
       ]
     },
     "netsuite": {
       "eyebrow": "№ Pilier I · NetSuite",
-      "h2Before": "Faire de NetSuite une plateforme ",
-      "h2Emphasis": "opérationnelle",
+      "h2Before": "NetSuite, ",
+      "h2Emphasis": "opérationnel",
       "h2After": ".",
-      "lede": "Pour les organisations qui ont dépassé l’implémentation initiale et qui veulent que leur ERP devienne un outil — pas un fardeau.",
+      "lede": "Pour les organisations qui veulent un ERP utile, pas un fardeau.",
       "blocks": [
         {
           "label": "I",
           "title": "Audit & architecture",
-          "body": "Cartographier les processus, repérer les ruptures, prioriser les chantiers à forte valeur. Livrable : un plan d’action documenté, pas une liste de slides."
+          "body": "Cartographier, prioriser, livrer un plan d’action documenté."
         },
         {
           "label": "II",
-          "title": "Développement custom SuiteScript",
-          "body": "SuiteScript 2.1, RESTlets, Suitelets, Map/Reduce, User Events, Workflow actions. Code lisible, testé, déployé sans surprise."
+          "title": "Custom dev",
+          "body": "SuiteScript 2.1, RESTlets, Suitelets, Map/Reduce. Code lisible, testé."
         },
         {
           "label": "III",
-          "title": "Automatisation des workflows",
-          "body": "Supprimer les ressaisies, standardiser les flux récurrents, brancher les systèmes tiers. Le temps métier libéré finance le projet."
+          "title": "Automation",
+          "body": "Supprimer les ressaisies. Brancher les outils tiers."
         },
         {
           "label": "IV",
-          "title": "Peppol e-invoicing",
-          "body": "Mise en conformité e-invoicing belge (BIS 3.0), intégration NetSuite, archivage légal. Une opération technique faite proprement."
+          "title": "Peppol",
+          "body": "Conformité BIS 3.0, intégration NetSuite, archivage."
         }
       ]
     },
     "ai": {
       "eyebrow": "№ Pilier II · IA",
-      "h2Before": "Étendre l’ERP avec de ",
-      "h2Emphasis": "l’intelligence",
+      "h2Before": "L’IA, ",
+      "h2Emphasis": "dans le flux",
       "h2After": ".",
-      "lede": "L’IA produit de la valeur quand elle est branchée sur le contexte métier. Le rôle d’un consultant : faire le pont entre les modèles et les opérations.",
+      "lede": "Brancher les modèles aux opérations, pas l’inverse.",
       "blocks": [
         {
           "label": "I",
-          "title": "Copilotes métier",
-          "body": "Assistants encastrés dans NetSuite et les outils satellites. Ils répondent avec vos données, votre langage, vos règles."
+          "title": "Copilotes",
+          "body": "Assistants encastrés. Vos données, votre langage."
         },
         {
           "label": "II",
           "title": "Workflows IA",
-          "body": "Classifications automatisées, extractions documentaires, décisions assistées. Toujours auditables, jamais des boîtes noires."
+          "body": "Classifications, extractions, décisions auditables."
         },
         {
           "label": "III",
           "title": "Search & retrieval",
-          "body": "RAG sur la base documentaire (contrats, procédures, rapports). Réponses sourcées, vérifiables, rapides."
+          "body": "RAG sourcé sur votre base documentaire."
         },
         {
           "label": "IV",
           "title": "Decision support",
-          "body": "Synthèses de données, alertes intelligentes, agents qui creusent à votre place avant chaque arbitrage stratégique."
+          "body": "Agents qui creusent avant chaque arbitrage."
         }
       ]
     },
     "cta": {
       "eyebrow": "№ Engage",
-      "h2": "Une question sur un service précis ?",
-      "lede": "Décrivez votre contexte par mail. Première réponse sous 48h, premier appel offert.",
-      "primary": "Écrire un mail",
+      "h2": "Une question précise ?",
+      "lede": "Décrivez par mail. Réponse sous 48h.",
+      "primary": "Écrire",
       "secondary": "LinkedIn"
     }
   },
   "about": {
     "page": {
       "title": "À propos",
-      "metaDescription": "Thibaut Gendebien — pratique de conseil indépendante, basée au Benelux, dédiée à NetSuite et à l’IA dans les opérations."
+      "metaDescription": "Thibaut Gendebien — pratique indépendante au Benelux, dédiée à NetSuite et à l’IA dans les opérations."
     },
     "hero": {
-      "eyebrow": "№ About · Pratique indépendante",
+      "eyebrow": "№ About · Indépendant",
       "h1": "Thibaut Gendebien.",
-      "lede": "Consultant indépendant. Plus de dix ans à transformer des ERP en outils que les opérations utilisent vraiment, et à câbler de l’IA sans perdre de vue le terrain."
+      "lede": "Dix ans à transformer des ERP en outils que les opérations utilisent."
     },
     "narrative": {
       "eyebrow": "№ Pourquoi TGTC",
       "paragraphs": [
-        "TG Tech Consulting a été fondée pour offrir aux organisations Benelux ce qui manque souvent dans le paysage NetSuite : un interlocuteur qui code, qui comprend les opérations, et qui n’a pas peur de dire « ce n’est pas la bonne approche ».",
-        "La pratique repose sur deux convictions. La première : un ERP n’a de valeur que s’il est habité — utilisé, compris, possédé par les équipes métier. La seconde : l’IA n’a de valeur que si elle est branchée sur des processus réels, pas exposée comme un gadget.",
-        "Le format est délibérément resserré : engagements ciblés, livraisons rapprochées, pas d’écran de fumée. C’est un pari sur la qualité plutôt que sur le volume."
+        "Un interlocuteur qui code, qui comprend les opérations, et qui sait dire « ce n’est pas la bonne approche ».",
+        "Deux convictions : un ERP n’a de valeur que s’il est habité ; l’IA, qu’une fois branchée à des processus réels.",
+        "Format resserré. Engagements ciblés. Pari sur la qualité, pas le volume."
       ]
     },
     "principles": {
@@ -266,25 +280,25 @@
         {
           "label": "I",
           "title": "Profondeur ERP",
-          "body": "Plus de dix ans dans NetSuite. SuiteScript, SuiteFlow, SuiteAnalytics, SuiteCloud Development Framework. La couche technique n’est pas négociée — elle est maîtrisée."
+          "body": "Dix ans de SuiteScript, SuiteFlow, SuiteAnalytics, SDF."
         },
         {
           "label": "II",
-          "title": "Délivrer ce qui est utilisé",
-          "body": "Un projet qui dort dans une sandbox n’est pas un succès. La métrique qui compte : combien d’équipes ouvrent l’outil chaque lundi matin sans broncher."
+          "title": "Délivrer ce qui sert",
+          "body": "Métrique : qui ouvre l’outil le lundi matin sans broncher."
         },
         {
           "label": "III",
           "title": "Communication directe",
-          "body": "Pas de jargon inutile, pas de slides cosmétiques. Un compte-rendu hebdomadaire qui dit ce qui marche, ce qui frotte, et ce qu’on fait la semaine suivante."
+          "body": "Pas de jargon. Note hebdo : ce qui marche, ce qui frotte, ce qu’on livre."
         }
       ]
     },
     "cta": {
       "eyebrow": "№ Engage",
       "h2": "Discutons.",
-      "lede": "Une heure offerte pour comprendre votre contexte avant tout devis.",
-      "primary": "Écrire un mail",
+      "lede": "Une heure offerte avant tout devis.",
+      "primary": "Écrire",
       "secondary": "LinkedIn"
     }
   },
@@ -296,7 +310,7 @@
     "hero": {
       "eyebrow": "№ Contact · Engage",
       "h1": "Écrire.",
-      "lede": "Pas de formulaire, pas de chatbot. Le canal le plus rapide reste un mail bien rédigé."
+      "lede": "Pas de formulaire. Un mail bien rédigé suffit."
     },
     "blocks": [
       {
@@ -311,11 +325,11 @@
       },
       {
         "label": "Localisation",
-        "value": "Benelux · réponse sous 48h",
+        "value": "Benelux · 48h",
         "kind": "text"
       }
     ],
-    "closing": "Préférer un appel ? Mentionnez-le par mail et on cale 30 minutes."
+    "closing": "Préférer un appel ? Mentionnez-le par mail."
   },
   "legal": {
     "shared": {
@@ -330,35 +344,35 @@
       "eyebrow": "Legal · Privacy policy",
       "h1": "Politique de confidentialité",
       "lastUpdated": "2026-05-04",
-      "intro": "Cette page décrit comment TG Tech Consulting traite les données collectées via le site tgtechconsulting.com.",
+      "intro": "Comment TG Tech Consulting traite les données collectées via tgtechconsulting.com.",
       "sections": [
         {
           "title": "Responsable du traitement",
-          "body": "TG Tech Consulting — à compléter avec dénomination sociale, BCE/CBE, adresse du siège, contact référent."
+          "body": "TG Tech Consulting — à compléter avec dénomination, BCE/CBE, adresse, contact."
         },
         {
           "title": "Données collectées",
-          "body": "Métriques de visite anonymes via Vercel Analytics (cookieless). Sur consentement explicite, statistiques d’audience via Google Analytics 4 (pages vues, source de trafic, durée de session). Logs techniques temporaires côté hébergeur (adresse IP, user-agent) à des fins de sécurité."
+          "body": "Vercel Analytics (cookieless). Sur consentement, Google Analytics 4 (pages, source, durée). Logs techniques temporaires côté hébergeur."
         },
         {
           "title": "Finalités",
-          "body": "Mesurer l’audience du site, identifier les contenus utiles, prévenir les abus techniques. Aucun profilage commercial, aucune revente, aucune publicité."
+          "body": "Mesurer l’audience, identifier les contenus utiles, prévenir les abus. Ni profilage commercial, ni revente, ni publicité."
         },
         {
           "title": "Bases légales",
-          "body": "Consentement explicite pour Google Analytics 4 (article 6.1.a RGPD). Intérêt légitime pour Vercel Analytics et les logs techniques (article 6.1.f RGPD)."
+          "body": "Consentement explicite pour GA4 (art. 6.1.a RGPD). Intérêt légitime pour Vercel Analytics et logs (art. 6.1.f RGPD)."
         },
         {
-          "title": "Durées de conservation",
-          "body": "GA4 : durée par défaut paramétrée à 14 mois. Vercel Analytics : agrégation continue, pas de données identifiantes. Logs techniques : 30 jours maximum."
+          "title": "Conservation",
+          "body": "GA4 : 14 mois. Vercel Analytics : agrégation continue, sans données identifiantes. Logs : 30 jours max."
         },
         {
           "title": "Sous-traitants",
-          "body": "Vercel Inc. (hébergement et analytics) — États-Unis, sous clauses contractuelles types. Google Ireland Ltd. (Google Analytics 4) — sur consentement uniquement."
+          "body": "Vercel Inc. (US, clauses contractuelles types). Google Ireland Ltd. (sur consentement)."
         },
         {
           "title": "Vos droits",
-          "body": "Accès, rectification, effacement, portabilité, opposition, retrait du consentement. Réclamation auprès de l’Autorité de protection des données (Belgique). Contact : utiliser l’adresse email du site."
+          "body": "Accès, rectification, effacement, portabilité, opposition, retrait. Réclamation auprès de l’APD belge."
         }
       ]
     },
@@ -369,22 +383,22 @@
       },
       "eyebrow": "Legal · Notice",
       "h1": "Mentions légales",
-      "intro": "Conformément au droit belge, les informations suivantes identifient l’éditeur du site.",
+      "intro": "Identification de l’éditeur, conformément au droit belge.",
       "sections": [
         {
           "title": "Éditeur",
-          "body": "TG Tech Consulting — dénomination sociale exacte à fournir."
+          "body": "TG Tech Consulting — dénomination exacte à fournir."
         },
         {
           "title": "Siège social",
-          "body": "Adresse du siège social — à fournir."
+          "body": "Adresse — à fournir."
         },
         {
-          "title": "Numéro d’entreprise (BCE/CBE)",
+          "title": "BCE/CBE",
           "body": "BE0XXX.XXX.XXX — à fournir."
         },
         {
-          "title": "Numéro de TVA",
+          "title": "TVA",
           "body": "BE0XXX.XXX.XXX — à fournir."
         },
         {
