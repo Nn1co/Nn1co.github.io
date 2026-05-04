@@ -4,6 +4,7 @@ import { Headline } from '@/components/shared/Headline'
 import { Rule } from '@/components/shared/Rule'
 import { CtaSecondary } from '@/components/shared/CtaSecondary'
 import { Reveal } from '@/components/motion/Reveal'
+import { HoverLetters } from '@/components/motion/HoverLetters'
 import { SectionWatermark } from '@/components/decorative/SectionWatermark'
 import { cn } from '@/lib/cn'
 
@@ -42,7 +43,9 @@ export async function PillarSection({
           <Eyebrow>{t('eyebrow')}</Eyebrow>
           <Headline as="h2" size="3xl" className="max-w-3xl">
             {t('h2Before')}
-            <em className="italic text-gold">{t('h2Emphasis')}</em>
+            <em className="italic text-gold ink-bleed">
+              <HoverLetters>{t('h2Emphasis')}</HoverLetters>
+            </em>
             {t('h2After')}
           </Headline>
           <p className="max-w-prose text-lg text-cream-dim">{t('lede')}</p>
@@ -57,14 +60,14 @@ export async function PillarSection({
               className="lift-card group bg-ink p-6 hover:bg-ink-soft md:p-8"
             >
               <div className="mb-4 flex items-baseline gap-3">
-                <span className="font-mono text-xs uppercase tracking-widest text-gold">
+                <span className="font-mono text-xs uppercase tracking-widest text-jade">
                   {block.label}
                 </span>
                 <span className="font-mono text-xs uppercase tracking-widest text-cream-muted">
                   /
                 </span>
-                <h3 className="font-display text-xl text-cream transition-colors group-hover:text-gold">
-                  {block.title}
+                <h3 className="font-display text-xl text-cream transition-colors group-hover:text-jade">
+                  <HoverLetters intensity="soft">{block.title}</HoverLetters>
                 </h3>
               </div>
               <p className="text-base text-cream-dim">{block.body}</p>

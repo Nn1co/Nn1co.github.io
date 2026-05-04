@@ -7,9 +7,10 @@ import { CtaSecondary } from '@/components/shared/CtaSecondary'
 import { InkButton } from '@/components/motion/InkButton'
 import { Typewriter } from '@/components/motion/Typewriter'
 import { MagneticCta } from '@/components/motion/MagneticCta'
-import { CursorSpotlight } from '@/components/decorative/CursorSpotlight'
 import { SectionWatermark } from '@/components/decorative/SectionWatermark'
 import { ParticleField } from '@/components/decorative/ParticleField'
+import { LeafFall } from '@/components/decorative/LeafFall'
+import { OrganicVine } from '@/components/decorative/OrganicVine'
 import { Scanline } from '@/components/decorative/Scanline'
 import { DataTicker } from '@/components/decorative/DataTicker'
 
@@ -20,9 +21,14 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[88vh] overflow-hidden">
       <SectionWatermark>01</SectionWatermark>
-      <ParticleField density="med" palette="mixed" />
+      <ParticleField density="low" palette="jade" />
+      <LeafFall count={12} />
+      <OrganicVine className="left-2 top-32 h-[520px] w-[140px] opacity-70 md:left-6 md:h-[640px]" />
+      <OrganicVine
+        variant="right"
+        className="right-2 top-48 h-[440px] w-[120px] opacity-50 md:right-8"
+      />
       <Scanline delaySeconds={3} />
-      <CursorSpotlight />
       <DataTicker prefix="SYS · NETSUITE" className="left-6 top-24 md:left-10 md:top-28" />
 
       <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 pt-32 md:pt-48 lg:grid-cols-[1.25fr_0.75fr] lg:gap-20">

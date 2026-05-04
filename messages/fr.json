@@ -8,7 +8,7 @@
   },
   "footer": {
     "brand": "TG TECH · CONSULTING",
-    "tagline": "NetSuite. IA. Benelux.",
+    "tagline": "NetSuite + Claude, natif. Benelux.",
     "contact": "Contact",
     "navigation": "Navigation",
     "legal": "Légal",
@@ -38,34 +38,33 @@
       "NetSuite OneWorld",
       "SuiteScript 2.1",
       "RESTlets",
-      "AI copilots",
+      "Claude embarqué",
+      "Agents Claude",
       "Peppol BIS 3.0",
-      "Workflow automation",
-      "RAG search",
-      "Decision support",
+      "Automatisation",
+      "RAG sourcé",
       "Map / Reduce",
       "User Events"
     ]
   },
   "home": {
     "page": {
-      "title": "Conseil NetSuite et intégration IA",
-      "metaDescription": "Pratique indépendante NetSuite et IA, basée au Benelux. Audit, développement custom, automatisation et copilotes métier — par TG Tech Consulting."
+      "title": "NetSuite + Claude, natif",
+      "metaDescription": "Pratique indépendante au Benelux. NetSuite et Claude branchés nativement, sans patchwork. Automatisation des tâches métier."
     },
     "hero": {
       "eyebrow": "№ 01 · Practice · Benelux",
-      "h1Before": "NetSuite, réellement ",
-      "h1Emphasis": "habitable",
+      "h1Before": "NetSuite + Claude. ",
+      "h1Emphasis": "Natif",
       "h1After": ".",
-      "lede": "ERP qui sert. IA branchée au métier. Sans démo, sans slideware.",
+      "lede": "Une plateforme. Tâches automatisées. Décisions assistées. Pas de patchwork.",
       "ctaPrimary": "Engager",
       "ctaSecondary": "Voir les services",
       "indexTitle": "Index",
       "indexItems": [
-        "Audit & architecture",
-        "SuiteScript & RESTlets",
-        "Workflows métier",
-        "Copilotes IA",
+        "NetSuite augmenté",
+        "Claude embarqué",
+        "Automatisation",
         "Peppol"
       ]
     },
@@ -85,53 +84,53 @@
     },
     "netsuite": {
       "eyebrow": "№ 03 · Pilier I",
-      "h2Before": "NetSuite, ",
-      "h2Emphasis": "opérationnel",
+      "h2Before": "L’ERP que vos équipes ",
+      "h2Emphasis": "utilisent",
       "h2After": ".",
-      "lede": "Auditer. Architecturer. Livrer.",
+      "lede": "Pour qu’il devienne un outil, pas un fardeau.",
       "blocks": [
         {
           "label": "I",
           "title": "Audit & architecture",
-          "body": "Cartographier. Prioriser. Recommander."
+          "body": "Cartographier ce qui frotte. Prioriser ce qui paie."
         },
         {
           "label": "II",
-          "title": "Custom dev",
-          "body": "SuiteScript 2.1. Code propre, livré sans surprise."
+          "title": "SuiteScript",
+          "body": "Code lisible, testé, livré sans surprise."
         },
         {
           "label": "III",
-          "title": "Automation",
-          "body": "Standardiser, supprimer les ressaisies, libérer du temps."
+          "title": "Automatisation",
+          "body": "Supprimer les ressaisies. Brancher les outils tiers."
         }
       ],
-      "cta": "Détails NetSuite"
+      "cta": "Voir le pilier"
     },
     "ai": {
       "eyebrow": "№ 04 · Pilier II",
-      "h2Before": "L’IA, ",
-      "h2Emphasis": "dans le flux",
+      "h2Before": "Claude, ",
+      "h2Emphasis": "branché au métier",
       "h2After": ".",
-      "lede": "Pas un produit. Une couche. Branchée au métier.",
+      "lede": "Ancré dans vos données, vos règles, votre langage. Pas un produit IA générique.",
       "blocks": [
         {
           "label": "I",
-          "title": "Copilotes",
-          "body": "Vos données. Votre langage. Vos règles."
+          "title": "Agents Claude",
+          "body": "Embarqués dans NetSuite. Vos règles, votre langage."
         },
         {
           "label": "II",
-          "title": "Workflows IA",
+          "title": "Workflows Claude",
           "body": "Classifications, extractions, décisions auditables."
         },
         {
           "label": "III",
-          "title": "Decision support",
-          "body": "Synthèses, alertes, agents qui creusent à votre place."
+          "title": "Recherche & arbitrage",
+          "body": "RAG sourcé. Agents qui creusent avant chaque arbitrage."
         }
       ],
-      "cta": "Détails IA"
+      "cta": "Voir le pilier"
     },
     "approach": {
       "eyebrow": "№ 05 · Approach",
@@ -152,13 +151,13 @@
         {
           "label": "III",
           "title": "Operate",
-          "body": "Transfert, runbook, vos équipes prennent le relais."
+          "body": "Handover, runbook. Vos équipes prennent le relais."
         }
       ]
     },
     "peppol": {
       "eyebrow": "№ 06 · Adjacent",
-      "body": "Peppol BIS 3.0, intégration NetSuite, archivage légal. En extension naturelle de l’ERP."
+      "body": "Peppol BIS 3.0, intégration NetSuite, archivage légal. Naturellement."
     },
     "manifesto": {
       "quote": "On ne livre pas un projet. On livre un outil que vos équipes ouvrent chaque matin sans grincer des dents.",
@@ -177,74 +176,74 @@
   "services": {
     "page": {
       "title": "Services",
-      "metaDescription": "Deux pratiques, une rigueur — conseil NetSuite et automatisation IA, par TG Tech Consulting au Benelux."
+      "metaDescription": "Conseil NetSuite augmenté + Claude embarqué. Pratique indépendante au Benelux."
     },
     "hero": {
       "eyebrow": "№ Services · Practice",
       "h1Before": "Deux pratiques, ",
       "h1Emphasis": "une rigueur",
       "h1After": ".",
-      "lede": "Comprendre avant de livrer. Livrer ce qui sera utilisé.",
+      "lede": "NetSuite + Claude, branchés nativement. Comprendre avant de livrer.",
       "anchors": [
         { "href": "#netsuite", "label": "NetSuite" },
-        { "href": "#ai", "label": "IA" }
+        { "href": "#ai", "label": "Claude" }
       ]
     },
     "netsuite": {
       "eyebrow": "№ Pilier I · NetSuite",
-      "h2Before": "NetSuite, ",
-      "h2Emphasis": "opérationnel",
+      "h2Before": "L’ERP ",
+      "h2Emphasis": "habité",
       "h2After": ".",
-      "lede": "Pour les organisations qui veulent un ERP utile, pas un fardeau.",
+      "lede": "Pour qu’il devienne un outil, pas un fardeau.",
       "blocks": [
         {
           "label": "I",
           "title": "Audit & architecture",
-          "body": "Cartographier, prioriser, livrer un plan d’action documenté."
+          "body": "Cartographier, prioriser, livrer un plan d’action."
         },
         {
           "label": "II",
-          "title": "Custom dev",
-          "body": "SuiteScript 2.1, RESTlets, Suitelets, Map/Reduce. Code lisible, testé."
+          "title": "SuiteScript",
+          "body": "RESTlets, Suitelets, Map/Reduce. Code lisible, testé."
         },
         {
           "label": "III",
-          "title": "Automation",
+          "title": "Automatisation",
           "body": "Supprimer les ressaisies. Brancher les outils tiers."
         },
         {
           "label": "IV",
           "title": "Peppol",
-          "body": "Conformité BIS 3.0, intégration NetSuite, archivage."
+          "body": "BIS 3.0, intégration NetSuite, archivage."
         }
       ]
     },
     "ai": {
-      "eyebrow": "№ Pilier II · IA",
-      "h2Before": "L’IA, ",
-      "h2Emphasis": "dans le flux",
+      "eyebrow": "№ Pilier II · Claude",
+      "h2Before": "Claude, ",
+      "h2Emphasis": "branché au métier",
       "h2After": ".",
-      "lede": "Brancher les modèles aux opérations, pas l’inverse.",
+      "lede": "Pas un produit IA générique. Ancré dans vos données, vos règles, votre langage.",
       "blocks": [
         {
           "label": "I",
-          "title": "Copilotes",
-          "body": "Assistants encastrés. Vos données, votre langage."
+          "title": "Agents Claude",
+          "body": "Embarqués dans NetSuite. Pas de plugin externe."
         },
         {
           "label": "II",
-          "title": "Workflows IA",
+          "title": "Workflows Claude",
           "body": "Classifications, extractions, décisions auditables."
         },
         {
           "label": "III",
-          "title": "Search & retrieval",
-          "body": "RAG sourcé sur votre base documentaire."
+          "title": "Recherche sourcée",
+          "body": "RAG sur votre base documentaire. Réponses traçables."
         },
         {
           "label": "IV",
-          "title": "Decision support",
-          "body": "Agents qui creusent avant chaque arbitrage."
+          "title": "Arbitrage",
+          "body": "Agents qui creusent avant chaque décision stratégique."
         }
       ]
     },
@@ -259,7 +258,7 @@
   "about": {
     "page": {
       "title": "À propos",
-      "metaDescription": "Thibaut Gendebien — pratique indépendante au Benelux, dédiée à NetSuite et à l’IA dans les opérations."
+      "metaDescription": "Thibaut Gendebien — pratique indépendante au Benelux. NetSuite et Claude branchés nativement."
     },
     "hero": {
       "eyebrow": "№ About · Indépendant",
@@ -270,8 +269,8 @@
       "eyebrow": "№ Pourquoi TGTC",
       "paragraphs": [
         "Un interlocuteur qui code, qui comprend les opérations, et qui sait dire « ce n’est pas la bonne approche ».",
-        "Deux convictions : un ERP n’a de valeur que s’il est habité ; l’IA, qu’une fois branchée à des processus réels.",
-        "Format resserré. Engagements ciblés. Pari sur la qualité, pas le volume."
+        "Deux convictions : un ERP ne sert que s’il est habité ; Claude n’a de valeur que branché au métier.",
+        "Format resserré. Pari sur la qualité, pas le volume."
       ]
     },
     "principles": {
@@ -285,12 +284,12 @@
         {
           "label": "II",
           "title": "Délivrer ce qui sert",
-          "body": "Métrique : qui ouvre l’outil le lundi matin sans broncher."
+          "body": "Métrique : qui ouvre l’outil le lundi sans broncher."
         },
         {
           "label": "III",
           "title": "Communication directe",
-          "body": "Pas de jargon. Note hebdo : ce qui marche, ce qui frotte, ce qu’on livre."
+          "body": "Pas de jargon. Note hebdo : ce qui marche, ce qu’on livre."
         }
       ]
     },
@@ -305,7 +304,7 @@
   "contact": {
     "page": {
       "title": "Contact",
-      "metaDescription": "Contact direct — email, LinkedIn, et localisation pour TG Tech Consulting au Benelux."
+      "metaDescription": "Contact direct — email, LinkedIn, Benelux."
     },
     "hero": {
       "eyebrow": "№ Contact · Engage",
@@ -352,7 +351,7 @@
         },
         {
           "title": "Données collectées",
-          "body": "Vercel Analytics (cookieless). Sur consentement, Google Analytics 4 (pages, source, durée). Logs techniques temporaires côté hébergeur."
+          "body": "Vercel Analytics (cookieless). Sur consentement, Google Analytics 4. Logs techniques temporaires côté hébergeur."
         },
         {
           "title": "Finalités",

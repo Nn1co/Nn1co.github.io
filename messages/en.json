@@ -8,7 +8,7 @@
   },
   "footer": {
     "brand": "TG TECH · CONSULTING",
-    "tagline": "NetSuite. AI. Benelux.",
+    "tagline": "NetSuite + Claude, native. Benelux.",
     "contact": "Contact",
     "navigation": "Navigation",
     "legal": "Legal",
@@ -38,34 +38,33 @@
       "NetSuite OneWorld",
       "SuiteScript 2.1",
       "RESTlets",
-      "AI copilots",
+      "Claude embedded",
+      "Claude agents",
       "Peppol BIS 3.0",
-      "Workflow automation",
-      "RAG search",
-      "Decision support",
+      "Automation",
+      "Sourced RAG",
       "Map / Reduce",
       "User Events"
     ]
   },
   "home": {
     "page": {
-      "title": "NetSuite consulting & AI integration",
-      "metaDescription": "Independent NetSuite and AI practice based in the Benelux. Audit, custom development, automation, and business copilots — by TG Tech Consulting."
+      "title": "NetSuite + Claude, native",
+      "metaDescription": "Independent practice in the Benelux. NetSuite and Claude wired natively, no patchwork. Business task automation."
     },
     "hero": {
       "eyebrow": "№ 01 · Practice · Benelux",
-      "h1Before": "NetSuite, truly ",
-      "h1Emphasis": "habitable",
+      "h1Before": "NetSuite + Claude. ",
+      "h1Emphasis": "Native",
       "h1After": ".",
-      "lede": "ERP that earns its keep. AI wired into operations. No demos.",
+      "lede": "One platform. Tasks automated. Decisions assisted. No patchwork.",
       "ctaPrimary": "Engage",
       "ctaSecondary": "See services",
       "indexTitle": "Index",
       "indexItems": [
-        "Audit & architecture",
-        "SuiteScript & RESTlets",
-        "Workflow automation",
-        "AI copilots",
+        "NetSuite augmented",
+        "Claude embedded",
+        "Automation",
         "Peppol"
       ]
     },
@@ -85,53 +84,53 @@
     },
     "netsuite": {
       "eyebrow": "№ 03 · Pillar I",
-      "h2Before": "NetSuite, ",
-      "h2Emphasis": "operational",
+      "h2Before": "The ERP your teams ",
+      "h2Emphasis": "actually use",
       "h2After": ".",
-      "lede": "Audit. Architect. Ship.",
+      "lede": "So it becomes a tool, not a burden.",
       "blocks": [
         {
           "label": "I",
           "title": "Audit & architecture",
-          "body": "Map. Prioritise. Recommend."
+          "body": "Map what frustrates. Prioritise what pays."
         },
         {
           "label": "II",
-          "title": "Custom dev",
-          "body": "SuiteScript 2.1. Clean code, shipped without surprise."
+          "title": "SuiteScript",
+          "body": "Readable code, tested, shipped without surprise."
         },
         {
           "label": "III",
           "title": "Automation",
-          "body": "Standardise, kill duplicate entry, free up time."
+          "body": "Kill duplicate entry. Plug in third-party systems."
         }
       ],
-      "cta": "NetSuite details"
+      "cta": "See pillar"
     },
     "ai": {
       "eyebrow": "№ 04 · Pillar II",
-      "h2Before": "AI, ",
-      "h2Emphasis": "in the flow",
+      "h2Before": "Claude, ",
+      "h2Emphasis": "wired to operations",
       "h2After": ".",
-      "lede": "Not a product. A layer. Wired to operations.",
+      "lede": "Anchored in your data, your rules, your language. Not a generic AI product.",
       "blocks": [
         {
           "label": "I",
-          "title": "Copilots",
-          "body": "Your data. Your language. Your rules."
+          "title": "Claude agents",
+          "body": "Embedded inside NetSuite. Your rules, your language."
         },
         {
           "label": "II",
-          "title": "AI workflows",
+          "title": "Claude workflows",
           "body": "Classifications, extractions, auditable decisions."
         },
         {
           "label": "III",
-          "title": "Decision support",
-          "body": "Synthesis, alerts, agents that dig before each call."
+          "title": "Search & decisions",
+          "body": "Sourced RAG. Agents that dig before each call."
         }
       ],
-      "cta": "AI details"
+      "cta": "See pillar"
     },
     "approach": {
       "eyebrow": "№ 05 · Approach",
@@ -152,13 +151,13 @@
         {
           "label": "III",
           "title": "Operate",
-          "body": "Handover, runbook, your teams take over."
+          "body": "Handover, runbook. Your teams take over."
         }
       ]
     },
     "peppol": {
       "eyebrow": "№ 06 · Adjacent",
-      "body": "Peppol BIS 3.0, NetSuite integration, legal archiving. A natural extension of the ERP."
+      "body": "Peppol BIS 3.0, NetSuite integration, legal archiving. Naturally."
     },
     "manifesto": {
       "quote": "We don’t deliver projects. We deliver tools your teams open every morning without grinding their teeth.",
@@ -177,25 +176,25 @@
   "services": {
     "page": {
       "title": "Services",
-      "metaDescription": "Two practices, one rigor — NetSuite consulting and AI automation, by TG Tech Consulting in the Benelux."
+      "metaDescription": "NetSuite augmented + Claude embedded. Independent practice in the Benelux."
     },
     "hero": {
       "eyebrow": "№ Services · Practice",
       "h1Before": "Two practices, ",
       "h1Emphasis": "one rigor",
       "h1After": ".",
-      "lede": "Understand before delivering. Deliver what gets used.",
+      "lede": "NetSuite + Claude, wired natively. Understand before delivering.",
       "anchors": [
         { "href": "#netsuite", "label": "NetSuite" },
-        { "href": "#ai", "label": "AI" }
+        { "href": "#ai", "label": "Claude" }
       ]
     },
     "netsuite": {
       "eyebrow": "№ Pillar I · NetSuite",
-      "h2Before": "NetSuite, ",
-      "h2Emphasis": "operational",
+      "h2Before": "The ERP, ",
+      "h2Emphasis": "inhabited",
       "h2After": ".",
-      "lede": "For organisations that want a useful ERP, not a burden.",
+      "lede": "So it becomes a tool, not a burden.",
       "blocks": [
         {
           "label": "I",
@@ -204,8 +203,8 @@
         },
         {
           "label": "II",
-          "title": "Custom dev",
-          "body": "SuiteScript 2.1, RESTlets, Suitelets, Map/Reduce. Readable, tested."
+          "title": "SuiteScript",
+          "body": "RESTlets, Suitelets, Map/Reduce. Readable, tested."
         },
         {
           "label": "III",
@@ -220,31 +219,31 @@
       ]
     },
     "ai": {
-      "eyebrow": "№ Pillar II · AI",
-      "h2Before": "AI, ",
-      "h2Emphasis": "in the flow",
+      "eyebrow": "№ Pillar II · Claude",
+      "h2Before": "Claude, ",
+      "h2Emphasis": "wired to operations",
       "h2After": ".",
-      "lede": "Wire models to operations, not the other way around.",
+      "lede": "Not a generic AI product. Anchored in your data, your rules, your language.",
       "blocks": [
         {
           "label": "I",
-          "title": "Copilots",
-          "body": "Embedded assistants. Your data, your language."
+          "title": "Claude agents",
+          "body": "Embedded inside NetSuite. No external plugin."
         },
         {
           "label": "II",
-          "title": "AI workflows",
+          "title": "Claude workflows",
           "body": "Classifications, extractions, auditable decisions."
         },
         {
           "label": "III",
-          "title": "Search & retrieval",
-          "body": "Sourced RAG over your document base."
+          "title": "Sourced search",
+          "body": "RAG over your document base. Traceable answers."
         },
         {
           "label": "IV",
-          "title": "Decision support",
-          "body": "Agents that dig before every call."
+          "title": "Arbitration",
+          "body": "Agents that dig before every strategic call."
         }
       ]
     },
@@ -259,7 +258,7 @@
   "about": {
     "page": {
       "title": "About",
-      "metaDescription": "Thibaut Gendebien — independent practice based in the Benelux, dedicated to NetSuite and to AI in business operations."
+      "metaDescription": "Thibaut Gendebien — independent practice in the Benelux. NetSuite and Claude wired natively."
     },
     "hero": {
       "eyebrow": "№ About · Independent",
@@ -270,8 +269,8 @@
       "eyebrow": "№ Why TGTC",
       "paragraphs": [
         "A counterpart who codes, understands operations, and isn’t afraid to say ‘this isn’t the right approach’.",
-        "Two convictions: an ERP only earns its keep when inhabited; AI, only when wired into real processes.",
-        "Tight format. Focused engagements. A bet on quality, not volume."
+        "Two convictions: an ERP only earns its keep when inhabited; Claude only earns it when wired into operations.",
+        "Tight format. A bet on quality, not volume."
       ]
     },
     "principles": {
@@ -290,7 +289,7 @@
         {
           "label": "III",
           "title": "Direct comms",
-          "body": "No jargon. Weekly note: what works, what frustrates, what we ship."
+          "body": "No jargon. Weekly note: what works, what we ship next."
         }
       ]
     },
@@ -305,7 +304,7 @@
   "contact": {
     "page": {
       "title": "Contact",
-      "metaDescription": "Direct contact — email, LinkedIn, and location for TG Tech Consulting in the Benelux."
+      "metaDescription": "Direct contact — email, LinkedIn, Benelux."
     },
     "hero": {
       "eyebrow": "№ Contact · Engage",
@@ -352,7 +351,7 @@
         },
         {
           "title": "Data collected",
-          "body": "Vercel Analytics (cookieless). On consent, Google Analytics 4 (pages, source, duration). Temporary host-side technical logs."
+          "body": "Vercel Analytics (cookieless). On consent, Google Analytics 4. Temporary host-side technical logs."
         },
         {
           "title": "Purposes",

@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import { Eyebrow } from '@/components/shared/Eyebrow'
 import { Rule } from '@/components/shared/Rule'
 import { Reveal } from '@/components/motion/Reveal'
+import { HoverLetters } from '@/components/motion/HoverLetters'
 import { Marquee } from '@/components/decorative/Marquee'
 import { SectionWatermark } from '@/components/decorative/SectionWatermark'
 import { DataNodes } from '@/components/decorative/DataNodes'
@@ -31,10 +32,10 @@ export async function PartnersSection() {
           {items.map((partner) => (
             <li key={partner.name} className="group flex flex-col gap-4">
               <span
-                className="font-display text-4xl tracking-[0.22em] text-cream transition-colors group-hover:text-jade md:text-5xl"
+                className="font-display text-4xl tracking-[0.22em] text-cream md:text-5xl"
                 aria-label={partner.name}
               >
-                {partner.name}
+                <HoverLetters>{partner.name}</HoverLetters>
               </span>
               <Rule variant="dotted" />
               <p className="font-mono text-xs uppercase tracking-widest text-cream-muted">
