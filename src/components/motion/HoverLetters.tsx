@@ -10,84 +10,133 @@ type HoverLettersProps = {
   intensity?: 'soft' | 'wave'
 }
 
-const SCRAMBLE_CHARS = '!<>-_\\/[]{}=+*^?#§◊•◦∞±¥¢×ø'
+// Scramble glyphs — chosen to feel "corrupted" without being too wide.
+const SCRAMBLE_CHARS = '#%&@$XBNQDFRGHJKWZVY*+'
 
 /**
- * Terminal-style text scramble effect on hover.
- * Each character cycles through random glyphs before resolving back
- * to its original letter, with a per-char start/end offset so the
- * resolution sweeps across the word like decoded data.
+ * Subtle terminal-style scramble on hover.
  *
- * No colour or glow change — only the textContent is corrupted, the
- * surrounding typography stays untouched.
+ * Behaviour:
+ *  - Each character is wrapped in its own span whose width is locked to
+ *    its measured natural width on first mount. As the inner glyph
+ *    swaps, the surrounding text never reflows.
+ *  - At any given moment only 1-3 characters are scrambled (depending
+ *    on word length). The other characters stay readable, so the word
+ *    is always recognisable.
+ *  - Total animation lasts ~700ms. Each scrambled position holds a
+ *    glyph for ~70ms before either picking a new glyph or settling and
+ *    letting another position take over.
  *
- * Implementation writes directly to textContent inside a rAF loop —
- * zero React re-renders during the animation.
+ * No colour or glow change — only the textContent corrupts.
  */
 export function HoverLetters({ children, className }: HoverLettersProps) {
   const ref = useRef<HTMLSpanElement>(null)
+  const charRefs = useRef<Array<HTMLSpanElement | null>>([])
   const animatingRef = useRef(false)
+  const chars = Array.from(children)
 
+  // Lock each character's natural width once on mount + when the prop
+  // changes (locale switch). Prevents layout shift during scramble.
   useEffect(() => {
-    if (ref.current) ref.current.textContent = children
+    charRefs.current.forEach((el, i) => {
+      if (!el) return
+      // Reset before measuring in case content changed.
+      el.style.width = ''
+      el.textContent = chars[i] === ' ' ? ' ' : chars[i] ?? ''
+      const w = el.getBoundingClientRect().width
+      // Add a hair of breathing room so descenders/ascenders never clip.
+      el.style.width = `${w}px`
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [children])
 
   function start() {
     if (typeof window === 'undefined') return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    if (!ref.current || animatingRef.current) return
+    if (animatingRef.current) return
+
+    const len = chars.length
+    if (len === 0) return
+
+    // Number of characters being scrambled at once. Keeps the word
+    // mostly readable: never more than 3, and never more than half.
+    const maxActive = Math.min(3, Math.max(1, Math.floor(len / 4)))
+
+    const TOTAL_MS = 700
+    const HOLD_MS = 70
+    const ROTATE_PROB = 0.4
 
     animatingRef.current = true
+    const startTime = performance.now()
+    const positionNext: number[] = Array(len).fill(0)
+    const activeSet = new Set<number>()
 
-    const chars = Array.from(children)
-    // Slower, more deliberate timings — roughly 2x slower than the
-    // previous version. start ~ 0–55 frames, end ~ 55–140 frames
-    // → up to ~2.3s for the slowest char to resolve at 60fps.
-    const queue = chars.map((c) => ({
-      from: c,
-      to: c,
-      start: Math.floor(Math.random() * 55),
-      end: 55 + Math.floor(Math.random() * 85),
-    }))
+    const settle = (pos: number) => {
+      const span = charRefs.current[pos]
+      if (span) span.textContent = chars[pos] === ' ' ? ' ' : chars[pos]
+    }
 
-    let frame = 0
-    let id: number | null = null
+    const pickNew = (): number => {
+      for (let i = 0; i < 25; i += 1) {
+        const p = Math.floor(Math.random() * len)
+        if (!activeSet.has(p) && chars[p] !== ' ') return p
+      }
+      return -1
+    }
+
+    while (activeSet.size < maxActive) {
+      const p = pickNew()
+      if (p === -1) break
+      activeSet.add(p)
+      positionNext[p] = startTime
+    }
 
     const tick = () => {
-      if (!ref.current) {
+      const now = performance.now()
+      const elapsed = now - startTime
+
+      if (elapsed >= TOTAL_MS) {
+        for (let i = 0; i < len; i += 1) settle(i)
         animatingRef.current = false
         return
       }
-      let output = ''
-      let complete = 0
-      for (const q of queue) {
-        if (q.to === ' ') {
-          output += ' '
-          complete += 1
-          continue
-        }
-        if (frame >= q.end) {
-          output += q.to
-          complete += 1
-        } else if (frame >= q.start) {
-          output += SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)]
+
+      // Iterate over a snapshot — we may mutate the set inside the loop.
+      const positions = Array.from(activeSet)
+      for (const pos of positions) {
+        if (now < positionNext[pos]) continue
+
+        const remaining = TOTAL_MS - elapsed
+        // Once we are close to the end, just settle.
+        if (remaining < HOLD_MS * 1.5 || Math.random() < ROTATE_PROB) {
+          settle(pos)
+          activeSet.delete(pos)
+          if (remaining > HOLD_MS) {
+            const newP = pickNew()
+            if (newP !== -1) {
+              activeSet.add(newP)
+              positionNext[newP] = now + HOLD_MS
+              const span = charRefs.current[newP]
+              if (span) {
+                span.textContent =
+                  SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)]
+              }
+            }
+          }
         } else {
-          output += q.from
+          const span = charRefs.current[pos]
+          if (span) {
+            span.textContent =
+              SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)]
+          }
+          positionNext[pos] = now + HOLD_MS
         }
       }
-      ref.current.textContent = output
-      frame += 1
-      if (complete < queue.length) {
-        id = requestAnimationFrame(tick)
-      } else {
-        animatingRef.current = false
-      }
+
+      requestAnimationFrame(tick)
     }
 
-    id = requestAnimationFrame(tick)
-    return () => {
-      if (id !== null) cancelAnimationFrame(id)
-    }
+    requestAnimationFrame(tick)
   }
 
   return (
@@ -99,7 +148,18 @@ export function HoverLetters({ children, className }: HoverLettersProps) {
       aria-label={children}
       className={cn('text-scramble inline-block', className)}
     >
-      {children}
+      {chars.map((c, i) => (
+        <span
+          key={i}
+          ref={(el) => {
+            charRefs.current[i] = el
+          }}
+          className="inline-block text-center"
+          aria-hidden={c === ' '}
+        >
+          {c === ' ' ? ' ' : c}
+        </span>
+      ))}
     </span>
   )
 }
