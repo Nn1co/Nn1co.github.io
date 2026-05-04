@@ -7,7 +7,6 @@ import { ApproachSection } from '@/components/home/ApproachSection'
 import { PeppolMention } from '@/components/home/PeppolMention'
 import { ManifestoQuote } from '@/components/home/ManifestoQuote'
 import { FinalCtaSection } from '@/components/home/FinalCtaSection'
-import { TreeOfLife } from '@/components/decorative/TreeOfLife'
 import { buildMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -33,8 +32,7 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale)
 
   return (
-    <div className="relative">
-      <TreeOfLife />
+    <>
       <HeroSection />
       <PartnersSection />
       <PillarSection
@@ -52,6 +50,6 @@ export default async function HomePage({ params }: Props) {
       <PeppolMention />
       <ManifestoQuote />
       <FinalCtaSection />
-    </div>
+    </>
   )
 }
