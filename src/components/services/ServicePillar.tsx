@@ -20,7 +20,7 @@ export async function ServicePillar({ id, namespace }: ServicePillarProps) {
       <Eyebrow>{t('eyebrow')}</Eyebrow>
       <Headline as="h2" size="3xl" className="mt-3 max-w-3xl">
         {t('h2Before')}
-        <em className="not-italic text-gold italic">{t('h2Emphasis')}</em>
+        <em className="italic text-gold">{t('h2Emphasis')}</em>
         {t('h2After')}
       </Headline>
       <p className="mt-6 max-w-prose text-lg text-cream-dim">{t('lede')}</p>

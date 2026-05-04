@@ -1,11 +1,17 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
+import { usePathname } from '@/i18n/navigation'
 import { LanguageSwitcher } from './LanguageSwitcher'
-import { MobileOverlay } from './MobileOverlay'
 import { cn } from '@/lib/cn'
+
+const MobileOverlay = dynamic(
+  () => import('./MobileOverlay').then((m) => ({ default: m.MobileOverlay })),
+  { ssr: false }
+)
 
 export function Header() {
   const t = useTranslations('nav')
@@ -57,7 +63,7 @@ export function Header() {
 
           <button
             type="button"
-            className="-mr-2 p-2 md:hidden"
+            className="-mr-2 rounded p-2 md:hidden"
             onClick={() => setMobileOpen(true)}
             aria-label={t('menu')}
             aria-expanded={mobileOpen}
@@ -79,16 +85,28 @@ export function Header() {
         </div>
       </header>
 
-      <MobileOverlay open={mobileOpen} onClose={() => setMobileOpen(false)} />
+      {mobileOpen ? (
+        <MobileOverlay open={mobileOpen} onClose={() => setMobileOpen(false)} />
+      ) : null}
     </>
   )
 }
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  const pathname = usePathname()
+  const isActive =
+    href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`)
+
   return (
     <Link
       href={href}
-      className="border-b border-dotted border-transparent pb-0.5 font-mono text-xs uppercase tracking-widest text-cream-dim transition-[color,border-color] duration-200 hover:border-gold hover:text-cream"
+      aria-current={isActive ? 'page' : undefined}
+      className={cn(
+        'border-b border-dotted pb-0.5 font-mono text-xs uppercase tracking-widest transition-[color,border-color] duration-200',
+        isActive
+          ? 'border-gold text-cream'
+          : 'border-transparent text-cream-dim hover:border-gold hover:text-cream'
+      )}
     >
       {children}
     </Link>

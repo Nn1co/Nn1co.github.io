@@ -33,7 +33,7 @@ export async function PillarSection({
         <Eyebrow>{t('eyebrow')}</Eyebrow>
         <Headline as="h2" size="3xl" className="max-w-3xl">
           {t('h2Before')}
-          <em className="not-italic text-gold italic">{t('h2Emphasis')}</em>
+          <em className="italic text-gold">{t('h2Emphasis')}</em>
           {t('h2After')}
         </Headline>
         <p className="max-w-prose text-lg text-cream-dim">{t('lede')}</p>

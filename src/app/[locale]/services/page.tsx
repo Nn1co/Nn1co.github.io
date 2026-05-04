@@ -39,7 +39,7 @@ export default async function ServicesPage({ params }: Props) {
         <Eyebrow>{t('hero.eyebrow')}</Eyebrow>
         <Headline as="h1" size="4xl" className="mt-3 max-w-4xl">
           {t('hero.h1Before')}
-          <em className="not-italic text-gold italic">{t('hero.h1Emphasis')}</em>
+          <em className="italic text-gold">{t('hero.h1Emphasis')}</em>
           {t('hero.h1After')}
         </Headline>
         <p className="mt-6 max-w-prose text-lg text-cream-dim md:text-xl">

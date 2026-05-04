@@ -1,13 +1,11 @@
 'use client'
 
-import { motion, useReducedMotion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 import { cn } from '@/lib/cn'
 
 type RevealProps = {
   children: React.ReactNode
   className?: string
-  delay?: number
-  amount?: number
   as?: 'div' | 'section' | 'article' | 'header' | 'footer' | 'aside'
   id?: string
   'aria-label'?: string
@@ -16,26 +14,42 @@ type RevealProps = {
 export function Reveal({
   children,
   className,
-  delay = 0,
-  amount = 0.25,
-  as = 'div',
+  as: Tag = 'div',
   id,
   'aria-label': ariaLabel,
 }: RevealProps) {
-  const reduced = useReducedMotion()
-  const MotionTag = motion[as]
+  const ref = useRef<HTMLElement | null>(null)
+
+  useEffect(() => {
+    const node = ref.current
+    if (!node) return
+    if (typeof IntersectionObserver === 'undefined') {
+      node.classList.add('reveal--visible')
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          node.classList.add('reveal--visible')
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.18, rootMargin: '0px 0px -40px 0px' }
+    )
+
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <MotionTag
+    <Tag
+      ref={ref as React.RefObject<never>}
       id={id}
       aria-label={ariaLabel}
-      className={cn(className)}
-      initial={reduced ? { opacity: 0 } : { opacity: 0, y: 20 }}
-      whileInView={reduced ? { opacity: 1 } : { opacity: 1, y: 0 }}
-      viewport={{ once: true, amount }}
-      transition={{ duration: reduced ? 0.4 : 0.6, ease: [0.22, 1, 0.36, 1], delay }}
+      className={cn('reveal', className)}
     >
       {children}
-    </MotionTag>
+    </Tag>
   )
 }

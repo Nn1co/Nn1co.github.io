@@ -7,10 +7,11 @@ integration practice based in the Benelux.
 
 - **Framework**: Next.js 14 (App Router) with React 18
 - **Language**: TypeScript (strict mode)
-- **Styling**: Tailwind CSS v3
-- **Animations**: Framer Motion
-- **i18n**: next-intl (subpath routing `/fr`, `/en`)
-- **Content**: MDX via `@next/mdx`
+- **Styling**: Tailwind CSS v3 with custom palette tokens (ink, cream, gold)
+- **Animations**: CSS-first; Framer Motion lazy-loaded for the mobile overlay
+- **i18n**: next-intl 4 (subpath routing `/fr`, `/en`, Accept-Language detection)
+- **Content**: structured copy in `messages/<locale>.json`, surfaced via
+  `useTranslations` / `getTranslations`
 - **Analytics**: `@vercel/analytics` (cookieless) + GA4 (consent-gated)
 - **Hosting**: Vercel
 - **Package manager**: npm
@@ -42,8 +43,26 @@ onto Vercel for `tgtechconsulting.com`.
 
 ## Content edits
 
-Page copy lives in `content/<locale>/<page>.mdx` (added in Phase 4+).
-A copy change is a PR of `.mdx` files only — no code change required.
+Page copy lives in `messages/fr.json` and `messages/en.json`, organised
+by namespace (`home.hero`, `services.netsuite`, `about.principles`, …).
+A copy change is a PR of these JSON files only — no React or layout
+work is required for a textual update. Both locales must stay in sync.
+
+## Environment variables
+
+| Variable | Purpose | Required in prod |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Canonical site origin (e.g. `https://tgtechconsulting.com`) | yes |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | GA4 measurement ID, only loaded after explicit consent | optional |
+
+## Performance budget
+
+The build aims for Lighthouse 95+ across Performance, Accessibility,
+Best Practices, and SEO on every page. First-Load JS sits well under
+the 100 kB gzipped target on every route; legal pages stay close to
+the framework baseline. CSS animations are preferred over Framer
+Motion to keep the initial bundle lean; Framer is only paid for when
+the mobile menu opens.
 
 ## Repository
 
