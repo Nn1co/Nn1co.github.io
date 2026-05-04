@@ -9,21 +9,27 @@ import { Typewriter } from '@/components/motion/Typewriter'
 import { MagneticCta } from '@/components/motion/MagneticCta'
 import { CursorSpotlight } from '@/components/decorative/CursorSpotlight'
 import { SectionWatermark } from '@/components/decorative/SectionWatermark'
+import { ParticleField } from '@/components/decorative/ParticleField'
+import { Scanline } from '@/components/decorative/Scanline'
+import { DataTicker } from '@/components/decorative/DataTicker'
 
 export function HeroSection() {
   const t = useTranslations('home.hero')
   const indexItems = t.raw('indexItems') as string[]
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative min-h-[88vh] overflow-hidden">
       <SectionWatermark>01</SectionWatermark>
+      <ParticleField density="med" palette="mixed" />
+      <Scanline delaySeconds={3} />
       <CursorSpotlight />
+      <DataTicker prefix="SYS · NETSUITE" className="left-6 top-24 md:left-10 md:top-28" />
 
       <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 pt-32 md:pt-48 lg:grid-cols-[1.25fr_0.75fr] lg:gap-20">
         <div className="flex flex-col gap-8">
-          <Eyebrow className="glyph-rise" >{t('eyebrow')}</Eyebrow>
+          <Eyebrow className="glyph-rise">{t('eyebrow')}</Eyebrow>
           <h1
-            className="font-display text-4xl leading-[1.05] text-cream md:text-5xl lg:text-[5.5rem]"
+            className="font-display text-4xl font-light leading-[1.02] text-cream md:text-5xl lg:text-[5.5rem]"
             style={{ animation: 'glyph-rise 1.1s cubic-bezier(0.22,1,0.36,1) backwards', animationDelay: '0.1s' }}
           >
             <Typewriter
@@ -45,7 +51,7 @@ export function HeroSection() {
 
         <aside
           aria-label={t('indexTitle')}
-          className="relative self-start border border-rule-soft bg-ink-soft/40 p-6 shadow-inset-glow lg:mt-24"
+          className="relative self-start border border-rule-jade bg-ink-soft/50 p-6 shadow-jade-glow backdrop-blur-sm lg:mt-24"
         >
           <div
             aria-hidden="true"
@@ -59,7 +65,7 @@ export function HeroSection() {
             <ol className="space-y-3 font-body text-base text-cream-dim">
               {indexItems.map((item, idx) => (
                 <li key={idx} className="group flex items-start gap-4">
-                  <span className="mt-0.5 inline-block w-6 shrink-0 font-mono text-xs uppercase tracking-widest text-gold">
+                  <span className="mt-0.5 inline-block w-6 shrink-0 font-mono text-xs uppercase tracking-widest text-jade">
                     {romanize(idx + 1)}
                   </span>
                   <span className="under-grow">{item}</span>

@@ -4,29 +4,39 @@
 
 :root {
   color-scheme: dark;
+  --bg-base: #0A1410;
+  --bg-soft: #0F1B16;
+  --bg-deep: #060B09;
+  --c-cream: #E8E2CF;
+  --c-gold: #D4A55F;
+  --c-jade: #34D399;
+  --c-cyan: #67E8F9;
 }
 
 @layer base {
   html {
-    background: #0E1410;
+    background: var(--bg-base);
   }
 
   body {
-    background: #0E1410;
-    color: #E8E2CF;
-    font-family: var(--font-body), 'Iowan Old Style', Georgia, serif;
-    font-feature-settings: 'kern', 'liga', 'onum';
+    background:
+      radial-gradient(1100px circle at 80% -20%, rgba(52, 211, 153, 0.06), transparent 60%),
+      radial-gradient(900px circle at -10% 110%, rgba(103, 232, 249, 0.04), transparent 65%),
+      var(--bg-base);
+    color: var(--c-cream);
+    font-family: var(--font-body), Inter, system-ui, sans-serif;
+    font-feature-settings: 'kern', 'liga', 'cv02', 'cv03', 'cv04', 'cv11';
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 
   ::selection {
-    background: rgba(212, 165, 95, 0.28);
-    color: #E8E2CF;
+    background: rgba(52, 211, 153, 0.28);
+    color: var(--c-cream);
   }
 
   *:focus-visible {
-    outline: 2px solid #D4A55F;
+    outline: 2px solid var(--c-jade);
     outline-offset: 3px;
     border-radius: 2px;
   }
@@ -45,11 +55,14 @@
     text-wrap: pretty;
   }
   .rule-soft {
-    border-color: rgba(232, 226, 207, 0.12);
+    border-color: rgba(232, 226, 207, 0.10);
   }
   .rule-dotted {
     border-style: dotted;
-    border-color: rgba(232, 226, 207, 0.25);
+    border-color: rgba(232, 226, 207, 0.22);
+  }
+  .rule-jade {
+    border-color: rgba(52, 211, 153, 0.20);
   }
 }
 
@@ -76,12 +89,14 @@
   transition:
     background-position 0.5s ease-in-out,
     color 0.3s ease-out,
-    transform 0.3s ease-out;
+    transform 0.3s ease-out,
+    box-shadow 0.4s ease-out;
 }
 
 .ink-button:hover,
 .ink-button:focus-visible {
   background-position: 100% 50%;
+  box-shadow: 0 0 30px rgba(212, 165, 95, 0.35);
 }
 
 /* ─── Section watermark numerals ──────────────────── */
@@ -113,20 +128,8 @@
 .marquee {
   overflow: hidden;
   position: relative;
-  mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    #000 8%,
-    #000 92%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    #000 8%,
-    #000 92%,
-    transparent 100%
-  );
+  mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
 }
 
 .marquee-track {
@@ -141,27 +144,19 @@
 }
 
 @keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-/* ─── Breathing letter-spacing on the manifesto ───── */
+/* ─── Breathing letter-spacing ────────────────────── */
 .breathe {
   animation: breathe 7s ease-in-out infinite;
   will-change: letter-spacing;
 }
 
 @keyframes breathe {
-  0%, 100% {
-    letter-spacing: 0em;
-  }
-  50% {
-    letter-spacing: 0.02em;
-  }
+  0%, 100% { letter-spacing: 0em; }
+  50% { letter-spacing: 0.02em; }
 }
 
 /* ─── Hover lift on pillar cards ──────────────────── */
@@ -169,7 +164,8 @@
   position: relative;
   transition:
     transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-    background-color 0.3s ease-out;
+    background-color 0.3s ease-out,
+    box-shadow 0.4s ease-out;
 }
 
 .lift-card::before {
@@ -179,7 +175,7 @@
   top: 0;
   height: 1px;
   width: 0;
-  background: linear-gradient(90deg, #D4A55F, transparent);
+  background: linear-gradient(90deg, #34D399, transparent);
   transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -190,6 +186,7 @@
 @media (hover: hover) {
   .lift-card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(52, 211, 153, 0.08);
   }
 }
 
@@ -199,36 +196,30 @@
   inset: 0;
   pointer-events: none;
   background: radial-gradient(
-    480px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(212, 165, 95, 0.07),
+    520px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(52, 211, 153, 0.10),
     transparent 60%
   );
   opacity: 0;
   transition: opacity 0.6s ease-out;
-  z-index: 0;
+  z-index: 1;
 }
 
 .cursor-spotlight--active {
   opacity: 1;
 }
 
-/* ─── Numerical glyph reveal animation ─────────────── */
+/* ─── Glyph reveal entry animation ─────────────────── */
 @keyframes glyph-rise {
-  from {
-    opacity: 0;
-    transform: translateY(40%) skewY(8deg);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) skewY(0);
-  }
+  from { opacity: 0; transform: translateY(40%) skewY(8deg); }
+  to { opacity: 1; transform: translateY(0) skewY(0); }
 }
 
 .glyph-rise {
   animation: glyph-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 }
 
-/* ─── Underline grow on hover (for body links) ────── */
+/* ─── Underline grow on hover ─────────────────────── */
 .under-grow {
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0 100%;
@@ -246,7 +237,7 @@
   content: '/';
   display: inline-block;
   margin-right: 0.3em;
-  color: #D4A55F;
+  color: #34D399;
   font-style: italic;
 }
 
@@ -256,21 +247,245 @@
   width: 6px;
   height: 6px;
   border-radius: 9999px;
-  background: #D4A55F;
+  background: #34D399;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.6);
   animation: pulse-dot 2.4s ease-in-out infinite;
 }
 
 @keyframes pulse-dot {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
+  0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 10px rgba(52,211,153,0.6); }
+  50% { transform: scale(1.7); opacity: 0.4; box-shadow: 0 0 20px rgba(52,211,153,0.3); }
+}
+
+/* ═══════════════════════════════════════════════════ */
+/* AMBIENT MOTION — runs even when the user is idle    */
+/* ═══════════════════════════════════════════════════ */
+
+/* ─── Particle field (fireflies / pollen) ─────────── */
+.particle-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(212, 165, 95, 0.85), transparent 60%);
+  filter: blur(0.5px);
+  opacity: 0;
+  animation-name: particle-drift;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+.particle--jade {
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.95), transparent 60%);
+  box-shadow: 0 0 6px rgba(52, 211, 153, 0.5);
+}
+
+.particle--cyan {
+  background: radial-gradient(circle, rgba(103, 232, 249, 0.85), transparent 60%);
+  box-shadow: 0 0 5px rgba(103, 232, 249, 0.4);
+}
+
+.particle--big {
+  width: 5px;
+  height: 5px;
+  filter: blur(0.8px);
+}
+
+@keyframes particle-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.5);
+    opacity: 0;
   }
-  50% {
-    transform: scale(1.6);
-    opacity: 0.5;
+  10% { opacity: var(--p-opacity, 0.55); }
+  90% { opacity: var(--p-opacity, 0.55); }
+  100% {
+    transform: translate3d(var(--p-x, 0), var(--p-y, -200px), 0) scale(1);
+    opacity: 0;
   }
 }
 
+/* ─── Drifting tropical fog ───────────────────────── */
+.drifting-fog {
+  position: absolute;
+  inset: -10%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.drifting-fog::before,
+.drifting-fog::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+.drifting-fog::before {
+  background: radial-gradient(60% 60% at 30% 40%, rgba(52, 211, 153, 0.08), transparent 70%);
+  animation: fog-drift-a 28s ease-in-out infinite alternate;
+}
+
+.drifting-fog::after {
+  background: radial-gradient(50% 50% at 70% 60%, rgba(103, 232, 249, 0.05), transparent 70%);
+  animation: fog-drift-b 34s ease-in-out infinite alternate;
+}
+
+@keyframes fog-drift-a {
+  0% { transform: translate(-3%, -2%) scale(1); }
+  50% { transform: translate(4%, 3%) scale(1.06); }
+  100% { transform: translate(-2%, 4%) scale(0.97); }
+}
+
+@keyframes fog-drift-b {
+  0% { transform: translate(3%, 2%) scale(0.95); }
+  50% { transform: translate(-4%, -3%) scale(1.04); }
+  100% { transform: translate(2%, -4%) scale(1); }
+}
+
+/* ─── Tech HUD grid background ────────────────────── */
+.tech-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, rgba(52, 211, 153, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(52, 211, 153, 0.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 78%);
+  animation: grid-breathe 14s ease-in-out infinite alternate;
+}
+
+@keyframes grid-breathe {
+  0% { opacity: 0.55; background-size: 56px 56px; }
+  100% { opacity: 0.95; background-size: 60px 60px; }
+}
+
+/* ─── Data nodes (pulsing dots + flowing lines) ───── */
+.data-node {
+  fill: #34D399;
+  filter: drop-shadow(0 0 4px rgba(52, 211, 153, 0.6));
+  animation: data-blink 3.6s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.data-node:nth-child(2n) { animation-delay: 0.6s; }
+.data-node:nth-child(3n) { animation-delay: 1.4s; }
+.data-node:nth-child(4n) { animation-delay: 2.2s; }
+.data-node:nth-child(5n) { animation-delay: 2.9s; }
+
+@keyframes data-blink {
+  0%, 100% { opacity: 0.25; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+
+.data-line {
+  stroke: rgba(52, 211, 153, 0.18);
+  stroke-width: 1;
+  fill: none;
+  stroke-dasharray: 6 6;
+  animation: data-flow 9s linear infinite;
+}
+
+@keyframes data-flow {
+  to { stroke-dashoffset: -240; }
+}
+
+/* ─── Vine SVG path drawn on visibility ───────────── */
+.vine-path {
+  fill: none;
+  stroke: #34D399;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  filter: drop-shadow(0 0 3px rgba(52, 211, 153, 0.4));
+  animation: vine-draw 5.5s ease-out forwards;
+}
+
+@keyframes vine-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ─── Scanline sweep (subtle, occasional) ─────────── */
+.scanline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.5), transparent);
+  animation: scanline-sweep 11s linear infinite;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+@keyframes scanline-sweep {
+  0% { top: -2%; }
+  100% { top: 102%; }
+}
+
+/* ─── Tiny data ticker (blinking corner readout) ──── */
+.data-ticker {
+  position: absolute;
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(52, 211, 153, 0.55);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.data-ticker::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #34D399;
+  margin-right: 0.6em;
+  vertical-align: middle;
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+
+/* ─── Slow gradient hue drift on selected accents ─── */
+@keyframes gradient-drift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.gradient-drift {
+  background: linear-gradient(110deg, #34D399, #67E8F9, #34D399);
+  background-size: 240% 100%;
+  animation: gradient-drift 14s ease-in-out infinite;
+}
+
+/* ─── Floating leaf SVG (svg parent gets this) ────── */
+.leaf-float {
+  animation: leaf-sway 7s ease-in-out infinite;
+  transform-origin: center top;
+  will-change: transform;
+}
+
+@keyframes leaf-sway {
+  0%, 100% { transform: rotate(-3deg) translateY(0); }
+  50% { transform: rotate(3deg) translateY(-4px); }
+}
+
+/* ─── Reduced-motion fallbacks ────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -295,12 +510,28 @@
   .breathe,
   .pulse-dot,
   .glyph-rise,
-  .cursor-spotlight {
+  .cursor-spotlight,
+  .particle,
+  .drifting-fog::before,
+  .drifting-fog::after,
+  .tech-grid,
+  .data-node,
+  .data-line,
+  .vine-path,
+  .scanline,
+  .gradient-drift,
+  .leaf-float {
     animation: none !important;
   }
 
-  .cursor-spotlight {
+  .particle-field,
+  .scanline {
     display: none;
+  }
+
+  .drifting-fog,
+  .tech-grid {
+    opacity: 0.3;
   }
 
   .lift-card:hover {

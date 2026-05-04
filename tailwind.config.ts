@@ -11,9 +11,12 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          DEFAULT: '#0E1410',
-          soft: '#142019',
+          DEFAULT: '#0A1410',
+          soft: '#0F1B16',
+          deep: '#060B09',
         },
+        moss: '#0F1A14',
+        fern: '#1F3528',
         cream: {
           DEFAULT: '#E8E2CF',
           dim: 'rgba(232,226,207,0.72)',
@@ -23,16 +26,26 @@ const config: Config = {
           DEFAULT: '#D4A55F',
           dim: '#A8814A',
         },
+        jade: {
+          DEFAULT: '#34D399',
+          dim: '#10B981',
+          deep: '#047857',
+        },
+        cyan: {
+          DEFAULT: '#67E8F9',
+          dim: '#22D3EE',
+        },
         oxblood: '#B73A2C',
         parchment: '#F4EDE1',
         rule: {
-          soft: 'rgba(232,226,207,0.12)',
-          dotted: 'rgba(232,226,207,0.25)',
+          soft: 'rgba(232,226,207,0.10)',
+          dotted: 'rgba(232,226,207,0.22)',
+          jade: 'rgba(52,211,153,0.20)',
         },
       },
       fontFamily: {
-        display: ['var(--font-display)', 'Iowan Old Style', 'Palatino', 'Georgia', 'serif'],
-        body: ['var(--font-body)', 'Iowan Old Style', 'Georgia', 'serif'],
+        display: ['var(--font-display)', 'Fraunces', 'Iowan Old Style', 'Georgia', 'serif'],
+        body: ['var(--font-body)', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['var(--font-mono)', 'ui-monospace', 'SF Mono', 'Menlo', 'monospace'],
       },
       fontSize: {
@@ -57,6 +70,7 @@ const config: Config = {
       },
       boxShadow: {
         'inset-glow': 'inset 0 0 30px rgba(212,165,95,0.04)',
+        'jade-glow': '0 0 40px rgba(52,211,153,0.18)',
       },
       maxWidth: {
         prose: '72ch',

@@ -7,6 +7,9 @@ import { InkButton } from '@/components/motion/InkButton'
 import { MagneticCta } from '@/components/motion/MagneticCta'
 import { Reveal } from '@/components/motion/Reveal'
 import { SectionWatermark } from '@/components/decorative/SectionWatermark'
+import { ParticleField } from '@/components/decorative/ParticleField'
+import { Scanline } from '@/components/decorative/Scanline'
+import { DataTicker } from '@/components/decorative/DataTicker'
 
 export async function FinalCtaSection() {
   const t = await getTranslations('home.finalCta')
@@ -15,6 +18,10 @@ export async function FinalCtaSection() {
   return (
     <section className="relative overflow-hidden">
       <SectionWatermark align="center">08</SectionWatermark>
+      <ParticleField density="med" palette="mixed" />
+      <Scanline delaySeconds={2} />
+      <DataTicker prefix="SYS · ENGAGE" className="bottom-8 right-8" />
+
       <Reveal className="relative z-10 mx-auto max-w-6xl px-6 py-24">
         <Eyebrow>{t('eyebrow')}</Eyebrow>
         <Headline as="h2" size="4xl" className="mt-3 max-w-3xl">

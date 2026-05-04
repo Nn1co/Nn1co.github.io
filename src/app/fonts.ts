@@ -1,18 +1,17 @@
-import { IM_Fell_English, EB_Garamond, JetBrains_Mono } from 'next/font/google'
+import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google'
 
-export const fontDisplay = IM_Fell_English({
+export const fontDisplay = Fraunces({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['300', '400', '500', '600', '700'],
   style: ['normal', 'italic'],
   variable: '--font-display',
   display: 'swap',
   preload: true,
 })
 
-export const fontBody = EB_Garamond({
+export const fontBody = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  style: ['normal', 'italic'],
+  weight: ['300', '400', '500', '600'],
   variable: '--font-body',
   display: 'swap',
   preload: true,

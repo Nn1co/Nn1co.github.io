@@ -4,6 +4,7 @@ import { Rule } from '@/components/shared/Rule'
 import { Reveal } from '@/components/motion/Reveal'
 import { Marquee } from '@/components/decorative/Marquee'
 import { SectionWatermark } from '@/components/decorative/SectionWatermark'
+import { DataNodes } from '@/components/decorative/DataNodes'
 
 type Partner = { name: string; caption: string }
 
@@ -16,6 +17,10 @@ export async function PartnersSection() {
   return (
     <section className="relative overflow-hidden">
       <SectionWatermark align="right">02</SectionWatermark>
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 opacity-60">
+        <DataNodes />
+      </div>
+
       <Reveal className="relative z-10 mx-auto max-w-6xl px-6 pt-24">
         <Eyebrow>{t('eyebrow')}</Eyebrow>
         <p className="mt-4 max-w-prose font-display text-3xl text-cream md:text-4xl">
@@ -26,7 +31,7 @@ export async function PartnersSection() {
           {items.map((partner) => (
             <li key={partner.name} className="group flex flex-col gap-4">
               <span
-                className="font-display text-4xl tracking-[0.22em] text-cream transition-colors group-hover:text-gold md:text-5xl"
+                className="font-display text-4xl tracking-[0.22em] text-cream transition-colors group-hover:text-jade md:text-5xl"
                 aria-label={partner.name}
               >
                 {partner.name}
