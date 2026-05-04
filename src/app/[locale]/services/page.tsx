@@ -7,13 +7,20 @@ import { CtaSecondary } from '@/components/shared/CtaSecondary'
 import { InkButton } from '@/components/motion/InkButton'
 import { Reveal } from '@/components/motion/Reveal'
 import { ServicePillar } from '@/components/services/ServicePillar'
+import { buildMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'services.page' })
-  return { title: t('title'), description: t('metaDescription') }
+  return buildMetadata({
+    locale,
+    path: '/services',
+    title: t('title'),
+    description: t('metaDescription'),
+    ogTitle: locale === 'fr' ? 'Deux pratiques, une rigueur.' : 'Two practices, one rigor.',
+  })
 }
 
 type Anchor = { href: string; label: string }

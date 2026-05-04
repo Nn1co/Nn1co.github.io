@@ -5,13 +5,20 @@ import { Rule } from '@/components/shared/Rule'
 import { CtaSecondary } from '@/components/shared/CtaSecondary'
 import { InkButton } from '@/components/motion/InkButton'
 import { Reveal } from '@/components/motion/Reveal'
+import { buildMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'about.page' })
-  return { title: t('title'), description: t('metaDescription') }
+  return buildMetadata({
+    locale,
+    path: '/about',
+    title: t('title'),
+    description: t('metaDescription'),
+    ogTitle: 'Thibaut Gendebien.',
+  })
 }
 
 type Principle = { label: string; title: string; body: string }

@@ -3,13 +3,20 @@ import type { Metadata } from 'next'
 import { Eyebrow } from '@/components/shared/Eyebrow'
 import { Rule } from '@/components/shared/Rule'
 import { Reveal } from '@/components/motion/Reveal'
+import { buildMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'contact.page' })
-  return { title: t('title'), description: t('metaDescription') }
+  return buildMetadata({
+    locale,
+    path: '/contact',
+    title: t('title'),
+    description: t('metaDescription'),
+    ogTitle: locale === 'fr' ? 'Écrire.' : 'Write.',
+  })
 }
 
 type Block = { label: string; value: string; kind: 'email' | 'linkedin' | 'text' }

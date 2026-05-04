@@ -1,4 +1,5 @@
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import type { Metadata } from 'next'
 import { HeroSection } from '@/components/home/HeroSection'
 import { PartnersSection } from '@/components/home/PartnersSection'
 import { PillarSection } from '@/components/home/PillarSection'
@@ -6,12 +7,27 @@ import { ApproachSection } from '@/components/home/ApproachSection'
 import { PeppolMention } from '@/components/home/PeppolMention'
 import { ManifestoQuote } from '@/components/home/ManifestoQuote'
 import { FinalCtaSection } from '@/components/home/FinalCtaSection'
+import { buildMetadata } from '@/lib/seo'
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}) {
+type Props = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'home.page' })
+  return buildMetadata({
+    locale,
+    path: '/',
+    title: t('title'),
+    description: t('metaDescription'),
+    ogTitle: 'NetSuite, truly habitable.',
+    ogSubtitle:
+      locale === 'fr'
+        ? 'Conseil NetSuite et intégration IA · Benelux'
+        : 'NetSuite consulting and AI integration · Benelux',
+  })
+}
+
+export default async function HomePage({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale)
 

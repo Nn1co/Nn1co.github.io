@@ -26,7 +26,18 @@
     "email": "thibaut.gendebien@tgtechconsulting.com",
     "linkedinUrl": "https://www.linkedin.com/in/thibaut-gendebien-7b777297"
   },
+  "consent": {
+    "label": "Cookie preferences",
+    "message": "This site uses Vercel Analytics (cookieless). With your consent, Google Analytics 4 also measures audience.",
+    "learnMore": "Privacy",
+    "accept": "Accept",
+    "refuse": "Refuse"
+  },
   "home": {
+    "page": {
+      "title": "NetSuite consulting & AI integration",
+      "metaDescription": "Independent NetSuite and AI practice based in the Benelux. Audit, custom development, automation, and business copilots — by TG Tech Consulting."
+    },
     "hero": {
       "eyebrow": "№ 01 · Practice · Benelux",
       "h1Before": "NetSuite, truly ",
