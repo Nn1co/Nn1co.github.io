@@ -8,11 +8,13 @@ import { SectionWatermark } from '@/components/decorative/SectionWatermark'
 import { DataNodes } from '@/components/decorative/DataNodes'
 
 type Partner = { name: string; caption: string }
+type Stat = { value: string; label: string }
 
 export async function PartnersSection() {
   const t = await getTranslations('home.partners')
   const marquee = await getTranslations('marquee')
   const items = t.raw('items') as Partner[]
+  const stats = t.raw('stats') as Stat[]
   const marqueeItems = marquee.raw('items') as string[]
 
   return (
@@ -28,22 +30,42 @@ export async function PartnersSection() {
           {t('headline')}
         </p>
         <Rule variant="soft" className="my-10" />
-        <ul className="grid grid-cols-1 gap-16 md:grid-cols-2">
-          {items.map((partner) => (
-            <li key={partner.name} className="group flex flex-col gap-4">
-              <span
-                className="font-display text-4xl tracking-[0.22em] text-cream md:text-5xl"
-                aria-label={partner.name}
+        {items.length ? (
+          <ul className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+            {items.map((partner) => (
+              <li key={partner.name} className="group flex flex-col gap-4">
+                <span
+                  className="block font-display text-[clamp(2.25rem,6.2vw,4.25rem)] leading-[0.95] tracking-[0.14em] text-cream"
+                  aria-label={partner.name}
+                >
+                  <HoverLetters>{partner.name}</HoverLetters>
+                </span>
+                <Rule variant="dotted" />
+                <p className="font-mono text-xs uppercase tracking-widest text-cream-muted">
+                  {partner.caption}
+                </p>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+
+        {stats?.length ? (
+          <dl className="mt-16 grid grid-cols-1 gap-px border-t border-rule-soft bg-rule-soft sm:grid-cols-3">
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="flex flex-col gap-2 bg-ink p-6 transition-colors duration-300 hover:bg-ink-soft"
               >
-                <HoverLetters>{partner.name}</HoverLetters>
-              </span>
-              <Rule variant="dotted" />
-              <p className="font-mono text-xs uppercase tracking-widest text-cream-muted">
-                {partner.caption}
-              </p>
-            </li>
-          ))}
-        </ul>
+                <dt className="font-mono text-[10px] uppercase tracking-widest text-cream-muted">
+                  {stat.label}
+                </dt>
+                <dd className="font-display text-3xl font-light leading-none text-jade md:text-4xl">
+                  {stat.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        ) : null}
       </Reveal>
 
       <div className="relative z-10 mt-20">

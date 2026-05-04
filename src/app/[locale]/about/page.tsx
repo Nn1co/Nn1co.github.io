@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 type Principle = { label: string; title: string; body: string }
+type CardItem = { label: string; value: string }
 
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params
@@ -31,6 +32,9 @@ export default async function AboutPage({ params }: Props) {
   const common = await getTranslations('common')
   const paragraphs = t.raw('narrative.paragraphs') as string[]
   const principles = t.raw('principles.items') as Principle[]
+  const cardItems = (t.raw('card.items') as CardItem[] | undefined) ?? []
+  const cardEyebrow = t.has('card.eyebrow') ? t('card.eyebrow') : null
+  const ctaEmailHint = t.has('cta.emailHint') ? t('cta.emailHint') : null
 
   return (
     <>
@@ -47,8 +51,40 @@ export default async function AboutPage({ params }: Props) {
       <Reveal as="section" className="mx-auto max-w-6xl px-6 py-24">
         <Eyebrow>{t('narrative.eyebrow')}</Eyebrow>
         <Rule variant="soft" className="mt-6" />
-        <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_2fr]">
-          <div aria-hidden="true" className="hidden lg:block" />
+        <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-[1fr_2fr]">
+          {cardItems.length ? (
+            <aside
+              aria-label={cardEyebrow ?? undefined}
+              className="relative self-start border border-rule-soft bg-ink-soft/40 p-6 backdrop-blur-sm transition-colors duration-300 hover:border-rule-jade"
+            >
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-2 border border-rule-soft/60"
+              />
+              <div className="relative">
+                {cardEyebrow ? (
+                  <p className="font-mono text-[10px] uppercase tracking-widest text-cream-muted">
+                    <span className="text-jade">/</span> {cardEyebrow.replace(/^\/\s*/, '')}
+                  </p>
+                ) : null}
+                <Rule variant="dotted" className="my-4" />
+                <dl className="space-y-4">
+                  {cardItems.map((item) => (
+                    <div key={item.label} className="flex flex-col gap-1">
+                      <dt className="font-mono text-[10px] uppercase tracking-widest text-cream-muted">
+                        {item.label}
+                      </dt>
+                      <dd className="font-display text-base leading-snug text-cream md:text-lg">
+                        {item.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </aside>
+          ) : (
+            <div aria-hidden="true" className="hidden lg:block" />
+          )}
           <div className="space-y-6 text-lg text-cream-dim md:text-xl">
             {paragraphs.map((para, idx) => (
               <p key={idx} className="max-w-prose">
@@ -86,6 +122,16 @@ export default async function AboutPage({ params }: Props) {
             {t('cta.secondary')}
           </CtaSecondary>
         </div>
+        {ctaEmailHint ? (
+          <p className="mt-4 font-mono text-[11px] tracking-wide text-cream-muted">
+            <a
+              href={`mailto:${common('email')}`}
+              className="border-b border-dotted border-rule-dotted pb-px transition-colors duration-200 hover:border-gold hover:text-cream"
+            >
+              {ctaEmailHint}
+            </a>
+          </p>
+        ) : null}
       </Reveal>
     </>
   )

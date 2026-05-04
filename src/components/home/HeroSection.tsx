@@ -15,7 +15,12 @@ import { DataTicker } from '@/components/decorative/DataTicker'
 
 export function HeroSection() {
   const t = useTranslations('home.hero')
+  const common = useTranslations('common')
   const indexItems = t.raw('indexItems') as string[]
+  const indexStatus = t.has('indexStatus') ? t('indexStatus') : null
+  const slaLabel = t.has('slaLabel') ? t('slaLabel') : null
+  const ctaEmail = t.has('ctaEmail') ? t('ctaEmail') : null
+  const email = common('email')
 
   return (
     <section className="relative min-h-[88vh] overflow-hidden">
@@ -43,32 +48,58 @@ export function HeroSection() {
           <p className="max-w-prose text-xl text-cream-dim md:text-2xl">{t('lede')}</p>
           <div className="flex flex-wrap items-center gap-8 pt-4">
             <MagneticCta>
-              <InkButton href="/contact">{t('ctaPrimary')}</InkButton>
+              <InkButton href={`mailto:${email}`}>{t('ctaPrimary')}</InkButton>
             </MagneticCta>
             <CtaSecondary href="/services">{t('ctaSecondary')}</CtaSecondary>
           </div>
+          {ctaEmail ? (
+            <p className="font-mono text-[11px] tracking-wide text-cream-muted">
+              <a
+                href={`mailto:${email}`}
+                className="border-b border-dotted border-rule-dotted pb-px transition-colors duration-200 hover:border-gold hover:text-cream"
+              >
+                {ctaEmail}
+              </a>
+            </p>
+          ) : null}
+          {slaLabel ? (
+            <p className="flex items-center gap-3 pt-2 font-mono text-[11px] uppercase tracking-widest text-cream-muted">
+              <span aria-hidden="true" className="pulse-dot" />
+              {slaLabel}
+            </p>
+          ) : null}
         </div>
 
         <aside
           aria-label={t('indexTitle')}
-          className="relative self-start border border-rule-jade bg-ink-soft/50 p-6 shadow-jade-glow backdrop-blur-sm lg:mt-24"
+          className="relative self-start border border-rule-soft bg-ink-soft/40 p-6 backdrop-blur-sm transition-colors duration-300 hover:border-rule-jade hover:bg-ink-soft/60 lg:mt-24"
         >
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-2 border border-rule-soft"
+            className="pointer-events-none absolute inset-2 border border-rule-soft/60"
           />
           <div className="relative">
-            <Eyebrow className="text-cream-muted" dot={false}>
-              <span className="slash">{t('indexTitle')}</span>
-            </Eyebrow>
+            <div className="flex items-baseline justify-between gap-4">
+              <Eyebrow className="text-cream-muted" dot={false}>
+                <span className="slash">{t('indexTitle')}</span>
+              </Eyebrow>
+              {indexStatus ? (
+                <span className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-cream-muted">
+                  <span aria-hidden="true" className="pulse-dot" />
+                  {indexStatus}
+                </span>
+              ) : null}
+            </div>
             <Rule variant="dotted" className="my-4" />
             <ol className="space-y-3 font-body text-base text-cream-dim">
               {indexItems.map((item, idx) => (
                 <li key={idx} className="group flex items-start gap-4">
-                  <span className="mt-0.5 inline-block w-6 shrink-0 font-mono text-xs uppercase tracking-widest text-jade">
+                  <span className="mt-0.5 inline-block w-6 shrink-0 font-mono text-xs uppercase tracking-widest text-jade/70 transition-colors duration-200 group-hover:text-jade">
                     {romanize(idx + 1)}
                   </span>
-                  <span className="under-grow">{item}</span>
+                  <span className="under-grow transition-colors duration-200 group-hover:text-cream">
+                    {item}
+                  </span>
                 </li>
               ))}
             </ol>

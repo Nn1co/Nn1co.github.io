@@ -5,9 +5,29 @@ import { Rule } from './shared/Rule'
 export async function Footer() {
   const t = await getTranslations()
 
+  const ctaLine = t.has('footer.ctaLine') ? t('footer.ctaLine') : null
+  const ctaButton = t.has('footer.ctaButton') ? t('footer.ctaButton') : null
+
   return (
     <footer className="mt-24 border-t border-rule-soft">
       <div className="mx-auto max-w-6xl px-6 py-16">
+        {ctaLine && ctaButton ? (
+          <div className="mb-12 flex flex-col items-start gap-4 border-b border-rule-soft pb-12 md:flex-row md:items-center md:justify-between md:gap-8">
+            <p className="max-w-prose font-display text-xl text-cream md:text-2xl">
+              {ctaLine}
+            </p>
+            <a
+              href={`mailto:${t('common.email')}`}
+              className="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-cream-dim transition-colors duration-200 hover:text-gold"
+            >
+              <span className="border-b border-dotted border-rule-dotted pb-px transition-colors duration-200 group-hover:border-gold">
+                {ctaButton}
+              </span>
+              <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+        ) : null}
+
         <div className="mb-10">
           <p className="font-display text-xl tracking-wide text-cream md:text-2xl">
             {t('footer.brand')}

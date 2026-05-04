@@ -4,7 +4,8 @@
     "about": "À propos",
     "contact": "Contact",
     "menu": "Menu",
-    "close": "Fermer"
+    "close": "Fermer",
+    "status": "Disponible"
   },
   "footer": {
     "brand": "TG TECH · CONSULTING",
@@ -15,7 +16,9 @@
     "privacy": "Confidentialité",
     "notice": "Mentions légales",
     "copyright": "© TG TECH CONSULTING · BENELUX",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "ctaLine": "Une heure pour cadrer un sujet, ensemble.",
+    "ctaButton": "Envoyer un mail"
   },
   "lang": {
     "fr": "FR",
@@ -57,10 +60,13 @@
       "h1Before": "NetSuite + Claude. ",
       "h1Emphasis": "Natif",
       "h1After": ".",
-      "lede": "Une plateforme. Tâches automatisées. Décisions assistées. Pas de patchwork.",
-      "ctaPrimary": "Engager",
+      "lede": "Votre ERP cesse d'être un coût. Il devient l'outil que vos équipes ouvrent chaque matin — sans ressaisie, sans patchwork.",
+      "ctaPrimary": "Faire un appel",
       "ctaSecondary": "Voir les services",
+      "ctaEmail": "ou écrire à thibaut.gendebien@tgtechconsulting.com",
       "indexTitle": "Index",
+      "indexStatus": "Actif",
+      "slaLabel": "Réponse sous 48 h · Visio offerte",
       "indexItems": [
         "NetSuite augmenté",
         "Claude embarqué",
@@ -69,25 +75,21 @@
       ]
     },
     "partners": {
-      "eyebrow": "№ 02 · Trusted by",
-      "headline": "Deux signatures, déjà.",
-      "items": [
-        {
-          "name": "BOLLÉ",
-          "caption": "Eyewear · OneWorld"
-        },
-        {
-          "name": "CLINISYS",
-          "caption": "HealthTech · Time Tracking"
-        }
+      "eyebrow": "№ 02 · Practice",
+      "headline": "12 ans de NetSuite, en production.",
+      "items": [],
+      "stats": [
+        { "value": "12 ans", "label": "SuiteScript en production" },
+        { "value": "Benelux", "label": "Fuseau, langue, droit" },
+        { "value": "Un interlocuteur", "label": "Du devis au runbook" }
       ]
     },
     "netsuite": {
       "eyebrow": "№ 03 · Pilier I",
-      "h2Before": "L’ERP que vos équipes ",
-      "h2Emphasis": "utilisent",
+      "h2Before": "Tout dans ",
+      "h2Emphasis": "NetSuite",
       "h2After": ".",
-      "lede": "Pour qu’il devienne un outil, pas un fardeau.",
+      "lede": "Vos services externes intégrés nativement. Plus rapide, plus fonctionnel, plus économique.",
       "blocks": [
         {
           "label": "I",
@@ -96,13 +98,13 @@
         },
         {
           "label": "II",
-          "title": "SuiteScript",
-          "body": "Code lisible, testé, livré sans surprise."
+          "title": "Intégration native",
+          "body": "Vos outils tiers absorbés dans NetSuite. Fini les connecteurs fragiles."
         },
         {
           "label": "III",
           "title": "Automatisation",
-          "body": "Supprimer les ressaisies. Brancher les outils tiers."
+          "body": "Supprimer les ressaisies. Code lisible, testé, livré sans surprise."
         }
       ],
       "cta": "Voir le pilier"
@@ -110,14 +112,14 @@
     "ai": {
       "eyebrow": "№ 04 · Pilier II",
       "h2Before": "Claude, ",
-      "h2Emphasis": "branché au métier",
+      "h2Emphasis": "l’avenir du travail",
       "h2After": ".",
-      "lede": "Ancré dans vos données, vos règles, votre langage. Pas un produit IA générique.",
+      "lede": "Un outil pour réfléchir, écrire, décider. Pas un produit IA générique — branché sur votre métier.",
       "blocks": [
         {
           "label": "I",
           "title": "Agents Claude",
-          "body": "Embarqués dans NetSuite. Vos règles, votre langage."
+          "body": "Des agents qui comprennent vos règles et votre langage."
         },
         {
           "label": "II",
@@ -132,45 +134,25 @@
       ],
       "cta": "Voir le pilier"
     },
-    "approach": {
-      "eyebrow": "№ 05 · Approach",
-      "h2Before": "Comment l’on ",
-      "h2Emphasis": "travaille",
-      "h2After": ".",
-      "items": [
-        {
-          "label": "I",
-          "title": "Discovery",
-          "body": "Comprendre. Avant tout code."
-        },
-        {
-          "label": "II",
-          "title": "Build",
-          "body": "Itérations courtes. Démos sur vos données."
-        },
-        {
-          "label": "III",
-          "title": "Operate",
-          "body": "Handover, runbook. Vos équipes prennent le relais."
-        }
-      ]
-    },
     "peppol": {
       "eyebrow": "№ 06 · Adjacent",
-      "body": "Peppol BIS 3.0, intégration NetSuite, archivage légal. Naturellement."
-    },
-    "manifesto": {
-      "quote": "On ne livre pas un projet. On livre un outil que vos équipes ouvrent chaque matin sans grincer des dents.",
-      "signature": "— TG TECH CONSULTING"
+      "body": "Peppol BIS 3.0, branché à NetSuite, archivage légal. Au passage, naturellement.",
+      "tags": ["BIS 3.0", "NetSuite natif", "Archivage légal", "FR · BE · NL"]
     },
     "finalCta": {
-      "eyebrow": "№ 08 · Engage",
+      "eyebrow": "№ 06 · Engage",
       "h2Before": "Parlons ",
       "h2Emphasis": "NetSuite",
       "h2After": ".",
-      "lede": "Une heure offerte. Pas de pitch.",
-      "ctaPrimary": "Écrire",
-      "ctaSecondary": "LinkedIn"
+      "lede": "Une heure pour cadrer un sujet, ensemble.",
+      "ctaPrimary": "Envoyer un mail",
+      "ctaSecondary": "LinkedIn",
+      "ctaEmailHint": "thibaut.gendebien@tgtechconsulting.com",
+      "signals": [
+        { "label": "Réponse", "value": "≤ 48 h" },
+        { "label": "Format", "value": "Visio · 60 min" },
+        { "label": "Engagement", "value": "Aucun, jusqu'au devis" }
+      ]
     }
   },
   "services": {
@@ -250,9 +232,15 @@
     "cta": {
       "eyebrow": "№ Engage",
       "h2": "Une question précise ?",
-      "lede": "Décrivez par mail. Réponse sous 48h.",
-      "primary": "Écrire",
-      "secondary": "LinkedIn"
+      "lede": "Décrivez par mail. Réponse sous 48 h, par Thibaut directement.",
+      "primary": "Envoyer un mail",
+      "secondary": "LinkedIn",
+      "emailHint": "thibaut.gendebien@tgtechconsulting.com",
+      "signals": [
+        { "label": "Réponse", "value": "≤ 48 h" },
+        { "label": "Format", "value": "Visio · 60 min" },
+        { "label": "Engagement", "value": "Aucun, jusqu'au devis" }
+      ]
     }
   },
   "about": {
@@ -264,6 +252,15 @@
       "eyebrow": "№ About · Indépendant",
       "h1": "Thibaut Gendebien.",
       "lede": "Dix ans à transformer des ERP en outils que les opérations utilisent."
+    },
+    "card": {
+      "eyebrow": "/ Carte",
+      "items": [
+        { "label": "Basé à", "value": "Bruxelles · Benelux" },
+        { "label": "Disponible en", "value": "FR · NL · EN" },
+        { "label": "Stack", "value": "NetSuite · SuiteScript 2.1 · Claude API" },
+        { "label": "Format", "value": "Mission, en direct" }
+      ]
     },
     "narrative": {
       "eyebrow": "№ Pourquoi TGTC",
@@ -296,9 +293,10 @@
     "cta": {
       "eyebrow": "№ Engage",
       "h2": "Discutons.",
-      "lede": "Une heure offerte avant tout devis.",
-      "primary": "Écrire",
-      "secondary": "LinkedIn"
+      "lede": "Une heure offerte avant tout devis. Réponse sous 48 h.",
+      "primary": "Envoyer un mail",
+      "secondary": "LinkedIn",
+      "emailHint": "thibaut.gendebien@tgtechconsulting.com"
     }
   },
   "contact": {
@@ -309,8 +307,15 @@
     "hero": {
       "eyebrow": "№ Contact · Engage",
       "h1": "Écrire.",
-      "lede": "Pas de formulaire. Un mail bien rédigé suffit."
+      "lede": "Pas de formulaire. Un mail bien rédigé suffit. Réponse sous 48 h, par Thibaut.",
+      "ctaPrimary": "Ouvrir un brouillon",
+      "ctaSecondary": "LinkedIn"
     },
+    "signals": [
+      { "label": "Réponse", "value": "≤ 48 h" },
+      { "label": "Format", "value": "Visio · 60 min" },
+      { "label": "Engagement", "value": "Aucun, jusqu'au devis" }
+    ],
     "blocks": [
       {
         "label": "Email",
@@ -324,11 +329,11 @@
       },
       {
         "label": "Localisation",
-        "value": "Benelux · 48h",
+        "value": "Bruxelles · Benelux",
         "kind": "text"
       }
     ],
-    "closing": "Préférer un appel ? Mentionnez-le par mail."
+    "closing": "Préférer un appel ? Mentionnez-le par mail — créneau renvoyé sous 24 h."
   },
   "legal": {
     "shared": {

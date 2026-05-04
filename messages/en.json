@@ -4,7 +4,8 @@
     "about": "About",
     "contact": "Contact",
     "menu": "Menu",
-    "close": "Close"
+    "close": "Close",
+    "status": "Available"
   },
   "footer": {
     "brand": "TG TECH · CONSULTING",
@@ -15,7 +16,9 @@
     "privacy": "Privacy",
     "notice": "Legal notice",
     "copyright": "© TG TECH CONSULTING · BENELUX",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "ctaLine": "An hour to scope a topic, together.",
+    "ctaButton": "Send a mail"
   },
   "lang": {
     "fr": "FR",
@@ -57,10 +60,13 @@
       "h1Before": "NetSuite + Claude. ",
       "h1Emphasis": "Native",
       "h1After": ".",
-      "lede": "One platform. Tasks automated. Decisions assisted. No patchwork.",
-      "ctaPrimary": "Engage",
+      "lede": "Your ERP stops being a cost. It becomes the tool your teams open every morning — no rekeying, no patchwork.",
+      "ctaPrimary": "Make a call",
       "ctaSecondary": "See services",
+      "ctaEmail": "or write to thibaut.gendebien@tgtechconsulting.com",
       "indexTitle": "Index",
+      "indexStatus": "Active",
+      "slaLabel": "Reply within 48 h · Free intro call",
       "indexItems": [
         "NetSuite augmented",
         "Claude embedded",
@@ -69,25 +75,21 @@
       ]
     },
     "partners": {
-      "eyebrow": "№ 02 · Trusted by",
-      "headline": "Two signatures, already.",
-      "items": [
-        {
-          "name": "BOLLÉ",
-          "caption": "Eyewear · OneWorld"
-        },
-        {
-          "name": "CLINISYS",
-          "caption": "HealthTech · Time Tracking"
-        }
+      "eyebrow": "№ 02 · Practice",
+      "headline": "12 years of NetSuite, in production.",
+      "items": [],
+      "stats": [
+        { "value": "12 yrs", "label": "SuiteScript in production" },
+        { "value": "Benelux", "label": "Zone, language, law" },
+        { "value": "One contact", "label": "Brief to runbook" }
       ]
     },
     "netsuite": {
       "eyebrow": "№ 03 · Pillar I",
-      "h2Before": "The ERP your teams ",
-      "h2Emphasis": "actually use",
+      "h2Before": "All in ",
+      "h2Emphasis": "NetSuite",
       "h2After": ".",
-      "lede": "So it becomes a tool, not a burden.",
+      "lede": "Your external services, integrated natively. Faster, more functional, more economical.",
       "blocks": [
         {
           "label": "I",
@@ -96,13 +98,13 @@
         },
         {
           "label": "II",
-          "title": "SuiteScript",
-          "body": "Readable code, tested, shipped without surprise."
+          "title": "Native integration",
+          "body": "Third-party tools absorbed into NetSuite. No more fragile connectors."
         },
         {
           "label": "III",
           "title": "Automation",
-          "body": "Kill duplicate entry. Plug in third-party systems."
+          "body": "Kill duplicate entry. Readable code, tested, shipped without surprise."
         }
       ],
       "cta": "See pillar"
@@ -110,14 +112,14 @@
     "ai": {
       "eyebrow": "№ 04 · Pillar II",
       "h2Before": "Claude, ",
-      "h2Emphasis": "wired to operations",
+      "h2Emphasis": "the future of work",
       "h2After": ".",
-      "lede": "Anchored in your data, your rules, your language. Not a generic AI product.",
+      "lede": "A tool to think, write, decide. Not a generic AI product — wired to your domain.",
       "blocks": [
         {
           "label": "I",
           "title": "Claude agents",
-          "body": "Embedded inside NetSuite. Your rules, your language."
+          "body": "Agents that understand your rules and your language."
         },
         {
           "label": "II",
@@ -132,45 +134,25 @@
       ],
       "cta": "See pillar"
     },
-    "approach": {
-      "eyebrow": "№ 05 · Approach",
-      "h2Before": "How we ",
-      "h2Emphasis": "work",
-      "h2After": ".",
-      "items": [
-        {
-          "label": "I",
-          "title": "Discovery",
-          "body": "Understand. Before any code."
-        },
-        {
-          "label": "II",
-          "title": "Build",
-          "body": "Short iterations. Demos on your data."
-        },
-        {
-          "label": "III",
-          "title": "Operate",
-          "body": "Handover, runbook. Your teams take over."
-        }
-      ]
-    },
     "peppol": {
       "eyebrow": "№ 06 · Adjacent",
-      "body": "Peppol BIS 3.0, NetSuite integration, legal archiving. Naturally."
-    },
-    "manifesto": {
-      "quote": "We don’t deliver projects. We deliver tools your teams open every morning without grinding their teeth.",
-      "signature": "— TG TECH CONSULTING"
+      "body": "Peppol BIS 3.0, wired into NetSuite, legal archiving. In passing, naturally.",
+      "tags": ["BIS 3.0", "NetSuite native", "Legal archive", "FR · BE · NL"]
     },
     "finalCta": {
-      "eyebrow": "№ 08 · Engage",
+      "eyebrow": "№ 06 · Engage",
       "h2Before": "Let’s talk ",
       "h2Emphasis": "NetSuite",
       "h2After": ".",
-      "lede": "An hour offered. No pitch.",
-      "ctaPrimary": "Write",
-      "ctaSecondary": "LinkedIn"
+      "lede": "An hour to scope a topic, together.",
+      "ctaPrimary": "Send a mail",
+      "ctaSecondary": "LinkedIn",
+      "ctaEmailHint": "thibaut.gendebien@tgtechconsulting.com",
+      "signals": [
+        { "label": "Reply", "value": "≤ 48 h" },
+        { "label": "Format", "value": "Video · 60 min" },
+        { "label": "Commitment", "value": "None, until quote" }
+      ]
     }
   },
   "services": {
@@ -250,9 +232,15 @@
     "cta": {
       "eyebrow": "№ Engage",
       "h2": "A specific question?",
-      "lede": "Describe by email. Reply within 48h.",
-      "primary": "Write",
-      "secondary": "LinkedIn"
+      "lede": "Describe by email. Reply within 48 h, by Thibaut directly.",
+      "primary": "Send a mail",
+      "secondary": "LinkedIn",
+      "emailHint": "thibaut.gendebien@tgtechconsulting.com",
+      "signals": [
+        { "label": "Reply", "value": "≤ 48 h" },
+        { "label": "Format", "value": "Video · 60 min" },
+        { "label": "Commitment", "value": "None, until quote" }
+      ]
     }
   },
   "about": {
@@ -264,6 +252,15 @@
       "eyebrow": "№ About · Independent",
       "h1": "Thibaut Gendebien.",
       "lede": "Ten years turning ERPs into tools operations actually use."
+    },
+    "card": {
+      "eyebrow": "/ Card",
+      "items": [
+        { "label": "Based in", "value": "Brussels · Benelux" },
+        { "label": "Available in", "value": "FR · NL · EN" },
+        { "label": "Stack", "value": "NetSuite · SuiteScript 2.1 · Claude API" },
+        { "label": "Format", "value": "Mission, in person" }
+      ]
     },
     "narrative": {
       "eyebrow": "№ Why TGTC",
@@ -296,9 +293,10 @@
     "cta": {
       "eyebrow": "№ Engage",
       "h2": "Let’s talk.",
-      "lede": "An hour offered before any quote.",
-      "primary": "Write",
-      "secondary": "LinkedIn"
+      "lede": "An hour offered before any quote. Reply within 48 h.",
+      "primary": "Send a mail",
+      "secondary": "LinkedIn",
+      "emailHint": "thibaut.gendebien@tgtechconsulting.com"
     }
   },
   "contact": {
@@ -309,8 +307,15 @@
     "hero": {
       "eyebrow": "№ Contact · Engage",
       "h1": "Write.",
-      "lede": "No form. A well-written email is enough."
+      "lede": "No form. A well-written email is enough. Reply within 48 h, by Thibaut.",
+      "ctaPrimary": "Open a draft",
+      "ctaSecondary": "LinkedIn"
     },
+    "signals": [
+      { "label": "Reply", "value": "≤ 48 h" },
+      { "label": "Format", "value": "Video · 60 min" },
+      { "label": "Commitment", "value": "None, until quote" }
+    ],
     "blocks": [
       {
         "label": "Email",
@@ -324,11 +329,11 @@
       },
       {
         "label": "Location",
-        "value": "Benelux · 48h",
+        "value": "Brussels · Benelux",
         "kind": "text"
       }
     ],
-    "closing": "Prefer a call? Mention it by email."
+    "closing": "Prefer a call? Mention it by email — slot returned within 24 h."
   },
   "legal": {
     "shared": {

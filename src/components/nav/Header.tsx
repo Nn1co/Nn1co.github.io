@@ -57,7 +57,16 @@ export function Header() {
             <NavLink href="/contact">{t('contact')}</NavLink>
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden items-center gap-6 md:flex">
+            {t.has('status') ? (
+              <span
+                className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-cream-muted transition-colors duration-200 hover:text-cream"
+                aria-live="polite"
+              >
+                <span aria-hidden="true" className="pulse-dot" />
+                {t('status')}
+              </span>
+            ) : null}
             <LanguageSwitcher />
           </div>
 

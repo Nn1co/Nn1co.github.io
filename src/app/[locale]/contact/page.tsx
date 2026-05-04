@@ -2,6 +2,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { Eyebrow } from '@/components/shared/Eyebrow'
 import { Rule } from '@/components/shared/Rule'
+import { CtaSecondary } from '@/components/shared/CtaSecondary'
+import { InkButton } from '@/components/motion/InkButton'
 import { Reveal } from '@/components/motion/Reveal'
 import { buildMetadata } from '@/lib/seo'
 
@@ -20,6 +22,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 type Block = { label: string; value: string; kind: 'email' | 'linkedin' | 'text' }
+type Signal = { label: string; value: string }
+
+const MAILTO_BODY_FR =
+  "Bonjour Thibaut,%0D%0A%0D%0AContexte : NetSuite [version, modules]. Sujet : [le vrai problème]. Disponibilité visio : [créneaux].%0D%0A%0D%0AMerci."
+const MAILTO_BODY_EN =
+  "Hi Thibaut,%0D%0A%0D%0AContext: NetSuite [version, modules]. Topic: [the real issue]. Video availability: [time slots].%0D%0A%0D%0AThanks."
 
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params
@@ -28,6 +36,12 @@ export default async function ContactPage({ params }: Props) {
   const t = await getTranslations('contact')
   const common = await getTranslations('common')
   const blocks = t.raw('blocks') as Block[]
+  const signals = (t.raw('signals') as Signal[] | undefined) ?? []
+  const ctaPrimary = t.has('hero.ctaPrimary') ? t('hero.ctaPrimary') : null
+  const ctaSecondary = t.has('hero.ctaSecondary') ? t('hero.ctaSecondary') : null
+  const subject = locale === 'fr' ? 'Sujet NetSuite' : 'NetSuite topic'
+  const body = locale === 'fr' ? MAILTO_BODY_FR : MAILTO_BODY_EN
+  const mailtoHref = `mailto:${common('email')}?subject=${encodeURIComponent(subject)}&body=${body}`
 
   return (
     <>
@@ -39,7 +53,34 @@ export default async function ContactPage({ params }: Props) {
         <p className="mt-6 max-w-prose text-lg text-cream-dim md:text-xl">
           {t('hero.lede')}
         </p>
+        {ctaPrimary ? (
+          <div className="mt-10 flex flex-wrap items-center gap-6">
+            <InkButton href={mailtoHref}>{ctaPrimary}</InkButton>
+            {ctaSecondary ? (
+              <CtaSecondary href={common('linkedinUrl')} external>
+                {ctaSecondary}
+              </CtaSecondary>
+            ) : null}
+          </div>
+        ) : null}
       </section>
+
+      {signals.length ? (
+        <section className="mx-auto max-w-3xl px-6">
+          <dl className="grid grid-cols-1 gap-x-8 gap-y-6 border-t border-rule-soft pt-8 sm:grid-cols-3">
+            {signals.map((signal) => (
+              <div key={signal.label} className="flex flex-col gap-1">
+                <dt className="font-mono text-[10px] uppercase tracking-widest text-cream-muted">
+                  {signal.label}
+                </dt>
+                <dd className="font-display text-lg text-cream md:text-xl">
+                  {signal.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      ) : null}
 
       <Reveal as="section" className="mx-auto max-w-3xl px-6 py-24">
         <ul className="space-y-0">

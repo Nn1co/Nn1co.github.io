@@ -3,9 +3,7 @@ import type { Metadata } from 'next'
 import { HeroSection } from '@/components/home/HeroSection'
 import { PartnersSection } from '@/components/home/PartnersSection'
 import { PillarSection } from '@/components/home/PillarSection'
-import { ApproachSection } from '@/components/home/ApproachSection'
 import { PeppolMention } from '@/components/home/PeppolMention'
-import { ManifestoQuote } from '@/components/home/ManifestoQuote'
 import { FinalCtaSection } from '@/components/home/FinalCtaSection'
 import { buildMetadata } from '@/lib/seo'
 
@@ -46,9 +44,7 @@ export default async function HomePage({ params }: Props) {
         alignment="right"
         watermark="04"
       />
-      <ApproachSection />
       <PeppolMention />
-      <ManifestoQuote />
       <FinalCtaSection />
     </>
   )

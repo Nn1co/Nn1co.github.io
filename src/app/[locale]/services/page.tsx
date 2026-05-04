@@ -75,6 +75,36 @@ export default async function ServicesPage({ params }: Props) {
             {t('cta.secondary')}
           </CtaSecondary>
         </div>
+        {t.has('cta.emailHint') ? (
+          <p className="mt-4 font-mono text-[11px] tracking-wide text-cream-muted">
+            <a
+              href={`mailto:${common('email')}`}
+              className="border-b border-dotted border-rule-dotted pb-px transition-colors duration-200 hover:border-gold hover:text-cream"
+            >
+              {t('cta.emailHint')}
+            </a>
+          </p>
+        ) : null}
+        {(() => {
+          const signals = t.raw('cta.signals') as
+            | { label: string; value: string }[]
+            | undefined
+          if (!signals?.length) return null
+          return (
+            <dl className="mt-12 grid grid-cols-1 gap-x-8 gap-y-6 border-t border-rule-soft pt-8 sm:grid-cols-3">
+              {signals.map((signal) => (
+                <div key={signal.label} className="flex flex-col gap-1">
+                  <dt className="font-mono text-[10px] uppercase tracking-widest text-cream-muted">
+                    {signal.label}
+                  </dt>
+                  <dd className="font-display text-lg text-cream md:text-xl">
+                    {signal.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          )
+        })()}
       </Reveal>
     </>
   )
