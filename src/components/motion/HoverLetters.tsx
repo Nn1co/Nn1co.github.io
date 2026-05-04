@@ -10,7 +10,7 @@ type HoverLettersProps = {
   intensity?: 'soft' | 'wave'
 }
 
-const SCRAMBLE_CHARS = '!<>-_\\/[]{}=+*^?#§◊•◦∞±¥¢×§ø'
+const SCRAMBLE_CHARS = '!<>-_\\/[]{}=+*^?#§◊•◦∞±¥¢×ø'
 
 /**
  * Terminal-style text scramble effect on hover.
@@ -18,17 +18,16 @@ const SCRAMBLE_CHARS = '!<>-_\\/[]{}=+*^?#§◊•◦∞±¥¢×§ø'
  * to its original letter, with a per-char start/end offset so the
  * resolution sweeps across the word like decoded data.
  *
+ * No colour or glow change — only the textContent is corrupted, the
+ * surrounding typography stays untouched.
+ *
  * Implementation writes directly to textContent inside a rAF loop —
  * zero React re-renders during the animation.
- *
- * The exported name is kept as `HoverLetters` to avoid churning every
- * import site; behaviour now matches a `TextScramble` component.
  */
 export function HoverLetters({ children, className }: HoverLettersProps) {
   const ref = useRef<HTMLSpanElement>(null)
   const animatingRef = useRef(false)
 
-  // Re-sync displayed text when the prop changes (e.g. locale switch)
   useEffect(() => {
     if (ref.current) ref.current.textContent = children
   }, [children])
@@ -39,14 +38,16 @@ export function HoverLetters({ children, className }: HoverLettersProps) {
     if (!ref.current || animatingRef.current) return
 
     animatingRef.current = true
-    ref.current.classList.add('text-scramble--active')
 
     const chars = Array.from(children)
+    // Slower, more deliberate timings — roughly 2x slower than the
+    // previous version. start ~ 0–55 frames, end ~ 55–140 frames
+    // → up to ~2.3s for the slowest char to resolve at 60fps.
     const queue = chars.map((c) => ({
       from: c,
       to: c,
-      start: Math.floor(Math.random() * 18),
-      end: 18 + Math.floor(Math.random() * 22),
+      start: Math.floor(Math.random() * 55),
+      end: 55 + Math.floor(Math.random() * 85),
     }))
 
     let frame = 0
@@ -80,7 +81,6 @@ export function HoverLetters({ children, className }: HoverLettersProps) {
         id = requestAnimationFrame(tick)
       } else {
         animatingRef.current = false
-        ref.current.classList.remove('text-scramble--active')
       }
     }
 
