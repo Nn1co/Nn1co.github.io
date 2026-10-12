@@ -8,7 +8,7 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'services.page' })
-  return buildMetadata({ locale, path: '/services', title: t('title'), description: t('metaDescription'), ogTitle: locale === 'fr' ? 'Deux pratiques, une rigueur.' : 'Two practices, one rigor.' })
+  return buildMetadata({ locale, path: '/services', title: t('title'), description: t('metaDescription'), ogTitle: locale === 'fr' ? 'ERP, IA et automatisation.' : 'ERP, AI and automation.', ogSubtitle: locale === 'fr' ? 'NetSuite, Odoo et intégration IA' : 'NetSuite, Odoo and AI integration' })
 }
 
 export default async function ServicesPage({ params }: Props) {

@@ -29,10 +29,11 @@ export function JsonLd({ locale }: JsonLdProps) {
     url: SITE_URL,
     description:
       locale === 'fr'
-        ? 'Conseil NetSuite indépendant et intégration IA dans les opérations métier. Accompagnement à distance.'
-        : 'Independent NetSuite consulting and AI integration into business operations. Remote delivery.',
+        ? 'Conseil ERP NetSuite et Odoo, intégration IA et automatisation des opérations métier. Accompagnement à distance.'
+        : 'NetSuite and Odoo ERP consulting, AI integration and business automation. Remote delivery.',
     knowsAbout: [
       'NetSuite',
+      'Odoo',
       'SuiteScript',
       'SuiteCloud Development Framework',
       'AI integration',

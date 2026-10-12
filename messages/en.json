@@ -10,7 +10,7 @@
   },
   "footer": {
     "brand": "TG TECH · CONSULTING",
-    "tagline": "NetSuite consulting & AI integration",
+    "tagline": "ERP consulting & AI integration",
     "contact": "Contact",
     "navigation": "Navigation",
     "legal": "Legal",
@@ -38,16 +38,16 @@
   },
   "home": {
     "page": {
-      "title": "NetSuite consulting & AI integration",
-      "metaDescription": "TG Tech Consulting: NetSuite consulting, SuiteScript development, AI integration and Microsoft Copilot Studio. Delivered remotely."
+      "title": "ERP consulting & AI integration",
+      "metaDescription": "TG Tech Consulting: NetSuite and Odoo consulting and development, integrations, AI and Microsoft Copilot Studio. Delivered remotely."
     },
     "hero": {
-      "title": "NetSuite & AI.",
+      "title": "ERP & AI.",
       "line": "Connected to",
       "emphasis": "your business.",
       "primary": "Let’s discuss your project",
       "diagramTitle": "Tools that work together",
-      "diagramLabel": "NetSuite connected to business tools and Claude or GPT.",
+      "diagramLabel": "NetSuite and Odoo connected to business tools and Claude or GPT.",
       "tools": "Business tools",
       "integration": "Integration",
       "ai": "Artificial intelligence"
@@ -58,9 +58,9 @@
       "items": [
         {
           "id": "netsuite",
-          "title": "NetSuite",
-          "body": "Audits, architecture and SuiteScript development. Integrations built around your processes.",
-          "tags": "SuiteScript · RESTlets · Suitelets"
+          "title": "NetSuite & Odoo",
+          "body": "ERP configuration, custom development and integrations built around your business processes.",
+          "tags": "SuiteScript · Odoo modules · APIs"
         },
         {
           "id": "ai",
@@ -79,36 +79,36 @@
     "about": {
       "eyebrow": "TG Tech Consulting",
       "title": "One direct point of contact.",
-      "body": "Thibaut Gendebien works with you remotely on NetSuite, AI integration and Microsoft Copilot Studio workflow projects.",
+      "body": "Thibaut Gendebien works with you remotely on NetSuite and Odoo, AI integration and Microsoft Copilot Studio workflow projects.",
       "link": "About TGTC"
     }
   },
   "services": {
     "page": {
       "title": "Services",
-      "metaDescription": "NetSuite audits, SuiteScript development, AI integrations, and Microsoft Copilot Studio agents and workflows."
+      "metaDescription": "NetSuite and Odoo configuration and development, ERP integrations, AI, and Microsoft Copilot Studio agents and workflows."
     },
     "hero": {
       "title": "Your tools, ",
       "emphasis": "connected.",
-      "lede": "From NetSuite development to AI integration, technical support for your business operations."
+      "lede": "From ERP development to AI integration, technical support for your business operations."
     },
     "netsuite": {
       "eyebrow": "01 · ERP",
-      "title": "NetSuite",
-      "lede": "Adapt NetSuite to your processes and connect it to your business tools.",
+      "title": "NetSuite & Odoo",
+      "lede": "Adapt your ERP to your processes and connect it to your business tools.",
       "blocks": [
         {
-          "title": "Audit & architecture",
-          "body": "Review of your configuration, data flows and business requirements."
+          "title": "Audit & configuration",
+          "body": "Review your ERP setup and adapt its configuration to your business processes."
         },
         {
-          "title": "SuiteScript development",
-          "body": "Development of scripts, RESTlets, Suitelets and Map/Reduce processes."
+          "title": "Development & customisation",
+          "body": "SuiteScript development for NetSuite and custom modules for Odoo."
         },
         {
           "title": "Integrations & automation",
-          "body": "Connect third-party applications and automate data exchanges."
+          "body": "Connect your ERP to business applications and automate data exchanges."
         }
       ]
     },
@@ -119,7 +119,7 @@
       "blocks": [
         {
           "title": "Agents & integration",
-          "body": "Agents built with Claude or GPT, including in NetSuite."
+          "body": "Agents built with Claude or GPT, connected to your ERP and business applications."
         },
         {
           "title": "Data processing",
@@ -159,7 +159,7 @@
     "hero": {
       "eyebrow": "The consultant",
       "title": "Thibaut Gendebien.",
-      "lede": "Finance, development and automation. A direct point of contact for your NetSuite projects, integrations and AI agents, working remotely."
+      "lede": "Finance, development and automation. A direct point of contact for your ERP projects, integrations and AI agents, working remotely."
     },
     "details": [
       {
@@ -168,7 +168,7 @@
       },
       {
         "label": "Expertise",
-        "value": "NetSuite · Integrations · AI"
+        "value": "NetSuite · Odoo · Integrations · AI"
       },
       {
         "label": "Technologies",
@@ -182,7 +182,7 @@
     "title": "Understand the business. Build the tools.",
     "paragraphs": [
       "I’m Thibaut Gendebien, founder of TG Tech Consulting. My background combines a degree in business engineering, financial reporting automation at EY and NetSuite consulting at Deloitte.",
-      "Since 2019, I’ve worked independently with businesses on NetSuite and SuiteScript development, application integrations, training and support. My work also includes Claude or GPT integration, and agents and workflows built with Microsoft Copilot Studio."
+      "Since 2019, I’ve worked independently with businesses on NetSuite and SuiteScript development, application integrations, training and support. My current work also covers Odoo, Claude or GPT integration, and agents and workflows built with Microsoft Copilot Studio."
     ],
     "link": "View my LinkedIn profile",
     "qualifications": {
@@ -270,7 +270,7 @@
     },
     "emailLabel": "Email",
     "linkedinLabel": "LinkedIn",
-    "subject": "NetSuite / AI project",
+    "subject": "ERP / AI project",
     "draft": "Hi Thibaut,\n\nI am getting in touch about:\n\nProject context:\n\nThank you."
   },
   "legal": {

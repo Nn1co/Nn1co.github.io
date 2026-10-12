@@ -1,6 +1,6 @@
 # TGTC — TG Tech Consulting
 
-Bilingual website for TG Tech Consulting: NetSuite consulting, integrations,
+Bilingual website for TG Tech Consulting: NetSuite and Odoo consulting, integrations,
 AI automation and Microsoft Copilot Studio services delivered remotely.
 
 ## Development

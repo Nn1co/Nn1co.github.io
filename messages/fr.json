@@ -10,7 +10,7 @@
   },
   "footer": {
     "brand": "TG TECH · CONSULTING",
-    "tagline": "Conseil NetSuite & intégration IA",
+    "tagline": "Conseil ERP & intégration IA",
     "contact": "Contact",
     "navigation": "Navigation",
     "legal": "Légal",
@@ -38,16 +38,16 @@
   },
   "home": {
     "page": {
-      "title": "Conseil NetSuite & intégration IA",
-      "metaDescription": "TG Tech Consulting : conseil NetSuite, développement SuiteScript, intégration IA et Microsoft Copilot Studio. Accompagnement à distance."
+      "title": "Conseil ERP & intégration IA",
+      "metaDescription": "TG Tech Consulting : conseil et développement NetSuite et Odoo, intégrations, IA et Microsoft Copilot Studio. Accompagnement à distance."
     },
     "hero": {
-      "title": "NetSuite & IA.",
+      "title": "ERP & IA.",
       "line": "Connectés à",
       "emphasis": "votre métier.",
       "primary": "Parlons de votre projet",
       "diagramTitle": "Des outils qui travaillent ensemble",
-      "diagramLabel": "NetSuite connecté aux outils métier et à Claude ou GPT.",
+      "diagramLabel": "NetSuite et Odoo connectés aux outils métier et à Claude ou GPT.",
       "tools": "Outils métier",
       "integration": "Intégration",
       "ai": "Intelligence artificielle"
@@ -58,9 +58,9 @@
       "items": [
         {
           "id": "netsuite",
-          "title": "NetSuite",
-          "body": "Audit, architecture et développement SuiteScript. Des intégrations adaptées à vos processus.",
-          "tags": "SuiteScript · RESTlets · Suitelets"
+          "title": "NetSuite & Odoo",
+          "body": "Configuration ERP, développement sur mesure et intégrations adaptés à vos processus métier.",
+          "tags": "SuiteScript · Modules Odoo · API"
         },
         {
           "id": "ai",
@@ -79,36 +79,36 @@
     "about": {
       "eyebrow": "TG Tech Consulting",
       "title": "Un interlocuteur direct.",
-      "body": "Thibaut Gendebien vous accompagne à distance sur vos projets NetSuite, d’intégration IA et de workflows Microsoft Copilot Studio.",
+      "body": "Thibaut Gendebien vous accompagne à distance sur vos projets NetSuite et Odoo, d’intégration IA et de workflows Microsoft Copilot Studio.",
       "link": "À propos de TGTC"
     }
   },
   "services": {
     "page": {
       "title": "Services",
-      "metaDescription": "Audit NetSuite, développement SuiteScript, intégrations IA, agents et workflows Microsoft Copilot Studio."
+      "metaDescription": "Configuration et développement NetSuite et Odoo, intégrations ERP, IA, agents et workflows Microsoft Copilot Studio."
     },
     "hero": {
       "title": "Vos outils, ",
       "emphasis": "connectés.",
-      "lede": "Du développement NetSuite à l’intégration IA, un accompagnement technique pour vos opérations métier."
+      "lede": "Du développement ERP à l’intégration IA, un accompagnement technique pour vos opérations métier."
     },
     "netsuite": {
       "eyebrow": "01 · ERP",
-      "title": "NetSuite",
-      "lede": "Adapter NetSuite à vos processus et le connecter à vos outils métier.",
+      "title": "NetSuite & Odoo",
+      "lede": "Adapter votre ERP à vos processus et le connecter à vos outils métier.",
       "blocks": [
         {
-          "title": "Audit & architecture",
-          "body": "Analyse de votre configuration, de vos flux de données et de vos besoins métier."
+          "title": "Audit & configuration",
+          "body": "Analyse de votre ERP et adaptation de sa configuration à vos processus métier."
         },
         {
-          "title": "Développement SuiteScript",
-          "body": "Développement de scripts, RESTlets, Suitelets et traitements Map/Reduce."
+          "title": "Développement & personnalisation",
+          "body": "Développement SuiteScript pour NetSuite et modules sur mesure pour Odoo."
         },
         {
           "title": "Intégrations & automatisation",
-          "body": "Connexion des applications tierces et automatisation des échanges de données."
+          "body": "Connecter votre ERP à vos applications métier et automatiser les échanges de données."
         }
       ]
     },
@@ -119,7 +119,7 @@
       "blocks": [
         {
           "title": "Agents & intégration",
-          "body": "Agents basés sur Claude ou GPT, notamment dans NetSuite."
+          "body": "Agents basés sur Claude ou GPT, connectés à votre ERP et à vos applications métier."
         },
         {
           "title": "Traitement de données",
@@ -159,7 +159,7 @@
     "hero": {
       "eyebrow": "Le consultant",
       "title": "Thibaut Gendebien.",
-      "lede": "Finance, développement et automatisation. Un interlocuteur direct pour vos projets NetSuite, vos intégrations et vos agents IA, à distance."
+      "lede": "Finance, développement et automatisation. Un interlocuteur direct pour vos projets ERP, vos intégrations et vos agents IA, à distance."
     },
     "details": [
       {
@@ -168,7 +168,7 @@
       },
       {
         "label": "Expertises",
-        "value": "NetSuite · Intégrations · IA"
+        "value": "NetSuite · Odoo · Intégrations · IA"
       },
       {
         "label": "Technologies",
@@ -182,7 +182,7 @@
     "title": "Comprendre le métier. Développer les outils.",
     "paragraphs": [
       "Je suis Thibaut Gendebien, fondateur de TG Tech Consulting. Mon parcours associe une formation en ingénierie de gestion, l’automatisation du reporting financier chez EY et le conseil NetSuite chez Deloitte.",
-      "Depuis 2019, j’accompagne les entreprises en indépendant : développement NetSuite et SuiteScript, intégrations entre applications, formation et support. Mon activité inclut aussi l’intégration de Claude ou GPT et la mise en place d’agents et de workflows avec Microsoft Copilot Studio."
+      "Depuis 2019, j’accompagne les entreprises en indépendant : développement NetSuite et SuiteScript, intégrations entre applications, formation et support. Mon activité actuelle inclut aussi Odoo, l’intégration de Claude ou GPT et la mise en place d’agents et de workflows avec Microsoft Copilot Studio."
     ],
     "link": "Voir mon profil LinkedIn",
     "qualifications": {
@@ -270,7 +270,7 @@
     },
     "emailLabel": "Email",
     "linkedinLabel": "LinkedIn",
-    "subject": "Projet NetSuite / IA",
+    "subject": "Projet ERP / IA",
     "draft": "Bonjour Thibaut,\n\nJe vous contacte au sujet de :\n\nContexte du projet :\n\nMerci."
   },
   "legal": {

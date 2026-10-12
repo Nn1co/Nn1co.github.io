@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: '%s · TG TECH CONSULTING',
   },
   description:
-    'Conseil NetSuite et intégration IA pour les opérations métier. Accompagnement à distance.',
+    'Conseil ERP NetSuite et Odoo, intégration IA et automatisation des opérations métier. Accompagnement à distance.',
   applicationName: 'TG TECH CONSULTING',
   authors: [{ name: 'Thibaut Gendebien' }],
   creator: 'Thibaut Gendebien',

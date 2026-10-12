@@ -10,7 +10,7 @@ type Service = { id: string; title: string; body: string; tags: string }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'home.page' })
-  return buildMetadata({ locale, path: '/', title: t('title'), description: t('metaDescription'), ogTitle: locale === 'fr' ? 'NetSuite + Claude. Natif.' : 'NetSuite + Claude. Native.', ogSubtitle: locale === 'fr' ? 'Conseil NetSuite et Claude embarqué' : 'NetSuite consulting and Claude embedded' })
+  return buildMetadata({ locale, path: '/', title: t('title'), description: t('metaDescription'), ogTitle: locale === 'fr' ? 'ERP & IA.' : 'ERP & AI.', ogSubtitle: locale === 'fr' ? 'NetSuite, Odoo et intégration IA' : 'NetSuite, Odoo and AI integration' })
 }
 
 export default async function HomePage({ params }: Props) {
@@ -28,7 +28,7 @@ export default async function HomePage({ params }: Props) {
           </div>
           <figure className="system-diagram" aria-label={t('hero.diagramLabel')}>
             <figcaption>{t('hero.diagramTitle')}</figcaption>
-            <div className="system-core"><strong>NetSuite</strong><span>ERP</span></div>
+            <div className="system-core"><strong>NetSuite / Odoo</strong><span>ERP</span></div>
             <div className="system-connections">
               <div className="system-node"><strong>{t('hero.tools')}</strong><small>{t('hero.integration')}</small></div>
               <div className="system-node"><strong>Claude / GPT</strong><small>{t('hero.ai')}</small></div>

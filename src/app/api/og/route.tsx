@@ -6,7 +6,7 @@ export async function GET(req: Request) {
   const { searchParams } = new URL(req.url)
   const title = (searchParams.get('title') ?? 'TG TECH · CONSULTING').slice(0, 120)
   const subtitle = (
-    searchParams.get('subtitle') ?? 'NetSuite consulting & AI integration'
+    searchParams.get('subtitle') ?? 'ERP consulting · NetSuite & Odoo · AI integration'
   ).slice(0, 140)
 
   return new ImageResponse(
