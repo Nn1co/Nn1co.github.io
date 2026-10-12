@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { routing } from '@/i18n/routing'
 import { SITE_URL } from '@/lib/seo'
 
-const STATIC_PATHS = ['', '/services', '/about', '/contact', '/legal/privacy', '/legal/notice']
+const STATIC_PATHS = ['', '/services', '/about', '/contact', '/legal/privacy']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()

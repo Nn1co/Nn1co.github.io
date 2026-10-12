@@ -1,13 +1,4 @@
-import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google'
-
-export const fontDisplay = Fraunces({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-display',
-  display: 'swap',
-  preload: true,
-})
+import { Inter, JetBrains_Mono } from 'next/font/google'
 
 export const fontBody = Inter({
   subsets: ['latin'],

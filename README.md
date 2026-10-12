@@ -1,70 +1,53 @@
 # TGTC — TG Tech Consulting
 
-Marketing website for TG Tech Consulting — NetSuite consulting and AI
-integration practice based in the Benelux.
+Bilingual website for TG Tech Consulting: NetSuite consulting, integrations,
+AI automation and Microsoft Copilot Studio services delivered remotely.
 
-## Stack
+## Development
 
-- **Framework**: Next.js 14 (App Router) with React 18
-- **Language**: TypeScript (strict mode)
-- **Styling**: Tailwind CSS v3 with custom palette tokens (ink, cream, gold)
-- **Animations**: CSS-first; Framer Motion lazy-loaded for the mobile overlay
-- **i18n**: next-intl 4 (subpath routing `/fr`, `/en`, Accept-Language detection)
-- **Content**: structured copy in `messages/<locale>.json`, surfaced via
-  `useTranslations` / `getTranslations`
-- **Analytics**: `@vercel/analytics` (cookieless) + GA4 (consent-gated)
-- **Hosting**: Vercel
-- **Package manager**: npm
-
-## Local development
+Next.js 14 (App Router), React 18, TypeScript and next-intl. Existing npm dependencies
+and lockfile are retained. CSS handles layout and motion; no animation library is
+loaded by the redesigned pages.
 
 ```bash
 npm install
 npm run dev    # http://localhost:3000
-npm run build  # production build
-npm run start  # serve the production build locally
+npm run build # includes lint and TypeScript checks
+npm run start # serve the production build
 npm run lint
 ```
 
-## Deploy flow
+Google Fonts are downloaded during the build and served locally by Next.js.
 
-Pushing to `main` triggers an automatic deploy on Vercel.
+## Editing
 
-The temporary `*.vercel.app` URL serves the site during development;
-Phase 9 of the rebuild switches the production DNS off GitHub Pages
-onto Vercel for `tgtechconsulting.com`.
+- Copy: `messages/fr.json` and `messages/en.json`; keep their structures in sync.
+- Theme and responsive layouts: `src/app/globals.css`.
+- Routes: `src/app/[locale]`; French and English variants of home, services,
+  about, contact and privacy.
+- Service anchors: `#netsuite`, `#ai`, `#copilot`.
+- Contact opens the visitor's email client or LinkedIn; there is no server form.
 
-## Project documentation
+The visual palette uses cool white, navy and cobalt. Content remains visible
+without JavaScript. Motion is limited to a short entrance and interaction states,
+with `prefers-reduced-motion` support. The previous decorative components were
+removed. Older design documents describe the superseded version.
 
-- **Design spec**: `docs/superpowers/specs/2026-04-27-tgtc-website-redesign-design.md`
-  (canonical reference for visual direction, content, architecture)
-- **GSD roadmap**: `.planning/ROADMAP.md`
-- **Requirements**: `.planning/REQUIREMENTS.md`
+## Configuration
 
-## Content edits
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Canonical origin; defaults to `https://tgtechconsulting.com` |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional Google Analytics ID; loaded after consent |
 
-Page copy lives in `messages/fr.json` and `messages/en.json`, organised
-by namespace (`home.hero`, `services.netsuite`, `about.principles`, …).
-A copy change is a PR of these JSON files only — no React or layout
-work is required for a textual update. Both locales must stay in sync.
+Vercel Analytics is retained. The consent banner appears only when Google Analytics
+is configured and the visitor has not chosen a preference.
 
-## Environment variables
+The legal entity, registered address, company/VAT numbers and retention periods
+remain to be confirmed. Unverified experience figures and response-time promises
+are omitted.
 
-| Variable | Purpose | Required in prod |
-|---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Canonical site origin (e.g. `https://tgtechconsulting.com`) | yes |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | GA4 measurement ID, only loaded after explicit consent | optional |
+## Hosting
 
-## Performance budget
-
-The build aims for Lighthouse 95+ across Performance, Accessibility,
-Best Practices, and SEO on every page. First-Load JS sits well under
-the 100 kB gzipped target on every route; legal pages stay close to
-the framework baseline. CSS animations are preferred over Framer
-Motion to keep the initial bundle lean; Framer is only paid for when
-the mobile menu opens.
-
-## Repository
-
-`Nn1co.github.io` — same repo as the previous Flutter build; history
-preserved.
+The repository retains its existing Vercel setup. Pushing to `main` may trigger a
+deployment. Local development and production builds do not publish the site.

@@ -1,123 +1,46 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import dynamic from 'next/dynamic'
-import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
-import { usePathname } from '@/i18n/navigation'
+import { Chevron } from '@/components/shared/Chevron'
+import { useEffect, useRef, useState } from 'react'
+import { useLocale, useTranslations } from 'next-intl'
+import { Link, usePathname } from '@/i18n/navigation'
 import { LanguageSwitcher } from './LanguageSwitcher'
-import { cn } from '@/lib/cn'
-
-const MobileOverlay = dynamic(
-  () => import('./MobileOverlay').then((m) => ({ default: m.MobileOverlay })),
-  { ssr: false }
-)
+import { Brand } from '@/components/shared/Brand'
 
 export function Header() {
   const t = useTranslations('nav')
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const pathname = usePathname()
+  const locale = useLocale()
+  const [open, setOpen] = useState(false)
+  const toggle = useRef<HTMLButtonElement>(null)
+  useEffect(() => setOpen(false), [pathname, locale])
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : ''
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [mobileOpen])
+  const links = [
+    { href: '/', label: t('home') },
+    { href: '/services', label: t('services') },
+    { href: '/about', label: t('about') },
+  ]
+  const navigation = links.map(({ href, label }) => (
+    <Link key={href} href={href} className="nav-link" aria-current={pathname === href ? 'page' : undefined} onClick={() => setOpen(false)}>{label}</Link>
+  ))
 
   return (
-    <>
-      <header
-        className={cn(
-          'fixed inset-x-0 top-0 z-40 transition-[padding,background-color,backdrop-filter,border-color] duration-300 ease-out',
-          scrolled
-            ? 'border-b border-rule-soft bg-ink/85 py-3 backdrop-blur-md'
-            : 'border-b border-transparent bg-transparent py-6'
-        )}
-      >
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6">
-          <Link
-            href="/"
-            className="font-display text-base tracking-wide text-cream transition-colors hover:text-gold md:text-lg"
-            aria-label="TG TECH CONSULTING — accueil"
-          >
-            TG TECH <span className="text-gold">·</span> CONSULTING
-          </Link>
-
-          <nav aria-label="Primary" className="hidden items-center gap-10 md:flex">
-            <NavLink href="/services">{t('services')}</NavLink>
-            <NavLink href="/about">{t('about')}</NavLink>
-            <NavLink href="/contact">{t('contact')}</NavLink>
-          </nav>
-
-          <div className="hidden items-center gap-6 md:flex">
-            {t.has('status') ? (
-              <span
-                className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-cream-muted transition-colors duration-200 hover:text-cream"
-                aria-live="polite"
-              >
-                <span aria-hidden="true" className="pulse-dot" />
-                {t('status')}
-              </span>
-            ) : null}
-            <LanguageSwitcher />
-          </div>
-
-          <button
-            type="button"
-            className="-mr-2 rounded p-2 md:hidden"
-            onClick={() => setMobileOpen(true)}
-            aria-label={t('menu')}
-            aria-expanded={mobileOpen}
-          >
-            <svg
-              width="22"
-              height="14"
-              viewBox="0 0 22 14"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              aria-hidden="true"
-            >
-              <line x1="0" y1="1" x2="22" y2="1" />
-              <line x1="0" y1="7" x2="22" y2="7" />
-              <line x1="0" y1="13" x2="22" y2="13" />
-            </svg>
+    <header className="site-header" onKeyDown={(event) => {
+      if (event.key === 'Escape' && open) { setOpen(false); toggle.current?.focus() }
+    }}>
+      <div className="wrap header-inner">
+        <Brand />
+        <nav className="desktop-nav" aria-label={t('primary')}>{navigation}</nav>
+        <div className="header-actions">
+          <LanguageSwitcher />
+          <Link href="/contact" className="button button-small">{t('contact')} <Chevron /></Link>
+          <button ref={toggle} className="menu-toggle" type="button" aria-expanded={open} aria-controls={open ? 'mobile-navigation' : undefined} aria-label={open ? t('close') : t('menu')} onClick={() => setOpen(!open)}>
+            <span>{open ? t('close') : t('menu')}</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d={open ? 'M5 5l14 14M5 19L19 5' : 'M3 8h18M3 16h18'} /></svg>
           </button>
         </div>
-      </header>
-
-      {mobileOpen ? (
-        <MobileOverlay open={mobileOpen} onClose={() => setMobileOpen(false)} />
-      ) : null}
-    </>
-  )
-}
-
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
-  const pathname = usePathname()
-  const isActive =
-    href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`)
-
-  return (
-    <Link
-      href={href}
-      aria-current={isActive ? 'page' : undefined}
-      className={cn(
-        'border-b border-dotted pb-0.5 font-mono text-xs uppercase tracking-widest transition-[color,border-color] duration-200',
-        isActive
-          ? 'border-gold text-cream'
-          : 'border-transparent text-cream-dim hover:border-gold hover:text-cream'
-      )}
-    >
-      {children}
-    </Link>
+      </div>
+      {open && <nav id="mobile-navigation" className="wrap mobile-nav" aria-label={t('primary')}>{navigation}<Link href="/contact" className="nav-link" aria-current={pathname === '/contact' ? 'page' : undefined} onClick={() => setOpen(false)}>{t('contact')}{' '}<Chevron /></Link></nav>}
+    </header>
   )
 }

@@ -17,7 +17,6 @@ export function JsonLd({ locale }: JsonLdProps) {
         '@type': 'ContactPoint',
         contactType: 'customer support',
         email: 'thibaut.gendebien@tgtechconsulting.com',
-        areaServed: ['BE', 'LU', 'NL'],
         availableLanguage: ['fr', 'en'],
       },
     ],
@@ -30,18 +29,12 @@ export function JsonLd({ locale }: JsonLdProps) {
     url: SITE_URL,
     description:
       locale === 'fr'
-        ? 'Conseil NetSuite indépendant et intégration IA dans les opérations métier. Pratique basée au Benelux.'
-        : 'Independent NetSuite consulting and AI integration into business operations. Practice based in the Benelux.',
-    areaServed: [
-      { '@type': 'Country', name: 'Belgium' },
-      { '@type': 'Country', name: 'Luxembourg' },
-      { '@type': 'Country', name: 'Netherlands' },
-    ],
+        ? 'Conseil NetSuite indépendant et intégration IA dans les opérations métier. Accompagnement à distance.'
+        : 'Independent NetSuite consulting and AI integration into business operations. Remote delivery.',
     knowsAbout: [
       'NetSuite',
       'SuiteScript',
       'SuiteCloud Development Framework',
-      'Peppol e-invoicing',
       'AI integration',
       'ERP automation',
     ],

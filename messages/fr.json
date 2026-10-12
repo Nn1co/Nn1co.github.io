@@ -5,20 +5,20 @@
     "contact": "Contact",
     "menu": "Menu",
     "close": "Fermer",
-    "status": "Disponible"
+    "home": "Accueil",
+    "primary": "Navigation principale"
   },
   "footer": {
     "brand": "TG TECH · CONSULTING",
-    "tagline": "NetSuite + Claude, natif. Benelux.",
+    "tagline": "Conseil NetSuite & intégration IA",
     "contact": "Contact",
     "navigation": "Navigation",
     "legal": "Légal",
     "privacy": "Confidentialité",
-    "notice": "Mentions légales",
-    "copyright": "© TG TECH CONSULTING · BENELUX",
+    "copyright": "© TG TECH CONSULTING",
     "linkedin": "LinkedIn",
-    "ctaLine": "Une heure pour cadrer un sujet, ensemble.",
-    "ctaButton": "Envoyer un mail"
+    "ctaLine": "Parlons de votre projet.",
+    "ctaButton": "Nous écrire"
   },
   "lang": {
     "fr": "FR",
@@ -31,313 +31,250 @@
   },
   "consent": {
     "label": "Préférence cookies",
-    "message": "Vercel Analytics tourne sans cookie. GA4 attend votre accord.",
+    "message": "Autorisez-vous les cookies de mesure d’audience Google Analytics ?",
     "learnMore": "En savoir plus",
     "accept": "Accepter",
     "refuse": "Refuser"
   },
-  "marquee": {
-    "items": [
-      "NetSuite OneWorld",
-      "SuiteScript 2.1",
-      "RESTlets",
-      "Claude embarqué",
-      "Agents Claude",
-      "Peppol BIS 3.0",
-      "Automatisation",
-      "RAG sourcé",
-      "Map / Reduce",
-      "User Events"
-    ]
-  },
   "home": {
     "page": {
-      "title": "NetSuite + Claude, natif",
-      "metaDescription": "Pratique indépendante au Benelux. NetSuite et Claude branchés nativement, sans patchwork. Automatisation des tâches métier."
+      "title": "Conseil NetSuite & intégration IA",
+      "metaDescription": "TG Tech Consulting : conseil NetSuite, développement SuiteScript, intégration IA et Microsoft Copilot Studio. Accompagnement à distance."
     },
     "hero": {
-      "eyebrow": "№ 01 · Practice · Benelux",
-      "h1Before": "NetSuite + Claude. ",
-      "h1Emphasis": "Natif",
-      "h1After": ".",
-      "lede": "Votre ERP cesse d'être un coût. Il devient l'outil que vos équipes ouvrent chaque matin — sans ressaisie, sans patchwork.",
-      "ctaPrimary": "Faire un appel",
-      "ctaSecondary": "Voir les services",
-      "ctaEmail": "ou écrire à thibaut.gendebien@tgtechconsulting.com",
-      "indexTitle": "Index",
-      "indexStatus": "Actif",
-      "slaLabel": "Réponse sous 48 h · Visio offerte",
-      "indexItems": [
-        "NetSuite augmenté",
-        "Claude embarqué",
-        "Automatisation",
-        "Peppol"
-      ]
+      "title": "NetSuite & IA.",
+      "line": "Connectés à",
+      "emphasis": "votre métier.",
+      "primary": "Parlons de votre projet",
+      "diagramTitle": "Des outils qui travaillent ensemble",
+      "diagramLabel": "NetSuite connecté aux outils métier et à Claude ou GPT.",
+      "tools": "Outils métier",
+      "integration": "Intégration",
+      "ai": "Intelligence artificielle"
     },
-    "partners": {
-      "eyebrow": "№ 02 · Practice",
-      "headline": "12 ans de NetSuite, en production.",
-      "items": [],
-      "stats": [
-        { "value": "12 ans", "label": "SuiteScript en production" },
-        { "value": "Benelux", "label": "Fuseau, langue, droit" },
-        { "value": "Un interlocuteur", "label": "Du devis au runbook" }
-      ]
-    },
-    "netsuite": {
-      "eyebrow": "№ 03 · Pilier I",
-      "h2Before": "Tout dans ",
-      "h2Emphasis": "NetSuite",
-      "h2After": ".",
-      "lede": "Vos services externes intégrés nativement. Plus rapide, plus fonctionnel, plus économique.",
-      "blocks": [
+    "services": {
+      "eyebrow": "Les services",
+      "title": "Du conseil au développement.",
+      "items": [
         {
-          "label": "I",
-          "title": "Audit & architecture",
-          "body": "Cartographier ce qui frotte. Prioriser ce qui paie."
+          "id": "netsuite",
+          "title": "NetSuite",
+          "body": "Audit, architecture et développement SuiteScript. Des intégrations adaptées à vos processus.",
+          "tags": "SuiteScript · RESTlets · Suitelets"
         },
         {
-          "label": "II",
-          "title": "Intégration native",
-          "body": "Vos outils tiers absorbés dans NetSuite. Fini les connecteurs fragiles."
+          "id": "ai",
+          "title": "IA & automatisation",
+          "body": "Intégration de Claude ou GPT dans vos outils. Extraction de données, classification et recherche documentaire.",
+          "tags": "Claude / GPT · Workflows · RAG"
         },
         {
-          "label": "III",
-          "title": "Automatisation",
-          "body": "Supprimer les ressaisies. Code lisible, testé, livré sans surprise."
+          "id": "copilot",
+          "title": "Copilot Studio",
+          "body": "Mise en place d’agents et de workflows connectés à vos outils métier et à Microsoft 365.",
+          "tags": "Agents · Workflows · Microsoft 365"
         }
-      ],
-      "cta": "Voir le pilier"
-    },
-    "ai": {
-      "eyebrow": "№ 04 · Pilier II",
-      "h2Before": "Claude, ",
-      "h2Emphasis": "l’avenir du travail",
-      "h2After": ".",
-      "lede": "Un outil pour réfléchir, écrire, décider. Pas un produit IA générique — branché sur votre métier.",
-      "blocks": [
-        {
-          "label": "I",
-          "title": "Agents Claude",
-          "body": "Des agents qui comprennent vos règles et votre langage."
-        },
-        {
-          "label": "II",
-          "title": "Workflows Claude",
-          "body": "Classifications, extractions, décisions auditables."
-        },
-        {
-          "label": "III",
-          "title": "Recherche & arbitrage",
-          "body": "RAG sourcé. Agents qui creusent avant chaque arbitrage."
-        }
-      ],
-      "cta": "Voir le pilier"
-    },
-    "peppol": {
-      "eyebrow": "№ 06 · Adjacent",
-      "body": "Peppol BIS 3.0, branché à NetSuite, archivage légal. Au passage, naturellement.",
-      "tags": ["BIS 3.0", "NetSuite natif", "Archivage légal", "FR · BE · NL"]
-    },
-    "finalCta": {
-      "eyebrow": "№ 06 · Engage",
-      "h2Before": "Parlons ",
-      "h2Emphasis": "NetSuite",
-      "h2After": ".",
-      "lede": "Une heure pour cadrer un sujet, ensemble.",
-      "ctaPrimary": "Envoyer un mail",
-      "ctaSecondary": "LinkedIn",
-      "ctaEmailHint": "thibaut.gendebien@tgtechconsulting.com",
-      "signals": [
-        { "label": "Réponse", "value": "≤ 48 h" },
-        { "label": "Format", "value": "Visio · 60 min" },
-        { "label": "Engagement", "value": "Aucun, jusqu'au devis" }
       ]
+    },
+    "about": {
+      "eyebrow": "TG Tech Consulting",
+      "title": "Un interlocuteur direct.",
+      "body": "Thibaut Gendebien vous accompagne à distance sur vos projets NetSuite, d’intégration IA et de workflows Microsoft Copilot Studio.",
+      "link": "À propos de TGTC"
     }
   },
   "services": {
     "page": {
       "title": "Services",
-      "metaDescription": "Conseil NetSuite augmenté + Claude embarqué. Pratique indépendante au Benelux."
+      "metaDescription": "Audit NetSuite, développement SuiteScript, intégrations IA, agents et workflows Microsoft Copilot Studio."
     },
     "hero": {
-      "eyebrow": "№ Services · Practice",
-      "h1Before": "Deux pratiques, ",
-      "h1Emphasis": "une rigueur",
-      "h1After": ".",
-      "lede": "NetSuite + Claude, branchés nativement. Comprendre avant de livrer.",
-      "anchors": [
-        { "href": "#netsuite", "label": "NetSuite" },
-        { "href": "#ai", "label": "Claude" }
-      ]
+      "title": "Vos outils, ",
+      "emphasis": "connectés.",
+      "lede": "Du développement NetSuite à l’intégration IA, un accompagnement technique pour vos opérations métier."
     },
     "netsuite": {
-      "eyebrow": "№ Pilier I · NetSuite",
-      "h2Before": "L’ERP ",
-      "h2Emphasis": "habité",
-      "h2After": ".",
-      "lede": "Pour qu’il devienne un outil, pas un fardeau.",
+      "eyebrow": "01 · ERP",
+      "title": "NetSuite",
+      "lede": "Adapter NetSuite à vos processus et le connecter à vos outils métier.",
       "blocks": [
         {
-          "label": "I",
           "title": "Audit & architecture",
-          "body": "Cartographier, prioriser, livrer un plan d’action."
+          "body": "Analyse de votre configuration, de vos flux de données et de vos besoins métier."
         },
         {
-          "label": "II",
-          "title": "SuiteScript",
-          "body": "RESTlets, Suitelets, Map/Reduce. Code lisible, testé."
+          "title": "Développement SuiteScript",
+          "body": "Développement de scripts, RESTlets, Suitelets et traitements Map/Reduce."
         },
         {
-          "label": "III",
-          "title": "Automatisation",
-          "body": "Supprimer les ressaisies. Brancher les outils tiers."
-        },
-        {
-          "label": "IV",
-          "title": "Peppol",
-          "body": "BIS 3.0, intégration NetSuite, archivage."
+          "title": "Intégrations & automatisation",
+          "body": "Connexion des applications tierces et automatisation des échanges de données."
         }
       ]
     },
     "ai": {
-      "eyebrow": "№ Pilier II · Claude",
-      "h2Before": "Claude, ",
-      "h2Emphasis": "branché au métier",
-      "h2After": ".",
-      "lede": "Pas un produit IA générique. Ancré dans vos données, vos règles, votre langage.",
+      "eyebrow": "02 · IA",
+      "title": "IA & automatisation",
+      "lede": "Intégrer Claude ou GPT à vos outils et à vos données métier.",
       "blocks": [
         {
-          "label": "I",
-          "title": "Agents Claude",
-          "body": "Embarqués dans NetSuite. Pas de plugin externe."
+          "title": "Agents & intégration",
+          "body": "Agents basés sur Claude ou GPT, notamment dans NetSuite."
         },
         {
-          "label": "II",
-          "title": "Workflows Claude",
-          "body": "Classifications, extractions, décisions auditables."
+          "title": "Traitement de données",
+          "body": "Extraction et classification de données au sein de vos workflows."
         },
         {
-          "label": "III",
-          "title": "Recherche sourcée",
-          "body": "RAG sur votre base documentaire. Réponses traçables."
-        },
-        {
-          "label": "IV",
-          "title": "Arbitrage",
-          "body": "Agents qui creusent avant chaque décision stratégique."
+          "title": "Recherche documentaire",
+          "body": "Recherche augmentée par vos documents (RAG), avec des réponses reliées à leurs sources."
         }
       ]
     },
-    "cta": {
-      "eyebrow": "№ Engage",
-      "h2": "Une question précise ?",
-      "lede": "Décrivez par mail. Réponse sous 48 h, par Thibaut directement.",
-      "primary": "Envoyer un mail",
-      "secondary": "LinkedIn",
-      "emailHint": "thibaut.gendebien@tgtechconsulting.com",
-      "signals": [
-        { "label": "Réponse", "value": "≤ 48 h" },
-        { "label": "Format", "value": "Visio · 60 min" },
-        { "label": "Engagement", "value": "Aucun, jusqu'au devis" }
+    "copilot": {
+      "eyebrow": "03 · Microsoft",
+      "title": "Copilot Studio",
+      "lede": "Créer et intégrer des agents et des workflows dans votre environnement Microsoft et vos applications métier.",
+      "blocks": [
+        {
+          "title": "Agents métier",
+          "body": "Création d’agents reliés à vos documents et données pour répondre aux questions et exécuter des actions."
+        },
+        {
+          "title": "Workflows",
+          "body": "Automatisation des tâches répétitives : traitement de demandes, validations et échanges de données."
+        },
+        {
+          "title": "Intégrations",
+          "body": "Connexion à Microsoft 365 et aux applications métier via des connecteurs existants ou personnalisés."
+        }
       ]
     }
   },
   "about": {
     "page": {
       "title": "À propos",
-      "metaDescription": "Thibaut Gendebien — pratique indépendante au Benelux. NetSuite et Claude branchés nativement."
+      "metaDescription": "Thibaut Gendebien, fondateur de TG Tech Consulting. Reporting financier chez EY, conseil NetSuite chez Deloitte, puis développement et intégrations en indépendant."
     },
     "hero": {
-      "eyebrow": "№ About · Indépendant",
-      "h1": "Thibaut Gendebien.",
-      "lede": "Dix ans à transformer des ERP en outils que les opérations utilisent."
+      "eyebrow": "Le consultant",
+      "title": "Thibaut Gendebien.",
+      "lede": "Finance, développement et automatisation. Un interlocuteur direct pour vos projets NetSuite, vos intégrations et vos agents IA, à distance."
     },
-    "card": {
-      "eyebrow": "/ Carte",
-      "items": [
-        { "label": "Basé à", "value": "Bruxelles · Benelux" },
-        { "label": "Disponible en", "value": "FR · NL · EN" },
-        { "label": "Stack", "value": "NetSuite · SuiteScript 2.1 · Claude API" },
-        { "label": "Format", "value": "Mission, en direct" }
-      ]
-    },
-    "narrative": {
-      "eyebrow": "№ Pourquoi TGTC",
-      "paragraphs": [
-        "Un interlocuteur qui code, qui comprend les opérations, et qui sait dire « ce n’est pas la bonne approche ».",
-        "Deux convictions : un ERP ne sert que s’il est habité ; Claude n’a de valeur que branché au métier.",
-        "Format resserré. Pari sur la qualité, pas le volume."
-      ]
-    },
-    "principles": {
-      "eyebrow": "№ Principes",
+    "details": [
+      {
+        "label": "Pratique",
+        "value": "TG Tech Consulting · Depuis 2019"
+      },
+      {
+        "label": "Expertises",
+        "value": "NetSuite · Intégrations · IA"
+      },
+      {
+        "label": "Technologies",
+        "value": "SuiteScript · Claude / GPT · Copilot Studio"
+      },
+      {
+        "label": "Collaboration",
+        "value": "À distance · Français & anglais"
+      }
+    ],
+    "title": "Comprendre le métier. Développer les outils.",
+    "paragraphs": [
+      "Je suis Thibaut Gendebien, fondateur de TG Tech Consulting. Mon parcours associe une formation en ingénierie de gestion, l’automatisation du reporting financier chez EY et le conseil NetSuite chez Deloitte.",
+      "Depuis 2019, j’accompagne les entreprises en indépendant : développement NetSuite et SuiteScript, intégrations entre applications, formation et support. Mon activité inclut aussi l’intégration de Claude ou GPT et la mise en place d’agents et de workflows avec Microsoft Copilot Studio."
+    ],
+    "link": "Voir mon profil LinkedIn",
+    "qualifications": {
+      "eyebrow": "Formation & certifications",
+      "title": "Gestion, code et NetSuite.",
       "items": [
         {
-          "label": "I",
-          "title": "Profondeur ERP",
-          "body": "Dix ans de SuiteScript, SuiteFlow, SuiteAnalytics, SDF."
+          "date": "2018",
+          "title": "Certifications NetSuite",
+          "subtitle": "SuiteCloud Developer · SuiteFoundation",
+          "body": "NetSuite Certified SuiteCloud Developer obtenue en juin 2018 et NetSuite Certified SuiteFoundation en mars 2018."
         },
         {
-          "label": "II",
-          "title": "Délivrer ce qui sert",
-          "body": "Métrique : qui ouvre l’outil le lundi sans broncher."
+          "date": "2017",
+          "title": "Le Wagon",
+          "subtitle": "Développement web · 9 semaines",
+          "body": "Formation intensive en développement web : JavaScript, SQL, Git et Ruby on Rails. Conception et mise en production de prototypes."
         },
         {
-          "label": "III",
-          "title": "Communication directe",
-          "body": "Pas de jargon. Note hebdo : ce qui marche, ce qu’on livre."
+          "date": "2015",
+          "title": "Louvain School of Management",
+          "subtitle": "Master en ingénierie de gestion · Cum Laude",
+          "body": "Formation en management, économie, mathématiques et statistiques. Échange en finance à ITBA Universidad en 2013."
         }
       ]
     },
-    "cta": {
-      "eyebrow": "№ Engage",
-      "h2": "Discutons.",
-      "lede": "Une heure offerte avant tout devis. Réponse sous 48 h.",
-      "primary": "Envoyer un mail",
-      "secondary": "LinkedIn",
-      "emailHint": "thibaut.gendebien@tgtechconsulting.com"
+    "languages": {
+      "eyebrow": "Communication",
+      "title": "Langues de travail.",
+      "items": [
+        {
+          "name": "Français",
+          "level": "Langue maternelle ou bilingue"
+        },
+        {
+          "name": "Anglais",
+          "level": "Maîtrise professionnelle"
+        },
+        {
+          "name": "Néerlandais",
+          "level": "Compétence professionnelle limitée"
+        },
+        {
+          "name": "Espagnol",
+          "level": "Notions élémentaires"
+        }
+      ]
+    },
+    "career": {
+      "eyebrow": "Expérience",
+      "title": "De la finance au développement.",
+      "items": [
+        {
+          "date": "2019 — aujourd’hui",
+          "title": "TG Tech Consulting",
+          "subtitle": "Fondateur · Consultant indépendant",
+          "body": "Applications sur mesure, conseil NetSuite, intégrations et IA. Accompagnement des implémentations, automatisation, formation et support après mise en production."
+        },
+        {
+          "date": "2017 — 2019",
+          "title": "Deloitte",
+          "subtitle": "Business Analyst → Consultant senior",
+          "body": "Conseil fonctionnel et technique NetSuite : processus de vente, achats et stocks, personnalisations SuiteScript, intégrations RESTlets et formation des utilisateurs."
+        },
+        {
+          "date": "2016 — 2017",
+          "title": "EY",
+          "subtitle": "Consultant · Industrie des fonds",
+          "body": "Automatisation d’états financiers et de reportings pour des fonds, banques et sociétés financières. Développement VBA et support d’IBM Cognos Disclosure Management."
+        }
+      ]
     }
   },
   "contact": {
     "page": {
       "title": "Contact",
-      "metaDescription": "Contact direct — email, LinkedIn, Benelux."
+      "metaDescription": "Contacter Thibaut Gendebien chez TG Tech Consulting par email ou sur LinkedIn."
     },
     "hero": {
-      "eyebrow": "№ Contact · Engage",
-      "h1": "Écrire.",
-      "lede": "Pas de formulaire. Un mail bien rédigé suffit. Réponse sous 48 h, par Thibaut.",
-      "ctaPrimary": "Ouvrir un brouillon",
-      "ctaSecondary": "LinkedIn"
+      "eyebrow": "Contact",
+      "title": "Parlons de votre projet.",
+      "lede": "Décrivez votre contexte et ce que vous souhaitez mettre en place. Vous pouvez me joindre par email ou sur LinkedIn.",
+      "primary": "Écrire à Thibaut",
+      "secondary": "LinkedIn"
     },
-    "signals": [
-      { "label": "Réponse", "value": "≤ 48 h" },
-      { "label": "Format", "value": "Visio · 60 min" },
-      { "label": "Engagement", "value": "Aucun, jusqu'au devis" }
-    ],
-    "blocks": [
-      {
-        "label": "Email",
-        "value": "thibaut.gendebien@tgtechconsulting.com",
-        "kind": "email"
-      },
-      {
-        "label": "LinkedIn",
-        "value": "linkedin.com/in/thibaut-gendebien-7b777297",
-        "kind": "linkedin"
-      },
-      {
-        "label": "Localisation",
-        "value": "Bruxelles · Benelux",
-        "kind": "text"
-      }
-    ],
-    "closing": "Préférer un appel ? Mentionnez-le par mail — créneau renvoyé sous 24 h."
+    "emailLabel": "Email",
+    "linkedinLabel": "LinkedIn",
+    "subject": "Projet NetSuite / IA",
+    "draft": "Bonjour Thibaut,\n\nJe vous contacte au sujet de :\n\nContexte du projet :\n\nMerci."
   },
   "legal": {
     "shared": {
-      "lastUpdatedLabel": "Dernière mise à jour",
       "tbdLabel": "À fournir par TG Tech Consulting"
     },
     "privacy": {
@@ -345,9 +282,7 @@
         "title": "Politique de confidentialité",
         "metaDescription": "Politique de confidentialité TG Tech Consulting — données collectées, GA4, sous-traitants, droits RGPD."
       },
-      "eyebrow": "Legal · Privacy policy",
       "h1": "Politique de confidentialité",
-      "lastUpdated": "2026-05-04",
       "intro": "Comment TG Tech Consulting traite les données collectées via tgtechconsulting.com.",
       "sections": [
         {
@@ -368,7 +303,7 @@
         },
         {
           "title": "Conservation",
-          "body": "GA4 : 14 mois. Vercel Analytics : agrégation continue, sans données identifiantes. Logs : 30 jours max."
+          "body": "Les durées de conservation des données d’analyse et des journaux techniques restent à confirmer."
         },
         {
           "title": "Sous-traitants",
@@ -377,45 +312,6 @@
         {
           "title": "Vos droits",
           "body": "Accès, rectification, effacement, portabilité, opposition, retrait. Réclamation auprès de l’APD belge."
-        }
-      ]
-    },
-    "notice": {
-      "page": {
-        "title": "Mentions légales",
-        "metaDescription": "Mentions légales TG Tech Consulting — éditeur, hébergeur, BCE/CBE, TVA, contact."
-      },
-      "eyebrow": "Legal · Notice",
-      "h1": "Mentions légales",
-      "intro": "Identification de l’éditeur, conformément au droit belge.",
-      "sections": [
-        {
-          "title": "Éditeur",
-          "body": "TG Tech Consulting — dénomination exacte à fournir."
-        },
-        {
-          "title": "Siège social",
-          "body": "Adresse — à fournir."
-        },
-        {
-          "title": "BCE/CBE",
-          "body": "BE0XXX.XXX.XXX — à fournir."
-        },
-        {
-          "title": "TVA",
-          "body": "BE0XXX.XXX.XXX — à fournir."
-        },
-        {
-          "title": "Directeur de la publication",
-          "body": "Thibaut Gendebien."
-        },
-        {
-          "title": "Hébergeur",
-          "body": "Vercel Inc. — 340 S Lemon Ave #4133, Walnut, CA 91789, USA."
-        },
-        {
-          "title": "Contact",
-          "body": "thibaut.gendebien@tgtechconsulting.com"
         }
       ]
     }

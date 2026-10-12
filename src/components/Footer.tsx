@@ -1,131 +1,29 @@
+import { Chevron } from '@/components/shared/Chevron'
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
-import { Rule } from './shared/Rule'
+import { Brand } from './shared/Brand'
 
 export async function Footer() {
   const t = await getTranslations()
-
-  const ctaLine = t.has('footer.ctaLine') ? t('footer.ctaLine') : null
-  const ctaButton = t.has('footer.ctaButton') ? t('footer.ctaButton') : null
-
   return (
-    <footer className="mt-24 border-t border-rule-soft">
-      <div className="mx-auto max-w-6xl px-6 py-16">
-        {ctaLine && ctaButton ? (
-          <div className="mb-12 flex flex-col items-start gap-4 border-b border-rule-soft pb-12 md:flex-row md:items-center md:justify-between md:gap-8">
-            <p className="max-w-prose font-display text-xl text-cream md:text-2xl">
-              {ctaLine}
-            </p>
-            <a
-              href={`mailto:${t('common.email')}`}
-              className="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-cream-dim transition-colors duration-200 hover:text-gold"
-            >
-              <span className="border-b border-dotted border-rule-dotted pb-px transition-colors duration-200 group-hover:border-gold">
-                {ctaButton}
-              </span>
-              <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-            </a>
-          </div>
-        ) : null}
-
-        <div className="mb-10">
-          <p className="font-display text-xl tracking-wide text-cream md:text-2xl">
-            {t('footer.brand')}
-          </p>
-          <p className="mt-1 text-sm text-cream-dim">{t('footer.tagline')}</p>
+    <footer className="site-footer">
+      <div className="wrap">
+        <div className="footer-contact">
+          <div><h2>{t('footer.ctaLine')}</h2><p>{t('footer.tagline')}</p></div>
+          <a href={`mailto:${t('common.email')}`} className="button">{t('footer.ctaButton')}<Chevron /></a>
         </div>
-
-        <Rule variant="soft" />
-
-        <div className="my-10 grid grid-cols-1 gap-10 md:grid-cols-3">
-          <div>
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-widest text-cream-muted">
-              {t('footer.contact')}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href={`mailto:${t('common.email')}`}
-                  className="text-cream-dim transition-colors hover:text-gold"
-                >
-                  {t('common.email')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={t('common.linkedinUrl')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cream-dim transition-colors hover:text-gold"
-                >
-                  {t('footer.linkedin')} ↗
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-widest text-cream-muted">
-              {t('footer.navigation')}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/services"
-                  className="text-cream-dim transition-colors hover:text-gold"
-                >
-                  {t('nav.services')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-cream-dim transition-colors hover:text-gold"
-                >
-                  {t('nav.about')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-cream-dim transition-colors hover:text-gold"
-                >
-                  {t('nav.contact')}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-widest text-cream-muted">
-              {t('footer.legal')}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/legal/privacy"
-                  className="text-cream-dim transition-colors hover:text-gold"
-                >
-                  {t('footer.privacy')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/legal/notice"
-                  className="text-cream-dim transition-colors hover:text-gold"
-                >
-                  {t('footer.notice')}
-                </Link>
-              </li>
-            </ul>
-          </div>
+        <div className="footer-main">
+          <Brand />
+          <nav aria-label={t('footer.navigation')}>
+            <Link href="/services">{t('nav.services')}</Link>
+            <Link href="/about">{t('nav.about')}</Link>
+            <a href={t('common.linkedinUrl')} target="_blank" rel="noopener noreferrer">LinkedIn{' '}<Chevron /></a>
+          </nav>
         </div>
-
-        <Rule variant="soft" />
-
-        <p className="mt-6 font-mono text-xs uppercase tracking-widest text-cream-muted">
-          {t('footer.copyright')}
-        </p>
+        <div className="footer-bottom">
+          <p>{t('footer.copyright')}</p>
+          <nav aria-label={t('footer.legal')}><Link href="/legal/privacy">{t('footer.privacy')}</Link></nav>
+        </div>
       </div>
     </footer>
   )

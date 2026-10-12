@@ -1,138 +1,74 @@
+import { Chevron } from '@/components/shared/Chevron'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
-import { Eyebrow } from '@/components/shared/Eyebrow'
-import { Rule } from '@/components/shared/Rule'
-import { CtaSecondary } from '@/components/shared/CtaSecondary'
-import { InkButton } from '@/components/motion/InkButton'
-import { Reveal } from '@/components/motion/Reveal'
 import { buildMetadata } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string }> }
+type ProfileItem = { date: string; title: string; subtitle: string; body: string }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'about.page' })
-  return buildMetadata({
-    locale,
-    path: '/about',
-    title: t('title'),
-    description: t('metaDescription'),
-    ogTitle: 'Thibaut Gendebien.',
-  })
+  return buildMetadata({ locale, path: '/about', title: t('title'), description: t('metaDescription'), ogTitle: 'Thibaut Gendebien.' })
 }
-
-type Principle = { label: string; title: string; body: string }
-type CardItem = { label: string; value: string }
 
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale)
-
   const t = await getTranslations('about')
   const common = await getTranslations('common')
-  const paragraphs = t.raw('narrative.paragraphs') as string[]
-  const principles = t.raw('principles.items') as Principle[]
-  const cardItems = (t.raw('card.items') as CardItem[] | undefined) ?? []
-  const cardEyebrow = t.has('card.eyebrow') ? t('card.eyebrow') : null
-  const ctaEmailHint = t.has('cta.emailHint') ? t('cta.emailHint') : null
-
+  const details = t.raw('details') as { label: string; value: string }[]
+  const paragraphs = t.raw('paragraphs') as string[]
+  const career = t.raw('career.items') as ProfileItem[]
+  const qualifications = t.raw('qualifications.items') as ProfileItem[]
+  const languages = t.raw('languages.items') as { name: string; level: string }[]
   return (
-    <>
-      <section className="mx-auto max-w-6xl px-6 pb-12 pt-32 md:pt-48">
-        <Eyebrow>{t('hero.eyebrow')}</Eyebrow>
-        <h1 className="mt-6 font-display text-4xl tracking-tight text-cream md:text-5xl">
-          {t('hero.h1')}
-        </h1>
-        <p className="mt-8 max-w-prose text-lg text-cream-dim md:text-xl">
-          {t('hero.lede')}
-        </p>
+    <div className="wrap">
+      <section className="page-intro">
+        <p className="eyebrow">{t('hero.eyebrow')}</p><h1>{t('hero.title')}</h1><p>{t('hero.lede')}</p>
       </section>
-
-      <Reveal as="section" className="mx-auto max-w-6xl px-6 py-24">
-        <Eyebrow>{t('narrative.eyebrow')}</Eyebrow>
-        <Rule variant="soft" className="mt-6" />
-        <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-[1fr_2fr]">
-          {cardItems.length ? (
-            <aside
-              aria-label={cardEyebrow ?? undefined}
-              className="relative self-start border border-rule-soft bg-ink-soft/40 p-6 backdrop-blur-sm transition-colors duration-300 hover:border-rule-jade"
-            >
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-2 border border-rule-soft/60"
-              />
-              <div className="relative">
-                {cardEyebrow ? (
-                  <p className="font-mono text-[10px] uppercase tracking-widest text-cream-muted">
-                    <span className="text-jade">/</span> {cardEyebrow.replace(/^\/\s*/, '')}
-                  </p>
-                ) : null}
-                <Rule variant="dotted" className="my-4" />
-                <dl className="space-y-4">
-                  {cardItems.map((item) => (
-                    <div key={item.label} className="flex flex-col gap-1">
-                      <dt className="font-mono text-[10px] uppercase tracking-widest text-cream-muted">
-                        {item.label}
-                      </dt>
-                      <dd className="font-display text-base leading-snug text-cream md:text-lg">
-                        {item.value}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-            </aside>
-          ) : (
-            <div aria-hidden="true" className="hidden lg:block" />
-          )}
-          <div className="space-y-6 text-lg text-cream-dim md:text-xl">
-            {paragraphs.map((para, idx) => (
-              <p key={idx} className="max-w-prose">
-                {para}
-              </p>
-            ))}
-          </div>
+      <section className="profile" aria-labelledby="profile-title">
+        <dl>{details.map((item) => <div key={item.label}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl>
+        <div className="profile-copy">
+          <h2 id="profile-title">{t('title')}</h2>
+          {paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          <a href={common('linkedinUrl')} className="text-link" target="_blank" rel="noopener noreferrer">{t('link')}<Chevron /></a>
         </div>
-      </Reveal>
-
-      <Reveal as="section" className="mx-auto max-w-6xl px-6 py-24">
-        <Eyebrow>{t('principles.eyebrow')}</Eyebrow>
-        <Rule variant="soft" className="my-10" />
-        <ol className="grid grid-cols-1 gap-12 md:grid-cols-3">
-          {principles.map((principle) => (
-            <li key={principle.label} className="flex flex-col gap-4">
-              <span className="font-display text-5xl text-gold">{principle.label}</span>
-              <h3 className="font-display text-2xl text-cream">{principle.title}</h3>
-              <p className="text-base text-cream-dim">{principle.body}</p>
+      </section>
+      <section className="profile-section" aria-labelledby="career-title">
+        <div className="section-heading">
+          <div><p className="eyebrow">{t('career.eyebrow')}</p><h2 id="career-title">{t('career.title')}</h2></div>
+        </div>
+        <ol className="qualification-list career-list">
+          {career.map((item) => (
+            <li key={item.title}>
+              <span className="qualification-year">{item.date}</span>
+              <div><h3>{item.title}</h3><p className="qualification-subtitle">{item.subtitle}</p></div>
+              <p>{item.body}</p>
             </li>
           ))}
         </ol>
-      </Reveal>
-
-      <Reveal as="section" className="mx-auto max-w-6xl px-6 py-24">
-        <Eyebrow>{t('cta.eyebrow')}</Eyebrow>
-        <h2 className="mt-3 font-display text-3xl text-cream md:text-4xl">
-          {t('cta.h2')}
-        </h2>
-        <p className="mt-6 max-w-prose text-lg text-cream-dim">{t('cta.lede')}</p>
-        <Rule variant="soft" className="my-10" />
-        <div className="flex flex-wrap items-center gap-6">
-          <InkButton href={`mailto:${common('email')}`}>{t('cta.primary')}</InkButton>
-          <CtaSecondary href={common('linkedinUrl')} external>
-            {t('cta.secondary')}
-          </CtaSecondary>
+      </section>
+      <section className="profile-section" aria-labelledby="qualifications-title">
+        <div className="section-heading">
+          <div><p className="eyebrow">{t('qualifications.eyebrow')}</p><h2 id="qualifications-title">{t('qualifications.title')}</h2></div>
         </div>
-        {ctaEmailHint ? (
-          <p className="mt-4 font-mono text-[11px] tracking-wide text-cream-muted">
-            <a
-              href={`mailto:${common('email')}`}
-              className="border-b border-dotted border-rule-dotted pb-px transition-colors duration-200 hover:border-gold hover:text-cream"
-            >
-              {ctaEmailHint}
-            </a>
-          </p>
-        ) : null}
-      </Reveal>
-    </>
+        <ol className="qualification-list">
+          {qualifications.map((item) => (
+            <li key={item.title}>
+              <span className="qualification-year">{item.date}</span>
+              <div><h3>{item.title}</h3><p className="qualification-subtitle">{item.subtitle}</p></div>
+              <p>{item.body}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section className="profile-section profile-languages" aria-labelledby="languages-title">
+        <div><p className="eyebrow">{t('languages.eyebrow')}</p><h2 id="languages-title">{t('languages.title')}</h2></div>
+        <dl className="language-list">
+          {languages.map((language) => <div key={language.name}><dt>{language.name}</dt><dd>{language.level}</dd></div>)}
+        </dl>
+      </section>
+    </div>
   )
 }

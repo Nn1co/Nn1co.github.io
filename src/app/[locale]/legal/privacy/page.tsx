@@ -19,5 +19,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function PrivacyPage({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale)
-  return <LegalPage namespace="legal.privacy" showLastUpdated />
+  return <LegalPage namespace="legal.privacy" />
 }

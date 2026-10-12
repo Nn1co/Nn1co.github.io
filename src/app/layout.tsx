@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import { getLocale } from 'next-intl/server'
-import { fontDisplay, fontBody, fontMono } from './fonts'
-import { cn } from '@/lib/cn'
+import { fontBody, fontMono } from './fonts'
 import { GoogleAnalytics } from '@/components/consent/GoogleAnalytics'
 import { SITE_URL } from '@/lib/seo'
 import './globals.css'
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
     template: '%s · TG TECH CONSULTING',
   },
   description:
-    'Conseil NetSuite et intégration IA pour les opérations métier. Pratique indépendante au Benelux.',
+    'Conseil NetSuite et intégration IA pour les opérations métier. Accompagnement à distance.',
   applicationName: 'TG TECH CONSULTING',
   authors: [{ name: 'Thibaut Gendebien' }],
   creator: 'Thibaut Gendebien',
@@ -41,14 +40,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html
       lang={locale}
-      className={cn(fontDisplay.variable, fontBody.variable, fontMono.variable)}
+      className={`${fontBody.variable} ${fontMono.variable}`}
     >
-      <body className="bg-ink font-body text-cream antialiased">
+      <body>
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-gold focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase focus:tracking-widest focus:text-ink"
+          className="skip-link"
         >
-          Skip to content
+          {locale === 'fr' ? 'Aller au contenu' : 'Skip to content'}
         </a>
         {children}
         <Analytics />
