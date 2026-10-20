@@ -1,16 +1,17 @@
-import { Chevron } from '@/components/shared/Chevron'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { buildMetadata } from '@/lib/seo'
+import { ProjectIllustration } from '@/components/work/ProjectIllustration'
+import type { ProjectSlug } from '@/lib/projects'
 
 type Props = { params: Promise<{ locale: string }> }
-type Service = { id: string; title: string; body: string; tags: string }
+type Service = { slug: ProjectSlug; kind: 'orders' | 'portal' | 'supply' | 'assistant'; title: string; body: string; example: string }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'home.page' })
-  return buildMetadata({ locale, path: '/', title: t('title'), description: t('metaDescription'), ogTitle: locale === 'fr' ? 'ERP & IA.' : 'ERP & AI.', ogSubtitle: locale === 'fr' ? 'NetSuite, Odoo et intégration IA' : 'NetSuite, Odoo and AI integration' })
+  return buildMetadata({ locale, path: '/', title: t('title'), description: t('metaDescription'), ogTitle: locale === 'fr' ? 'NetSuite, en plus simple.' : 'Easier NetSuite.', ogSubtitle: locale === 'fr' ? 'Applications sur mesure et assistants IA' : 'Custom applications and AI assistants' })
 }
 
 export default async function HomePage({ params }: Props) {
@@ -20,36 +21,28 @@ export default async function HomePage({ params }: Props) {
   const services = t.raw('services.items') as Service[]
   return (
     <>
-      <section className="wrap hero">
-        <div className="hero-grid">
-          <div>
-            <h1><span>{t('hero.title')}</span><span>{t('hero.line')}</span><em>{t('hero.emphasis')}</em></h1>
-            <Link href="/contact" className="button">{t('hero.primary')}<Chevron /></Link>
-          </div>
-          <figure className="system-diagram" aria-label={t('hero.diagramLabel')}>
-            <figcaption>{t('hero.diagramTitle')}</figcaption>
-            <div className="system-core"><strong>NetSuite / Odoo</strong><span>ERP</span></div>
-            <div className="system-connections">
-              <div className="system-node"><strong>{t('hero.tools')}</strong><small>{t('hero.integration')}</small></div>
-              <div className="system-node"><strong>Claude / GPT</strong><small>{t('hero.ai')}</small></div>
-            </div>
-          </figure>
+      <section className="wrap home-hero">
+        <h1><span>{t('hero.title')}</span>{' '}<em>{t('hero.emphasis')}</em></h1>
+        <p>{t('hero.description')}<br />{t('hero.detail')}</p>
+        <div className="hero-actions">
+          <Link href="/contact" className="button">{t('hero.primary')}</Link>
+          <a href="#services" className="text-link">{t('hero.secondary')}</a>
         </div>
       </section>
-      <section id="services" className="wrap section">
-        <div className="section-heading">
-          <div><p className="eyebrow">{t('services.eyebrow')}</p><h2>{t('services.title')}</h2></div>
-        </div>
+      <section id="services" className="wrap home-work" aria-label={t('services.label')}>
         {services.map((service, index) => (
-          <Link key={service.id} href={`/services#${service.id}`} className="service-row">
-            <span className="service-number" aria-hidden="true">0{index + 1}</span><h3>{service.title}</h3>
-            <div><p>{service.body}</p><small>{service.tags}</small></div><Chevron />
-          </Link>
+          <article key={service.slug} className={`work-row${index % 2 ? ' work-row-reverse' : ''}`}>
+            <div className="work-copy">
+              <h2>{service.title}</h2>
+              <p className="work-description">{service.body}</p>
+              <div className="service-example">
+                <p className="example-label">{t('services.exampleLabel')}</p>
+                <Link href={`/work/${service.slug}`} className="example-link">{service.example}</Link>
+              </div>
+            </div>
+            <div className="work-visual"><ProjectIllustration kind={service.kind} locale={locale} /></div>
+          </article>
         ))}
-      </section>
-      <section className="wrap about-strip">
-        <div><p className="eyebrow">{t('about.eyebrow')}</p><h2>{t('about.title')}</h2></div>
-        <div><p>{t('about.body')}</p><Link href="/about" className="text-link">{t('about.link')}<Chevron /></Link></div>
       </section>
     </>
   )

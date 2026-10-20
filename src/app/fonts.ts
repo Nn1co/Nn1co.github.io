@@ -1,16 +1,14 @@
-import { Inter, JetBrains_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
 
-export const fontBody = Inter({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+export const fontBody = localFont({
+  src: './fonts/GeistVF.woff',
   variable: '--font-body',
   display: 'swap',
   preload: true,
 })
 
-export const fontMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
+export const fontMono = localFont({
+  src: './fonts/GeistMonoVF.woff',
   variable: '--font-mono',
   display: 'swap',
   preload: false,

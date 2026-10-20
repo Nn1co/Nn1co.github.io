@@ -1,4 +1,3 @@
-import { Chevron } from '@/components/shared/Chevron'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { buildMetadata } from '@/lib/seo'
@@ -32,13 +31,11 @@ export default async function AboutPage({ params }: Props) {
         <div className="profile-copy">
           <h2 id="profile-title">{t('title')}</h2>
           {paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          <a href={common('linkedinUrl')} className="text-link" target="_blank" rel="noopener noreferrer">{t('link')}<Chevron /></a>
+          <a href={common('linkedinUrl')} className="text-link" target="_blank" rel="noopener noreferrer">{t('link')}</a>
         </div>
       </section>
-      <section className="profile-section" aria-labelledby="career-title">
-        <div className="section-heading">
-          <div><p className="eyebrow">{t('career.eyebrow')}</p><h2 id="career-title">{t('career.title')}</h2></div>
-        </div>
+      <details className="profile-disclosure">
+        <summary><span className="eyebrow">{t('career.eyebrow')}</span><h2>{t('career.title')}</h2></summary>
         <ol className="qualification-list career-list">
           {career.map((item) => (
             <li key={item.title}>
@@ -48,11 +45,9 @@ export default async function AboutPage({ params }: Props) {
             </li>
           ))}
         </ol>
-      </section>
-      <section className="profile-section" aria-labelledby="qualifications-title">
-        <div className="section-heading">
-          <div><p className="eyebrow">{t('qualifications.eyebrow')}</p><h2 id="qualifications-title">{t('qualifications.title')}</h2></div>
-        </div>
+      </details>
+      <details className="profile-disclosure">
+        <summary><span className="eyebrow">{t('qualifications.eyebrow')}</span><h2>{t('qualifications.title')}</h2></summary>
         <ol className="qualification-list">
           {qualifications.map((item) => (
             <li key={item.title}>
@@ -62,13 +57,13 @@ export default async function AboutPage({ params }: Props) {
             </li>
           ))}
         </ol>
-      </section>
-      <section className="profile-section profile-languages" aria-labelledby="languages-title">
-        <div><p className="eyebrow">{t('languages.eyebrow')}</p><h2 id="languages-title">{t('languages.title')}</h2></div>
+      </details>
+      <details className="profile-disclosure">
+        <summary><span className="eyebrow">{t('languages.eyebrow')}</span><h2>{t('languages.title')}</h2></summary>
         <dl className="language-list">
           {languages.map((language) => <div key={language.name}><dt>{language.name}</dt><dd>{language.level}</dd></div>)}
         </dl>
-      </section>
+      </details>
     </div>
   )
 }

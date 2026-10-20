@@ -29,14 +29,15 @@ export function JsonLd({ locale }: JsonLdProps) {
     url: SITE_URL,
     description:
       locale === 'fr'
-        ? 'Conseil ERP NetSuite et Odoo, intégration IA et automatisation des opérations métier. Accompagnement à distance.'
-        : 'NetSuite and Odoo ERP consulting, AI integration and business automation. Remote delivery.',
+        ? 'Applications NetSuite sur mesure et assistants IA connectés, pensés pour le quotidien de vos équipes.'
+        : 'Custom NetSuite applications and connected AI assistants, built around your team’s daily work.',
     knowsAbout: [
       'NetSuite',
       'Odoo',
       'SuiteScript',
       'SuiteCloud Development Framework',
       'AI integration',
+      'Microsoft Copilot Studio',
       'ERP automation',
     ],
     founder: {

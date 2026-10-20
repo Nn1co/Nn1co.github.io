@@ -1,7 +1,7 @@
 # TGTC — TG Tech Consulting
 
-Bilingual website for TG Tech Consulting: NetSuite and Odoo consulting, integrations,
-AI automation and Microsoft Copilot Studio services delivered remotely.
+Bilingual website for TG Tech Consulting: custom NetSuite applications, connected
+AI assistants, ERP consulting and integrations.
 
 ## Development
 
@@ -17,21 +17,29 @@ npm run start # serve the production build
 npm run lint
 ```
 
-Google Fonts are downloaded during the build and served locally by Next.js.
+The bundled Geist fonts are served locally. Builds do not download Google Fonts.
 
 ## Editing
 
 - Copy: `messages/fr.json` and `messages/en.json`; keep their structures in sync.
 - Theme and responsive layouts: `src/app/globals.css`.
 - Routes: `src/app/[locale]`; French and English variants of home, services,
-  about, contact and privacy.
-- Service anchors: `#netsuite`, `#ai`, `#copilot`.
-- Contact opens the visitor's email client or LinkedIn; there is no server form.
+  about, contact and project details.
+- Project routes: `/work/quick-so`, `/work/prp-v2`, `/work/supply-chain-workbench`,
+  `/work/quoting-assistants`.
+- Service anchors: `#netsuite`, `#replacements`, `#ai`.
+- Contact validates a short brief and prepares an email draft or copies the
+  message. The visitor reviews and sends it in their own email application;
+  the website does not submit, store or send the message.
 
-The visual palette uses cool white, navy and cobalt. Content remains visible
-without JavaScript. Motion is limited to a short entrance and interaction states,
+The visual palette uses white, navy and cobalt. The homepage leads with services,
+each supported by a small project example. Project pages explain the starting
+point, the application and what TGTC could build for the visitor’s team.
+The SVG illustrations contain no client data. AI services distinguish agents
+connected across business tools from assistants embedded in custom applications.
+Content remains visible without JavaScript. Motion is limited to interaction states,
 with `prefers-reduced-motion` support. The previous decorative components were
-removed. Older design documents describe the superseded version.
+removed. Older design documents describe superseded versions.
 
 ## Configuration
 

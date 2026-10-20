@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
 
 const COOKIE_NAME = 'NEXT_TGTC_CONSENT'
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 365
@@ -42,7 +41,7 @@ export function ConsentBanner() {
 
   return (
     <aside className="consent-banner" aria-label={t('label')}>
-      <p>{t('message')} <Link href="/legal/privacy">{t('learnMore')}</Link></p>
+      <p>{t('message')}</p>
       <div>
         <button type="button" className="button button-small button-outline" onClick={() => handle('refused')}>{t('refuse')}</button>
         <button type="button" className="button button-small" onClick={() => handle('granted')}>{t('accept')}</button>

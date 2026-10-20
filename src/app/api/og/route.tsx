@@ -4,9 +4,9 @@ export const runtime = 'edge'
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url)
-  const title = (searchParams.get('title') ?? 'TG TECH · CONSULTING').slice(0, 120)
+  const title = (searchParams.get('title') ?? 'Easier NetSuite.').slice(0, 120)
   const subtitle = (
-    searchParams.get('subtitle') ?? 'ERP consulting · NetSuite & Odoo · AI integration'
+    searchParams.get('subtitle') ?? 'Custom applications and connected AI assistants'
   ).slice(0, 140)
 
   return new ImageResponse(
@@ -15,13 +15,13 @@ export async function GET(req: Request) {
         style={{
           width: '100%',
           height: '100%',
-          background: '#0E1410',
+          background: '#FFFFFF',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
           padding: 80,
-          color: '#E8E2CF',
-          fontFamily: 'serif',
+          color: '#17283F',
+          fontFamily: 'sans-serif',
         }}
       >
         <div
@@ -30,13 +30,13 @@ export async function GET(req: Request) {
             justifyContent: 'space-between',
             alignItems: 'center',
             fontSize: 22,
-            color: '#D4A55F',
+            color: '#17283F',
             textTransform: 'uppercase',
             letterSpacing: 4,
             fontFamily: 'monospace',
           }}
         >
-          <span>№ TG TECH · CONSULTING</span>
+          <span>TG TECH · CONSULTING</span>
         </div>
         <div
           style={{
@@ -51,7 +51,7 @@ export async function GET(req: Request) {
               fontSize: 80,
               lineHeight: 1.05,
               letterSpacing: -1,
-              color: '#E8E2CF',
+              color: '#275BE8',
               maxWidth: 1000,
             }}
           >
@@ -61,13 +61,13 @@ export async function GET(req: Request) {
             style={{
               width: 60,
               height: 1,
-              background: 'rgba(232,226,207,0.25)',
+              background: '#E5EAF1',
             }}
           />
           <div
             style={{
               fontSize: 26,
-              color: 'rgba(232,226,207,0.72)',
+              color: '#5F6B7C',
               maxWidth: 900,
               lineHeight: 1.4,
             }}
