@@ -15,7 +15,6 @@ export async function Footer() {
           <Brand />
           <nav aria-label={t('footer.navigation')}>
             <Link href="/services">{t('nav.services')}</Link>
-            <Link href="/about">{t('nav.about')}</Link>
             <a href={t('common.linkedinUrl')} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </nav>
         </div>

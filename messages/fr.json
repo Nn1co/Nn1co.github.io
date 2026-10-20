@@ -1,7 +1,6 @@
 {
   "nav": {
     "services": "Services",
-    "about": "À propos",
     "contact": "Contact",
     "menu": "Menu",
     "close": "Fermer",
@@ -26,7 +25,7 @@
   },
   "common": {
     "email": "thibaut.gendebien@tgtechconsulting.com",
-    "linkedinUrl": "https://www.linkedin.com/in/thibaut-gendebien-7b777297"
+    "linkedinUrl": "https://www.linkedin.com/company/tg-tech-consulting/home/"
   },
   "consent": {
     "label": "Préférence cookies",
@@ -103,124 +102,22 @@
       ]
     }
   },
-  "about": {
-    "page": {
-      "title": "À propos",
-      "metaDescription": "Thibaut Gendebien, fondateur de TG Tech Consulting. Reporting financier chez EY, conseil NetSuite chez Deloitte, puis développement et intégrations en indépendant."
-    },
-    "hero": {
-      "eyebrow": "Le consultant",
-      "title": "Thibaut Gendebien.",
-      "lede": "Finance, développement et automatisation. Un interlocuteur direct pour vos applications, intégrations et projets IA."
-    },
-    "details": [
-      {
-        "label": "Pratique",
-        "value": "TG Tech Consulting · Depuis 2019"
-      },
-      {
-        "label": "Expertises",
-        "value": "NetSuite · Odoo · Intégrations · IA"
-      },
-      {
-        "label": "Technologies",
-        "value": "SuiteScript · Claude / GPT · Copilot Studio"
-      }
-    ],
-    "title": "Comprendre le métier. Développer les outils.",
-    "paragraphs": [
-      "Je suis Thibaut Gendebien, fondateur de TG Tech Consulting. Mon parcours associe une formation en ingénierie de gestion, l’automatisation du reporting financier chez EY et le conseil NetSuite chez Deloitte.",
-      "Depuis 2019, j’accompagne les entreprises en indépendant : développement NetSuite et SuiteScript, intégrations entre applications, formation et support. Mon activité actuelle inclut aussi Odoo, l’intégration de Claude ou GPT et la mise en place d’agents et de workflows avec Microsoft Copilot Studio."
-    ],
-    "link": "Voir mon profil LinkedIn",
-    "qualifications": {
-      "eyebrow": "Formation & certifications",
-      "title": "Gestion, code et NetSuite.",
-      "items": [
-        {
-          "date": "2018",
-          "title": "Certifications NetSuite",
-          "subtitle": "SuiteCloud Developer · SuiteFoundation",
-          "body": "NetSuite Certified SuiteCloud Developer obtenue en juin 2018 et NetSuite Certified SuiteFoundation en mars 2018."
-        },
-        {
-          "date": "2017",
-          "title": "Le Wagon",
-          "subtitle": "Développement web · 9 semaines",
-          "body": "Formation intensive en développement web : JavaScript, SQL, Git et Ruby on Rails. Conception et mise en production de prototypes."
-        },
-        {
-          "date": "2015",
-          "title": "Louvain School of Management",
-          "subtitle": "Master en ingénierie de gestion · Cum Laude",
-          "body": "Formation en management, économie, mathématiques et statistiques. Échange en finance à ITBA Universidad en 2013."
-        }
-      ]
-    },
-    "languages": {
-      "eyebrow": "Communication",
-      "title": "Langues de travail.",
-      "items": [
-        {
-          "name": "Français",
-          "level": "Langue maternelle ou bilingue"
-        },
-        {
-          "name": "Anglais",
-          "level": "Maîtrise professionnelle"
-        },
-        {
-          "name": "Néerlandais",
-          "level": "Compétence professionnelle limitée"
-        },
-        {
-          "name": "Espagnol",
-          "level": "Notions élémentaires"
-        }
-      ]
-    },
-    "career": {
-      "eyebrow": "Expérience",
-      "title": "De la finance au développement.",
-      "items": [
-        {
-          "date": "2019 — aujourd’hui",
-          "title": "TG Tech Consulting",
-          "subtitle": "Fondateur · Consultant indépendant",
-          "body": "Applications sur mesure, conseil NetSuite, intégrations et IA. Accompagnement des implémentations, automatisation, formation et support après mise en production."
-        },
-        {
-          "date": "2017 — 2019",
-          "title": "Deloitte",
-          "subtitle": "Business Analyst → Consultant senior",
-          "body": "Conseil fonctionnel et technique NetSuite : processus de vente, achats et stocks, personnalisations SuiteScript, intégrations RESTlets et formation des utilisateurs."
-        },
-        {
-          "date": "2016 — 2017",
-          "title": "EY",
-          "subtitle": "Consultant · Industrie des fonds",
-          "body": "Automatisation d’états financiers et de reportings pour des fonds, banques et sociétés financières. Développement VBA et support d’IBM Cognos Disclosure Management."
-        }
-      ]
-    },
-    "disclosureLabel": "Parcours et qualifications"
-  },
   "contact": {
     "page": {
       "title": "Contact",
-      "metaDescription": "Contacter Thibaut Gendebien chez TG Tech Consulting par email ou sur LinkedIn."
+      "metaDescription": "Contacter TG Tech Consulting par email ou sur LinkedIn."
     },
     "hero": {
       "eyebrow": "Contact",
       "title": "Que pourrions-nous simplifier ?",
-      "lede": "Parlez-moi d’une tâche que votre équipe aimerait rendre plus simple.",
-      "primary": "Écrire à Thibaut",
+      "lede": "Parlez-nous d’une tâche que votre équipe aimerait rendre plus simple.",
+      "primary": "Écrire à notre équipe",
       "secondary": "LinkedIn"
     },
     "emailLabel": "Email",
     "linkedinLabel": "LinkedIn",
     "subject": "Simplifier un parcours avec TGTC",
-    "draft": "Bonjour Thibaut,\n\nJe vous contacte au sujet de :\n\nContexte du projet :\n\nMerci.",
+    "draft": "Bonjour à l’équipe TG Tech Consulting,\n\nJe vous contacte au sujet de :\n\nContexte du projet :\n\nMerci.",
     "form": {
       "name": "Votre nom",
       "email": "Email professionnel",
@@ -233,10 +130,10 @@
       "prepare": "Préparer l’email",
       "copy": "Copier le message",
       "copied": "Message copié. Collez-le dans votre application email.",
-      "copyFailed": "La copie est indisponible. Vous pouvez m’écrire directement à l’adresse ci-dessus.",
+      "copyFailed": "La copie est indisponible. Vous pouvez nous écrire directement à l’adresse ci-dessus.",
       "hint": "Ouvre votre application email. Vous relisez et envoyez le message.",
       "subject": "Simplifier un parcours avec TGTC",
-      "greeting": "Bonjour Thibaut,",
+      "greeting": "Bonjour à l’équipe TG Tech Consulting,",
       "labels": {
         "name": "Nom",
         "email": "Email",

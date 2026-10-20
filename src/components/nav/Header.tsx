@@ -19,7 +19,6 @@ export function Header() {
 
   const links = [
     { href: '/services', label: t('services') },
-    { href: '/about', label: t('about') },
   ]
   const navigation = links.map(({ href, label }) => (
     <Link key={href} href={href} className="nav-link" aria-current={pathname === href ? 'page' : undefined} onClick={() => setOpen(false)}>{label}</Link>

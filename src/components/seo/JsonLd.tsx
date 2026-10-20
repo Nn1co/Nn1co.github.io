@@ -11,7 +11,7 @@ export function JsonLd({ locale }: JsonLdProps) {
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/api/og?title=TG%20TECH%20·%20CONSULTING`,
-    sameAs: ['https://www.linkedin.com/in/thibaut-gendebien-7b777297'],
+    sameAs: ['https://www.linkedin.com/company/tg-tech-consulting/home/'],
     contactPoint: [
       {
         '@type': 'ContactPoint',

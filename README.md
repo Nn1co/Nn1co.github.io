@@ -24,7 +24,7 @@ The bundled Geist fonts are served locally. Builds do not download Google Fonts.
 - Copy: `messages/fr.json` and `messages/en.json`; keep their structures in sync.
 - Theme and responsive layouts: `src/app/globals.css`.
 - Routes: `src/app/[locale]`; French and English variants of home, services,
-  about, contact and project details.
+  contact and project details. Former About URLs redirect to the homepage.
 - Project routes: `/work/quick-so`, `/work/prp-v2`, `/work/supply-chain-workbench`,
   `/work/quoting-assistants`.
 - Service anchors: `#netsuite`, `#replacements`, `#ai`.

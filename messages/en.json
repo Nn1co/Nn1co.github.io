@@ -1,7 +1,6 @@
 {
   "nav": {
     "services": "Services",
-    "about": "About",
     "contact": "Contact",
     "menu": "Menu",
     "close": "Close",
@@ -26,7 +25,7 @@
   },
   "common": {
     "email": "thibaut.gendebien@tgtechconsulting.com",
-    "linkedinUrl": "https://www.linkedin.com/in/thibaut-gendebien-7b777297"
+    "linkedinUrl": "https://www.linkedin.com/company/tg-tech-consulting/home/"
   },
   "consent": {
     "label": "Cookie preferences",
@@ -103,124 +102,22 @@
       ]
     }
   },
-  "about": {
-    "page": {
-      "title": "About",
-      "metaDescription": "Thibaut Gendebien, founder of TG Tech Consulting. Financial reporting at EY, NetSuite consulting at Deloitte, then independent development and integration work."
-    },
-    "hero": {
-      "eyebrow": "The consultant",
-      "title": "Thibaut Gendebien.",
-      "lede": "Finance, development and automation. A direct point of contact for your applications, integrations and AI projects."
-    },
-    "details": [
-      {
-        "label": "Practice",
-        "value": "TG Tech Consulting · Since 2019"
-      },
-      {
-        "label": "Expertise",
-        "value": "NetSuite · Odoo · Integrations · AI"
-      },
-      {
-        "label": "Technologies",
-        "value": "SuiteScript · Claude / GPT · Copilot Studio"
-      }
-    ],
-    "title": "Understand the business. Build the tools.",
-    "paragraphs": [
-      "I’m Thibaut Gendebien, founder of TG Tech Consulting. My background combines a degree in business engineering, financial reporting automation at EY and NetSuite consulting at Deloitte.",
-      "Since 2019, I’ve worked independently with businesses on NetSuite and SuiteScript development, application integrations, training and support. My current work also covers Odoo, Claude or GPT integration, and agents and workflows built with Microsoft Copilot Studio."
-    ],
-    "link": "View my LinkedIn profile",
-    "qualifications": {
-      "eyebrow": "Education & certifications",
-      "title": "Business, code and NetSuite.",
-      "items": [
-        {
-          "date": "2018",
-          "title": "NetSuite certifications",
-          "subtitle": "SuiteCloud Developer · SuiteFoundation",
-          "body": "NetSuite Certified SuiteCloud Developer awarded in June 2018 and NetSuite Certified SuiteFoundation in March 2018."
-        },
-        {
-          "date": "2017",
-          "title": "Le Wagon",
-          "subtitle": "Web development · 9 weeks",
-          "body": "Intensive web development training: JavaScript, SQL, Git and Ruby on Rails. Design and deployment of web prototypes."
-        },
-        {
-          "date": "2015",
-          "title": "Louvain School of Management",
-          "subtitle": "Master’s in Business Engineering · Cum Laude",
-          "body": "Management, economics, mathematics and statistics. Finance exchange programme at ITBA Universidad in 2013."
-        }
-      ]
-    },
-    "languages": {
-      "eyebrow": "Communication",
-      "title": "Working languages.",
-      "items": [
-        {
-          "name": "French",
-          "level": "Native or bilingual proficiency"
-        },
-        {
-          "name": "English",
-          "level": "Full professional proficiency"
-        },
-        {
-          "name": "Dutch",
-          "level": "Limited working proficiency"
-        },
-        {
-          "name": "Spanish",
-          "level": "Elementary proficiency"
-        }
-      ]
-    },
-    "career": {
-      "eyebrow": "Experience",
-      "title": "From finance to development.",
-      "items": [
-        {
-          "date": "2019 — present",
-          "title": "TG Tech Consulting",
-          "subtitle": "Founder · Independent consultant",
-          "body": "Custom applications, NetSuite consulting, integrations and AI. Implementation support, automation, training and ongoing support after go-live."
-        },
-        {
-          "date": "2017 — 2019",
-          "title": "Deloitte",
-          "subtitle": "Business Analyst → Senior Consultant",
-          "body": "Functional and technical NetSuite consulting: sales, purchasing and inventory processes, SuiteScript customisations, RESTlet integrations and user training."
-        },
-        {
-          "date": "2016 — 2017",
-          "title": "EY",
-          "subtitle": "Consultant · Fund industry",
-          "body": "Automating financial statements and reporting for funds, banks and financial companies. VBA development and IBM Cognos Disclosure Management support."
-        }
-      ]
-    },
-    "disclosureLabel": "Background & qualifications"
-  },
   "contact": {
     "page": {
       "title": "Contact",
-      "metaDescription": "Contact Thibaut Gendebien at TG Tech Consulting by email or on LinkedIn."
+      "metaDescription": "Contact TG Tech Consulting by email or on LinkedIn."
     },
     "hero": {
       "eyebrow": "Contact",
       "title": "What could be easier?",
-      "lede": "Tell me about one task your team would like to simplify.",
-      "primary": "Email Thibaut",
+      "lede": "Tell us about one task your team would like to simplify.",
+      "primary": "Email our team",
       "secondary": "LinkedIn"
     },
     "emailLabel": "Email",
     "linkedinLabel": "LinkedIn",
     "subject": "A simpler workflow with TGTC",
-    "draft": "Hi Thibaut,\n\nI am getting in touch about:\n\nProject context:\n\nThank you.",
+    "draft": "Hello TG Tech Consulting team,\n\nI am getting in touch about:\n\nProject context:\n\nThank you.",
     "form": {
       "name": "Your name",
       "email": "Work email",
@@ -233,10 +130,10 @@
       "prepare": "Prepare email",
       "copy": "Copy message",
       "copied": "Message copied. Paste it into your email application.",
-      "copyFailed": "Copying is unavailable. You can email me directly using the address above.",
+      "copyFailed": "Copying is unavailable. You can email us directly using the address above.",
       "hint": "Opens your email application. You review and send the message.",
       "subject": "A simpler workflow with TGTC",
-      "greeting": "Hi Thibaut,",
+      "greeting": "Hello TG Tech Consulting team,",
       "labels": {
         "name": "Name",
         "email": "Email",

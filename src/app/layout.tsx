@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   description:
     'Applications NetSuite sur mesure et assistants IA connectés, pensés pour le quotidien de vos équipes.',
   applicationName: 'TG TECH CONSULTING',
-  authors: [{ name: 'Thibaut Gendebien' }],
-  creator: 'Thibaut Gendebien',
+  authors: [{ name: 'TG TECH CONSULTING' }],
+  creator: 'TG TECH CONSULTING',
   publisher: 'TG TECH CONSULTING',
   formatDetection: {
     telephone: false,

@@ -24,7 +24,7 @@ export default async function ContactPage({ params }: Props) {
           <p className="eyebrow">{t('hero.eyebrow')}</p><h1>{t('hero.title')}</h1><p>{t('hero.lede')}</p>
           <dl className="contact-details">
             <div><dt>{t('emailLabel')}</dt><dd><a className="contact-address" href={`mailto:${email}`}>{email}</a></dd></div>
-            <div><dt>{t('linkedinLabel')}</dt><dd><a className="text-link" href={common('linkedinUrl')} target="_blank" rel="noopener noreferrer">Thibaut Gendebien</a></dd></div>
+            <div><dt>{t('linkedinLabel')}</dt><dd><a className="text-link" href={common('linkedinUrl')} target="_blank" rel="noopener noreferrer">TG Tech Consulting</a></dd></div>
           </dl>
         </section>
         <ContactComposer email={email} messages={t.raw('form') as ContactFormMessages} />
