@@ -27,27 +27,42 @@ The bundled Geist fonts are served locally. Builds do not download Google Fonts.
   contact and project details. Former About URLs redirect to the homepage.
 - Project routes: `/work/quick-so`, `/work/prp-v2`, `/work/supply-chain-workbench`,
   `/work/quoting-assistants`.
-- Order workflow landing page: `/en/netsuite-order-workflow` and
-  `/fr/netsuite-order-workflow`. The same slug preserves the existing locale
-  routing and language switcher. It embeds the verified 65-second synthetic
-  workflow montage, with French/English captions and a text transcript.
-  The interface shown is French; the demonstration creates no real order and
-  does not connect to NetSuite. Public assets are in `public/proof/demo/` and
-  `public/proof/video/`; open their explicit `index.html` paths. The interactive
-  demo stores a draft only in the visitor’s browser.
+- Demo workshop: `/en/demos` and `/fr/demos`, with three working applications
+  embedded from `public/demos/`: order portal, stock workbench and quote configurator.
+  The heading identifies NetSuite as the business context; the introduction and
+  adjacent note distinguish fictional demonstrations from connected account software.
+  Each tab loads on first use and stays mounted to preserve unfinished work.
+  `?embed=1` removes redundant navigation through the scoped shared embed styles;
+  standalone routes keep their complete layout. Full-screen links open those routes.
+  Each accepts `?lang=fr` or `?lang=en` and uses fictional data stored locally in
+  the visitor’s browser. The order portal supports carts, drafts and templates;
+  the stock workbench supports demand/supply scenarios and filtered CSV exports;
+  the configurator supports independent variants, comparisons, guided actions
+  and saved quote exports. These demos do not connect to a business account or AI API.
+  Their NetSuite branding is plain text, without a link or keyboard stop.
+  The legacy hashes `order`, `stock`, `quote` and `assistant` open the matching
+  application in the current language; `assistant` also opens its guided panel.
+- Work index: `/en/work` and `/fr/work`, an image-led gallery of three documented
+  projects. Captures in `public/work-previews/*-netsuite.jpg` show similar public demonstrations
+  with fictional data, never client screens. A shared native dialog reuses one
+  interactive instance per application. Project pages offer inline demonstrations
+  and expandable background details. The AI offer remains linked from services.
+- The former order-workflow route remains a short specialist page; no slow video
+  is used as the main presentation. Earlier public demo/video files remain direct
+  links for compatibility, outside the main navigation.
 - Service anchors: `#netsuite`, `#replacements`, `#ai`.
 - Contact validates a short brief and prepares an email draft or copies the
   message. The visitor reviews and sends it in their own email application;
   the website does not submit, store or send the message.
 
-The visual palette uses white, navy and cobalt. The homepage leads with services,
-each supported by a small project example. Project pages explain the starting
-point, the application and what TGTC could build for the visitor’s team.
-The SVG illustrations contain no client data. AI services distinguish agents
-connected across business tools from assistants embedded in custom applications.
-Content remains visible without JavaScript. Motion is limited to interaction states,
-with `prefers-reduced-motion` support. The previous decorative components were
-removed. Older design documents describe superseded versions.
+The visual palette, typography, spacing and alternating service/illustration rows
+retain the approved Easier NetSuite design. The homepage keeps the original hero
+and three service rows, with a short practical AI paragraph in the existing AI row.
+Navigation separates Services, Demos, Work and Contact. The workshop and case
+gallery use their own CSS modules and do not repeat the homepage service rows.
+AI copy distinguishes connected agents from in-app assistants. Illustrations contain
+no client data. Content remains visible without JavaScript; interactive examples
+require JavaScript. Reduced-motion preferences are respected.
 
 ## Configuration
 

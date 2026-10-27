@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Workbench de stock : explorez 12 semaines de projections et testez vos scénarios dans une démonstration interactive.">
+  <title>Workbench de stock · TG</title>
+  <link rel="stylesheet" href="../shared/base.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../shared/erp.css">
+  <link rel="stylesheet" href="../shared/embed.css">
+  <script src="../shared/embed.js" defer></script>
+  <script src="model.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body class="stock-app">
+  <a class="skip-link" href="#main" data-i18n="skip">Aller au workbench</a>
+  <header class="erp-header">
+    <span class="erp-brand"><span data-i18n="shellBrand">Applications pour NetSuite</span><span> · TG</span></span>
+    <span class="erp-application" data-i18n="shellContext">Planification des stocks</span>
+    <span class="erp-demo" data-i18n="shellDemo">Démo locale · données fictives</span>
+    <nav aria-label="Navigation" class="header-links erp-site-links">
+      <div class="languages"><a href="?lang=fr" lang="fr" id="lang-fr">FR</a><span aria-hidden="true">/</span><a href="?lang=en" lang="en" id="lang-en">EN</a></div>
+      <a id="contact-link" href="/fr/contact" data-i18n="contact">Parlons de votre projet ↗</a>
+    </nav>
+  </header>
+      <div class="view-options erp-navigation"><div class="view-buttons" role="group" aria-label="Vue du tableau"><button id="overview-view" type="button" aria-pressed="true" data-i18n="overview">Synthèse</button><button id="projection-view" type="button" aria-pressed="false" data-i18n="projection">Projection par semaine</button></div><label class="check-label"><input id="planned" type="checkbox" checked><span data-i18n="includePlanned">Inclure les arrivages planifiés</span></label></div>
+  <main id="main">
+    <section class="intro erp-record" aria-labelledby="app-title">
+      <div><p class="erp-breadcrumb" data-i18n="eyebrow">Opérations / Planification</p><h1 id="app-title" data-i18n="title">Workbench de stock</h1></div>
+      <div class="horizon"><strong data-i18n="horizon">Horizon de 12 semaines</strong><span id="date-range"></span></div>
+    </section>
+    <div class="scenario-bar"><span id="scenario-status"></span><button class="quiet-button" id="reset" type="button" data-i18n="reset">Réinitialiser le scénario</button></div>
+    <p id="storage-warning" class="notice" role="alert" hidden></p>
+    <section id="metrics" class="metrics" aria-label="Indicateurs de stock"></section>
+    <section class="work-area" aria-labelledby="inventory-title">
+      <div class="section-top"><div><h2 id="inventory-title" data-i18n="inventory">Votre plan de stock</h2><p class="muted" id="inventory-context"></p></div><button id="export" class="action-button" type="button" data-i18n="export">Exporter le périmètre CSV ↓</button></div>
+      <form id="filters" class="filters" role="search">
+        <label class="search-field"><span data-i18n="search">Rechercher un article</span><input id="search" type="search" maxlength="100" autocomplete="off" placeholder="SKU ou désignation" data-placeholder="searchPlaceholder"></label>
+        <label><span data-i18n="family">Famille</span><select id="family"></select></label>
+        <label><span data-i18n="warehouse">Entrepôt</span><select id="location"></select></label>
+        <label><span data-i18n="risk">Risque</span><select id="risk"></select></label>
+        <button class="quiet-button clear-filters" type="button" id="clear-filters" data-i18n="clear">Effacer les filtres</button>
+      </form>
+      <p id="table-hint" class="table-hint" data-i18n="tableHint">Ouvrez un article pour examiner ses mouvements et tester un scénario.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Plan de stock"><table id="stock-table"></table></div>
+      <div class="table-footer"><p id="result-count" role="status" aria-live="polite"></p><div class="pagination"><button id="previous" type="button" class="quiet-button" data-i18n="previous">← Précédent</button><span id="page-count"></span><button id="next" type="button" class="quiet-button" data-i18n="next">Suivant →</button></div></div>
+      <p class="empty-state" id="empty-state" hidden data-i18n="empty">Aucun article ne correspond à ces filtres. Effacez-les pour retrouver le plan complet.</p>
+    </section>
+    <details class="calculation-note"><summary data-i18n="how">Comment lire ces projections ?</summary><div><p data-i18n="formula">Stock final = stock initial + arrivages retenus + transferts entrants − demande − transferts sortants. Les soldes négatifs restent visibles et se reportent à la semaine suivante.</p><p data-i18n="demandRule">La demande réunit les commandes fermes et une prévision complémentaire : elle n’est déduite qu’une fois. Un ajustement local remplace le total de la semaine.</p><p data-i18n="riskRule">Rupture : au moins un solde négatif. Sous sécurité : au moins un solde inférieur à deux semaines de demande moyenne. Sinon, surstock : solde final supérieur à huit semaines de demande moyenne. Couvert : les autres cas.</p><p data-i18n="coverageRule">La couverture de fin = stock final positif ÷ demande hebdomadaire moyenne des 12 semaines. Sans demande, elle est affichée « — ». Les arrivages planifiés peuvent être exclus du calcul.</p></div></details>
+    <footer class="app-footer"><span data-i18n="footer">20 articles · 3 entrepôts · Un espace pour essayer vos décisions.</span><a id="footer-contact" href="/fr/contact" data-i18n="footerContact">Construisons votre outil ↗</a></footer>
+    <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+  </main>
+  <dialog id="detail-dialog" aria-labelledby="detail-title">
+    <div class="dialog-header"><div><p class="eyebrow" id="detail-context"></p><h2 id="detail-title"></h2></div><button type="button" class="quiet-button" id="close-detail" data-i18n="close">Fermer ×</button></div>
+    <div class="detail-content">
+      <section class="comparison-panel" aria-labelledby="comparison-title">
+        <div class="comparison-header"><h3 id="comparison-title" data-i18n="compareTitle">Mesurez l’effet de votre scénario</h3><div class="chart-legend"><span class="baseline-key" data-i18n="baseline">Plan initial</span><span class="scenario-key" data-i18n="currentScenario">Scénario courant</span></div></div>
+        <p class="section-description muted" id="comparison-context"></p>
+        <div id="detail-metrics" class="detail-metrics"></div>
+        <div id="chart-container" class="stock-chart"></div>
+        <p class="chart-note" id="chart-note"></p>
+        <details class="comparison-data"><summary data-i18n="compareData">Comparer les 12 semaines en chiffres</summary><div class="table-scroll" tabindex="0" role="region" id="comparison-table-region"><table id="comparison-table"></table></div></details>
+      </section>
+      <section id="coverage-guide" class="coverage-guide" aria-labelledby="coverage-title"></section>
+      <div class="detail-grid"><section aria-labelledby="weekly-title"><h3 id="weekly-title" data-i18n="weeklyTitle">Projection hebdomadaire</h3><p class="muted section-description" data-i18n="weeklyHint">Sélectionnez une semaine pour voir les documents et ajuster le plan.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Projection hebdomadaire"><table id="period-table"></table></div><p class="detail-legend" data-i18n="transferLegend">Transferts : entrants − sortants. Entrées : fermes et planifiées retenues.</p></section><section id="period-detail" aria-labelledby="period-title"></section></div><p id="detail-status" role="status" aria-live="polite" class="detail-status"></p>
+    </div>
+  </dialog>
+  <dialog id="reset-dialog" aria-labelledby="reset-title"><div class="reset-content"><h2 id="reset-title" data-i18n="resetTitle">Revenir au plan initial ?</h2><p data-i18n="resetBody">Les ajustements de demande et les arrivages ajoutés dans cette démonstration seront supprimés de ce navigateur.</p><div class="reset-actions"><button id="cancel-reset" class="quiet-button" type="button" data-i18n="cancel">Annuler</button><button id="confirm-reset" class="action-button" type="button" data-i18n="confirmReset">Réinitialiser</button></div></div></dialog>
+  <noscript><p class="notice">Activez JavaScript pour utiliser ce workbench. / Enable JavaScript to use this workbench.</p></noscript>
+</body>
+</html>

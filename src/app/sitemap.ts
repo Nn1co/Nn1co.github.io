@@ -3,7 +3,7 @@ import { routing } from '@/i18n/routing'
 import { SITE_URL } from '@/lib/seo'
 import { PROJECT_SLUGS } from '@/lib/projects'
 
-const STATIC_PATHS = ['', '/netsuite-order-workflow', '/services', '/contact', ...PROJECT_SLUGS.map((slug) => `/work/${slug}`)]
+const STATIC_PATHS = ['', '/demos', '/work', '/netsuite-order-workflow', '/services', '/contact', ...PROJECT_SLUGS.map((slug) => `/work/${slug}`)]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []

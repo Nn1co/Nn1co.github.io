@@ -6,8 +6,9 @@
     "close": "Fermer",
     "home": "Accueil",
     "primary": "Navigation principale",
-    "work": "Nos réalisations",
-    "orders": "Parcours commandes"
+    "work": "Réalisations",
+    "orders": "Parcours commandes",
+    "demos": "Démos"
   },
   "footer": {
     "brand": "TG TECH · CONSULTING",
@@ -37,14 +38,14 @@
   "home": {
     "page": {
       "title": "NetSuite, en plus simple",
-      "metaDescription": "Simplifiez la préparation des commandes NetSuite avec TG Tech Consulting. Un processus précis, vos outils existants et une amélioration au périmètre clair."
+      "metaDescription": "Applications NetSuite sur mesure, alternatives aux outils sous licence coûteux et assistants IA connectés. Des outils adaptés à votre équipe avec TG Tech Consulting."
     },
     "hero": {
       "title": "NetSuite,",
       "emphasis": "en plus simple.",
-      "description": "Moins d’étapes pour préparer vos commandes.",
-      "detail": "Un processus précis. Vos outils existants d’abord.",
-      "primary": "Simplifier les commandes",
+      "description": "Applications et assistants IA.",
+      "detail": "Sur mesure, pour vos équipes.",
+      "primary": "Parlons-en",
       "secondary": "Découvrir nos services"
     },
     "services": {
@@ -61,15 +62,15 @@
         {
           "slug": "prp-v2",
           "kind": "portal",
-          "title": "Des outils adaptés\nà votre équipe.",
+          "title": "Choisir le\nbon outil.",
           "body": "Nous comparons votre configuration, les produits disponibles et une application sur mesure ciblée. Conserver ce qui fonctionne, traiter ce qui manque et inclure la maintenance dans la décision.",
-          "example": "Clients, produits et commandes enregistrées dans une application."
+          "example": "Remplacer un outil de vente par une application NetSuite."
         },
         {
           "slug": "quoting-assistants",
           "kind": "assistant",
           "title": "Assistants IA\nconnectés.",
-          "body": "Nous connectons des agents à NetSuite, aux documents et à vos autres outils pour répondre aux questions, analyser les informations et faciliter les tâches. Dans vos applications sur mesure, les assistants guident les utilisateurs et les aident à agir.",
+          "body": "Une information retrouvée, un brief client prêt à relire, un devis préparé sans recopier les mêmes données. Nous intégrons l’IA à vos outils autour de ces tâches concrètes, avec votre équipe et ses validations.",
           "example": "Des agents connectés et des assistants dans vos applications."
         }
       ]
@@ -81,9 +82,7 @@
       "metaDescription": "Applications NetSuite sur mesure, alternatives aux outils sous licence et assistants IA connectés. Des solutions adaptées au travail quotidien de votre équipe."
     },
     "hero": {
-      "title": "Ce que nous créons.",
-      "body": "Partons d’une tâche que votre équipe répète. Nous examinons l’existant avant de proposer un produit ou une application sur mesure.",
-      "orders": "Explorer la préparation des commandes"
+      "title": "Ce que nous créons."
     },
     "netsuite": {
       "title": "Applications sur mesure.",
@@ -103,11 +102,6 @@
         "Nous connectons des agents IA à NetSuite, à vos documents et à vos autres outils. Vos équipes peuvent poser des questions, analyser des informations et se faire aider dans leurs tâches, sans multiplier les recherches entre les outils.",
         "Nous intégrons des assistants dans vos applications sur mesure pour guider les utilisateurs et les aider à effectuer des actions directement dans l’application, avec moins d’étapes manuelles."
       ]
-    },
-    "stock": {
-      "title": "Comprendre une question de stock.",
-      "body": "Réunir stocks, approvisionnements et prévisions pour examiner un écart. Les sources, leur fraîcheur et la personne qui doit agir comptent autant que la vue.",
-      "link": "Voir l’exemple du tableau de planification"
     }
   },
   "contact": {
@@ -118,11 +112,11 @@
     "hero": {
       "eyebrow": "Contact",
       "title": "Que pourrions-nous simplifier ?",
-      "lede": "Décrivez à Thibaut la tâche à simplifier, qui l’effectue et l’étape qui pose problème. Quelques lignes suffisent pour commencer.",
+      "lede": "Parlez-nous d’une tâche que votre équipe aimerait rendre plus simple.",
       "primary": "Écrire à notre équipe",
       "secondary": "LinkedIn"
     },
-    "emailLabel": "Écrire à Thibaut",
+    "emailLabel": "Email",
     "linkedinLabel": "LinkedIn",
     "subject": "Simplifier un parcours avec TGTC",
     "draft": "Bonjour à l’équipe TG Tech Consulting,\n\nJe vous contacte au sujet de :\n\nContexte du projet :\n\nMerci.",
@@ -134,14 +128,14 @@
       "namePlaceholder": "Votre nom",
       "emailPlaceholder": "vous@entreprise.com",
       "companyPlaceholder": "Nom de l’entreprise",
-      "workflowPlaceholder": "Quelle tâche ? Qui l’effectue ? Quelle étape pose problème ? Aucune donnée confidentielle n’est nécessaire.",
+      "workflowPlaceholder": "La tâche, vos outils et ce qui complique le travail.",
       "prepare": "Préparer l’email",
       "copy": "Copier le message",
       "copied": "Message copié. Collez-le dans votre application email.",
       "copyFailed": "La copie est indisponible. Vous pouvez nous écrire directement à l’adresse ci-dessus.",
-      "hint": "Ouvre votre application email. Vous relisez et envoyez le message. N’incluez pas de données confidentielles ni d’identifiants de connexion.",
+      "hint": "Ouvre votre application email. Vous relisez et envoyez le message.",
       "subject": "Simplifier un parcours avec TGTC",
-      "greeting": "Bonjour Thibaut,",
+      "greeting": "Bonjour à l’équipe TG Tech Consulting,",
       "labels": {
         "name": "Nom",
         "email": "Email",
@@ -151,34 +145,34 @@
     }
   },
   "work": {
-    "back": "Retour aux services",
+    "back": "Toutes les réalisations",
     "problemLabel": "Le point de départ",
     "solutionLabel": "Ce que nous avons construit",
     "contactLabel": "Parlez-nous de vos besoins",
     "items": {
       "quick-so": {
-        "title": "Les commandes dans un écran clair.",
+        "title": "Les commandes, dans un écran clair.",
         "summary": "Une façon plus simple de choisir les produits et de créer une commande directement dans NetSuite.",
         "problem": "Les commerciaux devaient passer par le formulaire standard de NetSuite pour créer une commande. La saisie était lente et peu intuitive, alors qu’il s’agissait d’une tâche courante de leur journée.",
         "solution": "Nous avons créé un écran dédié qui réunit le client, les produits, les quantités et les détails de la commande. Les employés préparent et vérifient leur commande dans une interface claire. Une fois validée, elle est créée automatiquement dans NetSuite.",
         "forYou": "Qu’est-ce qui faciliterait le travail de votre équipe ? Nous créons des applications sur mesure pour simplifier les tâches du quotidien, automatiser le travail répétitif et connecter vos outils."
       },
       "prp-v2": {
-        "title": "Une alternative plus simple à un outil de vente coûteux.",
+        "title": "Une application commerciale à votre mesure.",
         "summary": "Nous avons développé les fonctions de vente directement dans NetSuite pour remplacer une application séparée.",
-        "problem": "L’équipe payait une application de vente que les employés trouvaient difficile à utiliser. Elle avait besoin des fonctions commerciales essentielles, sans la complexité et le coût de cet outil séparé.",
+        "problem": "L’équipe avait besoin de fonctions commerciales essentielles dans une interface plus simple que son outil de vente séparé.",
         "solution": "Nous avons développé les fonctions utiles directement dans NetSuite : clients, produits, prix, stocks et commandes au même endroit. Les paniers enregistrés et les modèles de commande permettent de reprendre un travail en cours ou préparer une commande récurrente sans tout recommencer.",
-        "forYou": "Quel outil coûte cher tout en frustrant votre équipe ? Nous pouvons créer un remplacement plus simple avec les fonctions que vous utilisez, en comparant son coût de développement et de maintenance aux licences que vous pourriez supprimer."
+        "forYou": "Une interface plus simple ou un outil à remplacer ? Comparons les fonctions utiles, les licences et la maintenance pour choisir une solution adaptée."
       },
       "supply-chain-workbench": {
-        "title": "Stocks et prévisions dans une même vue.",
+        "title": "Une meilleure vue sur vos stocks.",
         "summary": "Un tableau de planification pour repérer les risques de rupture et vérifier les approvisionnements à venir.",
         "problem": "L’équipe devait comparer les stocks, les prévisions et les livraisons à venir pour anticiper les ruptures et planifier les achats. Un simple chiffre de stock ne donnait pas assez de contexte.",
         "solution": "Nous avons créé un tableau qui réunit ces informations par produit, site et période. Les employés peuvent voir où le stock risque de manquer et consulter les commandes fournisseurs concernées, tout en gardant une vue d’ensemble.",
         "forYou": "Quels chiffres votre équipe doit-elle comparer avant de décider ? Nous pouvons les réunir dans une vue de travail, faire ressortir les points à examiner et rendre les détails faciles à consulter."
       },
       "quoting-assistants": {
-        "title": "L’IA dans vos outils et vos applications.",
+        "title": "L’IA, au cœur de vos outils.",
         "summary": "Des agents connectés à NetSuite, aux documents et à vos autres outils pour répondre aux questions et vous aider dans vos tâches. Des assistants intégrés à vos applications sur mesure pour guider les utilisateurs.",
         "problem": "Trouver une information dans NetSuite peut être lent. Analyser des informations réparties entre plusieurs documents et outils prend vite un temps précieux pour les équipes.",
         "solution": "Nous mettons en place des agents connectés à NetSuite, aux documents et aux autres outils métier. Ils aident les employés à trouver des réponses, analyser les informations et réaliser leurs tâches quotidiennes.\n\nDans vos applications sur mesure, nous intégrons des assistants pour guider les utilisateurs, expliquer la marche à suivre et les aider à effectuer leurs actions plus simplement et plus rapidement.",
@@ -187,151 +181,88 @@
       }
     },
     "offerLabel": "Et pour votre équipe ?",
-    "ordersLabel": "Explorer votre parcours commandes",
-    "evidenceLimit": "L’illustration utilise des données synthétiques. Ces exemples décrivent des fonctions, pas des résultats clients mesurés ni un produit prêt à installer. Votre configuration, les droits et les tests de recette déterminent le périmètre.",
-    "stockLimit": "L’illustration utilise des données synthétiques. Cette vue sert à examiner stocks et prévisions ; elle ne constitue pas un moteur de disponible à promettre (ATP) vérifié ni une garantie de date de livraison."
+    "ordersLabel": "Essayer les démos",
+    "evidenceLimit": "Illustration · données de démonstration",
+    "stockLimit": "Illustration · données de démonstration",
+    "page": {
+      "title": "Réalisations NetSuite",
+      "description": "Saisie de commandes, portail commercial et planification des stocks : trois projets de TG Tech, avec des démonstrations similaires sur données fictives."
+    },
+    "hero": {
+      "title": "Nos réalisations.",
+      "body": "Applications commerciales et planification : quelques exemples de notre travail."
+    },
+    "read": "Découvrir le projet",
+    "demoLabel": "Essayer une démonstration similaire",
+    "illustration": "Illustration · données de démonstration"
   },
   "orderWorkflow": {
     "page": {
-      "title": "Simplifier la préparation des commandes NetSuite",
-      "description": "Trop d’étapes pour préparer une commande NetSuite ? TG Tech vous aide à cadrer un processus, comparer les outils existants et définir une amélioration vérifiable."
+      "title": "Simplifier vos commandes NetSuite",
+      "description": "Une interface claire pour retrouver le client, préparer les lignes et vérifier une commande. Découvrez notre approche et nos démos interactives."
     },
     "hero": {
-      "audience": "Opérations · Service client · Équipes commerciales",
-      "title": "Préparer une commande.",
-      "emphasis": "Avec moins d’étapes.",
-      "body": "Le client d’un côté, les produits de l’autre, un brouillon à refaire. TG Tech vous aide à simplifier un processus précis dans NetSuite, en vérifiant d’abord ce que vos outils permettent déjà.",
-      "secondary": "Voir le parcours en vidéo"
+      "audience": "Commandes · Ventes · Service client",
+      "title": "Préparer une commande NetSuite.",
+      "body": "Réunir le client, les produits et les quantités dans une même vue pour préparer et relire une commande.",
+      "demo": "Ouvrir le portail de commandes",
+      "contact": "Parlons de vos commandes"
     },
-    "example": {
-      "label": "Un point de départ concret",
-      "title": "De la demande client à la commande vérifiée.",
-      "disclosure": "Démonstration synthétique : aucun système NetSuite connecté, aucune commande créée.",
-      "steps": [
-        {
-          "title": "Retrouver le contexte client",
-          "body": "Identifier le client, la personne qui prépare la commande et les informations utiles."
-        },
-        {
-          "title": "Préparer et reprendre le brouillon",
-          "body": "Réunir les lignes et définir ce qui doit être conservé lorsque le travail est interrompu."
-        },
-        {
-          "title": "Rendre une exception visible",
-          "body": "Un prix non confirmé doit avoir un responsable de vérification et rester visible avant la suite."
-        },
-        {
-          "title": "Vérifier la transmission",
-          "body": "Convenir des contrôles avant envoi, de la personne autorisée et du moyen de vérifier la commande créée."
-        }
-      ]
+    "stepsTitle": "Une interface au service de la tâche.",
+    "steps": [
+      {
+        "title": "Retrouver le client",
+        "body": "Réunir le contexte et les références utiles avant de commencer."
+      },
+      {
+        "title": "Préparer les lignes",
+        "body": "Choisir les produits, ajuster les quantités et voir le panier évoluer."
+      },
+      {
+        "title": "Vérifier et reprendre",
+        "body": "Rendre les exceptions visibles et retrouver le travail en cours."
+      }
+    ],
+    "related": "Découvrir l’application commerciale",
+    "note": "Illustration · données de démonstration"
+  },
+  "demos": {
+    "page": {
+      "title": "Démos d’applications NetSuite",
+      "description": "Essayez trois démonstrations de commandes, de stocks et de devis sur données fictives, sans connexion à un compte NetSuite."
     },
-    "options": {
-      "title": "Partir de ce que vous avez déjà.",
-      "body": "Une nouvelle interface est une possibilité. Nous comparons trois approches sur la même tâche.",
-      "items": [
-        {
-          "title": "Adapter l’existant",
-          "body": "Vérifier si vos formulaires, paramètres et méthodes de travail peuvent simplifier l’étape difficile."
-        },
-        {
-          "title": "Choisir un produit existant",
-          "body": "Examiner le processus couvert, les accès, les licences et le support avant d’ajouter un outil."
-        },
-        {
-          "title": "Développer une extension ciblée",
-          "body": "S’il reste un manque, définir le plus petit écran ou lien utile et prévoir sa maintenance."
-        }
-      ]
+    "hero": {
+      "title": "Nos démos.",
+      "body": "Préparez une commande, testez un scénario de stock ou comparez deux devis. Explorez trois applications conçues autour du travail des équipes."
     },
-    "scope": {
-      "title": "Une première mission que vous pouvez valider.",
-      "body": "Un processus, des utilisateurs identifiés et des limites claires. La proposition précise la modification, les données et accès nécessaires, la recette, la transmission et le support.",
-      "diagnostic": "Si la correction est déjà comprise, cadrons-la directement. Un diagnostic payant n’a de sens que si ses conclusions ont une valeur propre.",
-      "acceptanceTitle": "Exemples de critères de recette",
-      "acceptance": [
-        "Un brouillon peut être repris sans ressaisir ses lignes.",
-        "Un prix non confirmé est visible et a un responsable.",
-        "Un utilisateur autorisé peut effectuer la transmission convenue et en vérifier le résultat."
-      ],
-      "boundary": "Ces critères sont à convenir et tester dans votre environnement, avec votre configuration, vos droits d’accès et vos règles métier."
-    },
-    "evidence": {
-      "label": "Travaux associés",
-      "title": "Des écrans de vente et des brouillons réutilisables.",
-      "body": "Nos travaux documentés d’application commerciale réunissent clients, produits et commandes, avec des paniers enregistrés et des modèles de commande récurrents.",
-      "link": "Lire l’exemple de l’application commerciale",
-      "limit": "Cet exemple décrit des fonctions. Il ne démontre ni adoption actuelle en production, ni économies mesurées, ni produit installable sans adaptation.",
-      "stock": "Le blocage concerne le stock ? Voir le tableau de planification."
-    },
-    "contact": {
-      "label": "Échanger avec Thibaut · TG Tech Consulting",
-      "title": "Quelle étape ralentit votre équipe ?",
-      "questions": "Décrivez la tâche, qui l’effectue et ce qui complique le travail. Nous pourrons discuter des alternatives existantes et d’un premier périmètre utile.",
-      "cta": "Décrire votre processus",
-      "privacy": "Quelques lignes suffisent. N’incluez pas de données confidentielles ni d’identifiants de connexion."
-    },
-    "video": {
-      "label": "Préparation d’une commande — démonstration synthétique",
-      "method": "65 secondes · Sans audio · Sous-titres FR/EN. Montage de 13 captures du parcours exécuté, avec durées de lecture adaptées ; ce n’est pas un enregistrement en temps réel. L’interface présentée est en français.",
-      "transcriptLabel": "Lire la transcription",
-      "download": "Ouvrir la vidéo MP4",
-      "stepsLabel": "Quatre points à examiner pour votre équipe",
-      "transcript": [
-        {
-          "time": "00:00",
-          "text": "Démonstration synthétique : aucun système NetSuite connecté."
-        },
-        {
-          "time": "00:05",
-          "text": "Choisir un client fictif et retrouver le contexte."
-        },
-        {
-          "time": "00:10",
-          "text": "Reprendre les articles d’une commande fictive."
-        },
-        {
-          "time": "00:15",
-          "text": "Ajouter un article au panier."
-        },
-        {
-          "time": "00:20",
-          "text": "Enregistrer le brouillon dans ce navigateur."
-        },
-        {
-          "time": "00:25",
-          "text": "Reprendre le brouillon après rechargement."
-        },
-        {
-          "time": "00:30",
-          "text": "Une ambiguïté bloque la suite du parcours."
-        },
-        {
-          "time": "00:35",
-          "text": "Examiner les références et les prix fictifs."
-        },
-        {
-          "time": "00:40",
-          "text": "Choisir explicitement la référence de démonstration."
-        },
-        {
-          "time": "00:45",
-          "text": "Le panier est recalculé après le choix humain."
-        },
-        {
-          "time": "00:50",
-          "text": "Relire le récapitulatif. Aucune validation serveur."
-        },
-        {
-          "time": "00:55",
-          "text": "Un échec simulé conserve les lignes du panier."
-        },
-        {
-          "time": "01:00",
-          "text": "Reprise terminée. Aucune commande créée."
-        }
-      ],
-      "demo": "Essayer la démo"
-    }
+    "data": "Données de démonstration.",
+    "listLabel": "Sites de démonstration",
+    "preparing": "En préparation.",
+    "items": [
+      {
+        "id": "order",
+        "path": "order-portal",
+        "kind": "portal",
+        "title": "Un portail de commandes.",
+        "body": "Retrouver un client, parcourir les produits, reprendre un panier et préparer une commande dans une même application.",
+        "action": "Ouvrir le portail"
+      },
+      {
+        "id": "stock",
+        "path": "stock-workbench",
+        "kind": "supply",
+        "title": "Un tableau de stocks.",
+        "body": "Comparer les stocks, les besoins et les arrivages. Examiner les écarts et retrouver les informations utiles pour planifier.",
+        "action": "Ouvrir le tableau de stocks"
+      },
+      {
+        "id": "quote",
+        "path": "quote-configurator",
+        "kind": "assistant",
+        "title": "Un configurateur de devis.",
+        "body": "Choisir les options, comparer les variantes et préparer une proposition. Des actions guidées vous aident à ajuster la configuration.",
+        "action": "Ouvrir le configurateur"
+      }
+    ]
   }
 }

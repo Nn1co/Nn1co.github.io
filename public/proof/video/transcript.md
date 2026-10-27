@@ -1,6 +1,6 @@
 # Parcours de préparation de commande — transcription FR / EN
 
-27 octobre 2026. Données fictives et transmission simulée. Montage de captures du parcours réellement exécuté, durées éditées. Sans audio.
+Exemple de préparation de commande · Données de démonstration.
 
 ## 00:00:00.000 --> 00:00:05.000
 

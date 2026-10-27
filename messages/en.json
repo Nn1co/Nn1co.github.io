@@ -6,8 +6,9 @@
     "close": "Close",
     "home": "Home",
     "primary": "Main navigation",
-    "work": "Our work",
-    "orders": "Order workflows"
+    "work": "Work",
+    "orders": "Order workflows",
+    "demos": "Demos"
   },
   "footer": {
     "brand": "TG TECH · CONSULTING",
@@ -37,14 +38,14 @@
   "home": {
     "page": {
       "title": "Easier NetSuite",
-      "metaDescription": "Simplify NetSuite order preparation with TG Tech Consulting. Start with one workflow, review your existing tools and scope a practical improvement."
+      "metaDescription": "Custom NetSuite applications, alternatives to costly add-ons and connected AI assistants. Practical tools built around your team with TG Tech Consulting."
     },
     "hero": {
       "title": "Easier",
       "emphasis": "NetSuite.",
-      "description": "Fewer steps to prepare your orders.",
-      "detail": "Start with one workflow. Check your existing tools first.",
-      "primary": "Simplify order preparation",
+      "description": "Custom applications and AI assistants.",
+      "detail": "Built around the way your team works.",
+      "primary": "Let’s talk",
       "secondary": "Explore our services"
     },
     "services": {
@@ -61,15 +62,15 @@
         {
           "slug": "prp-v2",
           "kind": "portal",
-          "title": "Tools that fit\nyour team.",
-          "body": "We compare your existing setup, available products and a focused custom application. Keep what works, address what is missing, and include maintenance in the decision.",
-          "example": "Customers, products and saved orders in one application."
+          "title": "Choose the\nright tool.",
+          "body": "We compare your configuration, available products and a focused custom application. Keep what works, address what is missing and include maintenance in the decision.",
+          "example": "Replacing a separate sales tool with a NetSuite application."
         },
         {
           "slug": "quoting-assistants",
           "kind": "assistant",
           "title": "Connected AI\nassistants.",
-          "body": "We connect agents to NetSuite, documents and other tools to answer questions, analyse information and help with tasks. Inside custom applications, assistants guide users and help them take action, reducing searches and manual steps.",
+          "body": "Find the information you need, review a prepared client brief, put together a quote without copying the same data. We integrate AI into your tools around these everyday tasks, with your team and its approval steps.",
           "example": "Answers across tools and help inside custom applications."
         }
       ]
@@ -81,9 +82,7 @@
       "metaDescription": "Custom NetSuite applications, tailored alternatives to licensed tools and connected AI assistants. Practical development around your team’s daily work."
     },
     "hero": {
-      "title": "What we build.",
-      "body": "Start with a task your team repeats. We review the existing setup before proposing a product or a custom application.",
-      "orders": "Explore order preparation"
+      "title": "What we build."
     },
     "netsuite": {
       "title": "Custom applications.",
@@ -94,7 +93,7 @@
     "replacements": {
       "title": "Choose the right tool.",
       "paragraphs": [
-        "We compare configuration, existing products and custom development around the features your team actually needs. Licensing, implementation and ongoing support all belong in that decision. Sometimes the right answer is to improve what you already use."
+        "We compare configuration, existing products and development around the features your team needs. Licences, setup and support are part of the decision. Sometimes the right answer is to improve what you already use."
       ]
     },
     "ai": {
@@ -103,11 +102,6 @@
         "We connect AI agents to NetSuite, business documents and your other tools. Employees can ask questions, analyse information and get help with tasks, spending less time searching across systems.",
         "We embed assistants in custom applications to guide users through their work and help them take action directly in the application, with fewer manual steps."
       ]
-    },
-    "stock": {
-      "title": "Stock questions, with context.",
-      "body": "Bring stock, incoming supply and forecasts together to investigate an exception. The source data, its freshness and the next person to act matter as much as the view.",
-      "link": "See the planning workbench example"
     }
   },
   "contact": {
@@ -118,11 +112,11 @@
     "hero": {
       "eyebrow": "Contact",
       "title": "What could be easier?",
-      "lede": "Tell Thibaut which task needs improving, who performs it and where it gets stuck. A short description is enough to start.",
+      "lede": "Tell us about one task your team would like to simplify.",
       "primary": "Email our team",
       "secondary": "LinkedIn"
     },
-    "emailLabel": "Email Thibaut",
+    "emailLabel": "Email",
     "linkedinLabel": "LinkedIn",
     "subject": "A simpler workflow with TGTC",
     "draft": "Hello TG Tech Consulting team,\n\nI am getting in touch about:\n\nProject context:\n\nThank you.",
@@ -134,14 +128,14 @@
       "namePlaceholder": "Your name",
       "emailPlaceholder": "you@company.com",
       "companyPlaceholder": "Company name",
-      "workflowPlaceholder": "Which task? Who performs it? At which step does it get difficult? No confidential records are needed.",
+      "workflowPlaceholder": "The task, the tools you use and where it gets difficult.",
       "prepare": "Prepare email",
       "copy": "Copy message",
       "copied": "Message copied. Paste it into your email application.",
       "copyFailed": "Copying is unavailable. You can email us directly using the address above.",
-      "hint": "Opens your email application. You review and send the message. Please leave out confidential data and login details.",
+      "hint": "Opens your email application. You review and send the message.",
       "subject": "A simpler workflow with TGTC",
-      "greeting": "Hello Thibaut,",
+      "greeting": "Hello TG Tech Consulting team,",
       "labels": {
         "name": "Name",
         "email": "Email",
@@ -151,34 +145,34 @@
     }
   },
   "work": {
-    "back": "Back to services",
+    "back": "All work",
     "problemLabel": "The starting point",
     "solutionLabel": "What we built",
     "contactLabel": "Tell us what you need",
     "items": {
       "quick-so": {
-        "title": "Sales orders in one clear screen.",
+        "title": "Orders, in one clear screen.",
         "summary": "A simpler way for sales teams to choose products and create an order directly in NetSuite.",
         "problem": "Sales teams had to use NetSuite’s standard sales-order form. The process felt slow and hard to follow, making a routine part of their job frustrating.",
         "solution": "We built a dedicated order-entry screen with the customer, products, quantities and order details together. Employees prepare and review the order in one clear interface. Once submitted, the sales order is created automatically in NetSuite.",
         "forYou": "What would make work easier for your team? We build custom applications to simplify everyday tasks, automate repetitive work and connect your tools."
       },
       "prp-v2": {
-        "title": "A simpler alternative to a costly sales tool.",
+        "title": "A sales application that fits.",
         "summary": "We built sales features directly in NetSuite to replace a separate sales application.",
-        "problem": "The team was paying for a sales application that employees found difficult to use. The team needed the core sales features without the complexity and cost of that separate tool.",
+        "problem": "The team needed essential sales functions in an interface simpler than its separate sales tool.",
         "solution": "We built the required sales features directly in NetSuite, bringing customers, products, prices, stock and orders together. Saved carts and order templates let employees resume work and prepare repeat orders without starting again.",
-        "forYou": "Which tool is expensive but still frustrates your team? We can build a simpler replacement around the features you use, comparing its development and support costs with the licences you could remove."
+        "forYou": "Need a simpler interface or a replacement tool? Let’s compare useful features, licences and maintenance to choose an approach that fits."
       },
       "supply-chain-workbench": {
-        "title": "Stock and forecasts in the same view.",
+        "title": "A clearer view of your stock.",
         "summary": "A planning table to spot potential shortages and check incoming supply.",
         "problem": "The team needed to compare stock, forecasts and incoming deliveries to spot shortages and plan purchases. A stock figure on its own did not give enough context.",
         "solution": "We built a planning table that brings this information together by product, location and period. Employees can see where stock may run short and open the related purchase orders to investigate, without losing the overall view.",
         "forYou": "Which figures does your team need to compare before making a decision? We can bring them into one working view, highlight what needs attention and make the supporting details easy to reach."
       },
       "quoting-assistants": {
-        "title": "AI across your tools and applications.",
+        "title": "AI, inside your tools.",
         "summary": "Agents that answer questions and help with tasks across NetSuite, documents and other tools. Assistants embedded in custom applications to guide users as they work.",
         "problem": "Finding information in NetSuite can be slow. Analysing information spread across documents and tools quickly takes up time that employees could spend on their work.",
         "solution": "Across your tools, we implement agents connected to NetSuite, documents and other business systems. They help employees find answers, analyse information and carry out everyday tasks.\n\nInside your custom applications, we embed assistants that guide users, explain what to do and help them complete actions more easily and quickly.",
@@ -187,151 +181,88 @@
       }
     },
     "offerLabel": "What would help your team?",
-    "ordersLabel": "Explore your order workflow",
-    "evidenceLimit": "The illustration uses synthetic data. These examples describe application capabilities, not measured customer results or a ready-to-install product. Your configuration, permissions and acceptance tests determine the scope.",
-    "stockLimit": "The illustration uses synthetic data. This is a view for investigating stock and forecasts, not a verified available-to-promise engine or a guarantee of delivery dates."
+    "ordersLabel": "Try the demos",
+    "evidenceLimit": "Illustration · demo data",
+    "stockLimit": "Illustration · demo data",
+    "page": {
+      "title": "NetSuite projects",
+      "description": "Sales order entry, a sales portal and stock planning: three TG Tech projects, with similar demonstrations using fictional data."
+    },
+    "hero": {
+      "title": "Our work.",
+      "body": "Sales applications and planning: a selection of our work."
+    },
+    "read": "Explore the project",
+    "demoLabel": "Try a similar demonstration",
+    "illustration": "Illustration · demo data"
   },
   "orderWorkflow": {
     "page": {
-      "title": "Simplify NetSuite order preparation",
-      "description": "Too many steps to prepare a NetSuite order? TG Tech helps scope one workflow, compare existing tools and define a practical improvement with clear acceptance checks."
+      "title": "Simplify your NetSuite orders",
+      "description": "A clear interface to find the customer, prepare line items and review an order. Explore our approach and interactive demos."
     },
     "hero": {
-      "audience": "Operations · Customer service · Sales operations",
-      "title": "Preparing an order.",
-      "emphasis": "With fewer steps.",
-      "body": "Customer details in one place, products in another, a draft to rebuild. TG Tech helps simplify a specific order workflow in NetSuite, starting with what your existing tools can already do.",
-      "secondary": "Watch the workflow"
+      "audience": "Orders · Sales · Customer service",
+      "title": "Prepare a NetSuite order.",
+      "body": "Bring the customer, products and quantities together in one view to prepare and review an order.",
+      "demo": "Open the order portal",
+      "contact": "Let’s talk about your orders"
     },
-    "example": {
-      "label": "A concrete starting point",
-      "title": "From a customer request to a reviewed order.",
-      "disclosure": "Synthetic demonstration: no connected NetSuite system and no order created.",
-      "steps": [
-        {
-          "title": "Find the customer context",
-          "body": "Identify the customer, the person preparing the order and the information they need."
-        },
-        {
-          "title": "Prepare and resume the draft",
-          "body": "Bring the lines together and define what must be kept when work is interrupted."
-        },
-        {
-          "title": "Make an exception visible",
-          "body": "An unconfirmed price needs a named reviewer. Keep it visible before the order moves on."
-        },
-        {
-          "title": "Check the handoff",
-          "body": "Agree which checks allow submission, who can submit and how to confirm the resulting order."
-        }
-      ]
+    "stepsTitle": "An interface built around the task.",
+    "steps": [
+      {
+        "title": "Find the customer",
+        "body": "Bring together the context and references you need before starting."
+      },
+      {
+        "title": "Prepare the line items",
+        "body": "Choose products, adjust quantities and see the cart update."
+      },
+      {
+        "title": "Review and resume",
+        "body": "Make exceptions visible and pick up work in progress."
+      }
+    ],
+    "related": "Explore the sales application",
+    "note": "Illustration · demo data"
+  },
+  "demos": {
+    "page": {
+      "title": "NetSuite application demos",
+      "description": "Try three demonstrations for orders, stock and quotes using fictional data, without connecting to a NetSuite account."
     },
-    "options": {
-      "title": "Start with what you already have.",
-      "body": "A new interface is one possible answer. We compare three routes against the same task.",
-      "items": [
-        {
-          "title": "Adjust the existing setup",
-          "body": "Check whether your current forms, settings and working practices can remove the difficult step."
-        },
-        {
-          "title": "Use an existing product",
-          "body": "Assess the workflow fit, access needs, licences and support before adding another tool."
-        },
-        {
-          "title": "Build a focused extension",
-          "body": "When a gap remains, define the smallest useful screen or connection and how it will be maintained."
-        }
-      ]
+    "hero": {
+      "title": "Our demos.",
+      "body": "Prepare an order, test a stock scenario or compare two quotes. Explore three applications designed around the way teams work."
     },
-    "scope": {
-      "title": "A first piece of work you can accept.",
-      "body": "One workflow, agreed users and clear boundaries. The proposal defines the change, required data and access, acceptance checks, handover and support.",
-      "diagnostic": "If the correction is already clear, scope it directly. A paid diagnostic only makes sense when its findings are useful in their own right.",
-      "acceptanceTitle": "Example acceptance checks",
-      "acceptance": [
-        "A draft can be resumed without re-entering its lines.",
-        "An unresolved price is visible and has an owner.",
-        "An authorised user can complete the agreed handoff and verify its result."
-      ],
-      "boundary": "These criteria must be agreed and tested in your environment, with your configuration, access rights and business rules."
-    },
-    "evidence": {
-      "label": "Related work",
-      "title": "Order screens and reusable drafts.",
-      "body": "Our documented sales application work brings customer, product and order information together, with saved carts and repeat-order templates.",
-      "link": "Read the sales application example",
-      "limit": "The example describes capabilities. It does not establish current production adoption, measured savings or a product that can be installed unchanged.",
-      "stock": "Is the difficult step a stock question? See the workbench."
-    },
-    "contact": {
-      "label": "Talk to Thibaut · TG Tech Consulting",
-      "title": "Which step slows your team down?",
-      "questions": "Tell us the task, who performs it and where it gets difficult. We can then discuss the existing alternatives and a useful first scope.",
-      "cta": "Describe your workflow",
-      "privacy": "A short description is enough. Please leave out confidential records and login details."
-    },
-    "video": {
-      "label": "Order preparation — synthetic demonstration",
-      "method": "65 seconds · No audio · FR/EN captions. A montage of 13 captures from the executed workflow, with edited reading durations; this is not a realtime screen recording. The interface shown is in French.",
-      "transcriptLabel": "Read the transcript",
-      "download": "Open the MP4 video",
-      "stepsLabel": "Four points to examine for your team",
-      "transcript": [
-        {
-          "time": "00:00",
-          "text": "Synthetic demonstration: no connected NetSuite system."
-        },
-        {
-          "time": "00:05",
-          "text": "Choose a fictional customer and review the context."
-        },
-        {
-          "time": "00:10",
-          "text": "Reuse the lines of a fictional order."
-        },
-        {
-          "time": "00:15",
-          "text": "Add a product to the cart."
-        },
-        {
-          "time": "00:20",
-          "text": "Save the draft in this browser."
-        },
-        {
-          "time": "00:25",
-          "text": "Resume the draft after reloading."
-        },
-        {
-          "time": "00:30",
-          "text": "An ambiguity blocks the next step."
-        },
-        {
-          "time": "00:35",
-          "text": "Review fictional product references and prices."
-        },
-        {
-          "time": "00:40",
-          "text": "Explicitly select the demonstration product."
-        },
-        {
-          "time": "00:45",
-          "text": "The cart is recalculated after the human choice."
-        },
-        {
-          "time": "00:50",
-          "text": "Review the summary. No server validation."
-        },
-        {
-          "time": "00:55",
-          "text": "A simulated failure preserves the cart lines."
-        },
-        {
-          "time": "01:00",
-          "text": "Retry completed. No order was created."
-        }
-      ],
-      "demo": "Try the demo (French interface)"
-    }
+    "data": "Demo data.",
+    "listLabel": "Demo sites",
+    "preparing": "In preparation.",
+    "items": [
+      {
+        "id": "order",
+        "path": "order-portal",
+        "kind": "portal",
+        "title": "An order portal.",
+        "body": "Find a customer, browse products, resume a cart and prepare an order in one application.",
+        "action": "Open the portal"
+      },
+      {
+        "id": "stock",
+        "path": "stock-workbench",
+        "kind": "supply",
+        "title": "A stock workbench.",
+        "body": "Compare stock, demand and incoming supply. Examine gaps and find the information needed for planning.",
+        "action": "Open the stock workbench"
+      },
+      {
+        "id": "quote",
+        "path": "quote-configurator",
+        "kind": "assistant",
+        "title": "A quote configurator.",
+        "body": "Choose options, compare variants and prepare a proposal. Guided actions help you adjust the configuration.",
+        "action": "Open the configurator"
+      }
+    ]
   }
 }

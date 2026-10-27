@@ -1,0 +1,13 @@
+@media screen {
+  html.demo-embed .erp-site-links,
+  html.demo-embed .stock-app .app-footer,
+  html.demo-embed .quote-app .app-footer { display:none; }
+  html.demo-embed .order-app .workspace { min-height:0; }
+}
+
+@media screen and (max-width:700px) {
+  html.demo-embed .stock-app .embed-filters { border-bottom:1px solid var(--line);background:#fff; }
+  html.demo-embed .stock-app .embed-filters > summary { min-height:44px;padding:11px 10px;cursor:pointer;font-size:14px;color:var(--blue); }
+  html.demo-embed .stock-app .embed-filters[open] > summary { border-bottom:1px solid var(--line); }
+  html.demo-embed .stock-app .table-hint { display:none; }
+}

@@ -18,11 +18,12 @@ export function Header() {
   }, [pathname, locale])
 
   const links = [
-    { href: '/netsuite-order-workflow', label: t('orders') },
     { href: '/services', label: t('services') },
+    { href: '/demos', label: t('demos') },
+    { href: '/work', label: t('work') },
   ]
   const navigation = links.map(({ href, label }) => (
-    <Link key={href} href={href} className="nav-link" aria-current={pathname === href ? 'page' : undefined} onClick={() => setOpen(false)}>{label}</Link>
+    <Link key={href} href={href} className="nav-link" aria-current={pathname === href || (href === '/work' && pathname.startsWith('/work/')) ? 'page' : undefined} onClick={() => setOpen(false)}>{label}</Link>
   ))
 
   return (
