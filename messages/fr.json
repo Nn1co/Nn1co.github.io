@@ -6,7 +6,8 @@
     "close": "Fermer",
     "home": "Accueil",
     "primary": "Navigation principale",
-    "work": "Nos réalisations"
+    "work": "Nos réalisations",
+    "orders": "Parcours commandes"
   },
   "footer": {
     "brand": "TG TECH · CONSULTING",
@@ -36,14 +37,14 @@
   "home": {
     "page": {
       "title": "NetSuite, en plus simple",
-      "metaDescription": "Applications NetSuite sur mesure, alternatives aux outils sous licence coûteux et assistants IA connectés. Des outils adaptés à votre équipe avec TG Tech Consulting."
+      "metaDescription": "Simplifiez la préparation des commandes NetSuite avec TG Tech Consulting. Un processus précis, vos outils existants et une amélioration au périmètre clair."
     },
     "hero": {
       "title": "NetSuite,",
       "emphasis": "en plus simple.",
-      "description": "Applications et assistants IA.",
-      "detail": "Sur mesure, pour vos équipes.",
-      "primary": "Parlons-en",
+      "description": "Moins d’étapes pour préparer vos commandes.",
+      "detail": "Un processus précis. Vos outils existants d’abord.",
+      "primary": "Simplifier les commandes",
       "secondary": "Découvrir nos services"
     },
     "services": {
@@ -60,9 +61,9 @@
         {
           "slug": "prp-v2",
           "kind": "portal",
-          "title": "Remplacer les\noutils coûteux.",
-          "body": "Nous remplaçons les logiciels coûteux et peu pratiques par des applications sur mesure qui facilitent le travail. Nous conservons les fonctions utiles aux équipes, simplifions les processus compliqués et ajoutons les fonctionnalités qui leur manquent.",
-          "example": "Remplacer un outil de vente par une application NetSuite."
+          "title": "Des outils adaptés\nà votre équipe.",
+          "body": "Nous comparons votre configuration, les produits disponibles et une application sur mesure ciblée. Conserver ce qui fonctionne, traiter ce qui manque et inclure la maintenance dans la décision.",
+          "example": "Clients, produits et commandes enregistrées dans une application."
         },
         {
           "slug": "quoting-assistants",
@@ -80,7 +81,9 @@
       "metaDescription": "Applications NetSuite sur mesure, alternatives aux outils sous licence et assistants IA connectés. Des solutions adaptées au travail quotidien de votre équipe."
     },
     "hero": {
-      "title": "Ce que nous créons."
+      "title": "Ce que nous créons.",
+      "body": "Partons d’une tâche que votre équipe répète. Nous examinons l’existant avant de proposer un produit ou une application sur mesure.",
+      "orders": "Explorer la préparation des commandes"
     },
     "netsuite": {
       "title": "Applications sur mesure.",
@@ -89,9 +92,9 @@
       ]
     },
     "replacements": {
-      "title": "Remplacer les outils coûteux.",
+      "title": "Choisir le bon outil.",
       "paragraphs": [
-        "Nous remplaçons les logiciels aux licences coûteuses par des applications plus simples à utiliser. Nous conservons les fonctions utiles aux équipes, améliorons les processus existants et ajoutons les fonctionnalités qui leur manquent au quotidien."
+        "Nous comparons paramétrage, produits existants et développement autour des fonctions réellement utiles. Les licences, la mise en place et le support font partie de cette décision. Parfois, la bonne réponse consiste à améliorer ce que vous utilisez déjà."
       ]
     },
     "ai": {
@@ -100,6 +103,11 @@
         "Nous connectons des agents IA à NetSuite, à vos documents et à vos autres outils. Vos équipes peuvent poser des questions, analyser des informations et se faire aider dans leurs tâches, sans multiplier les recherches entre les outils.",
         "Nous intégrons des assistants dans vos applications sur mesure pour guider les utilisateurs et les aider à effectuer des actions directement dans l’application, avec moins d’étapes manuelles."
       ]
+    },
+    "stock": {
+      "title": "Comprendre une question de stock.",
+      "body": "Réunir stocks, approvisionnements et prévisions pour examiner un écart. Les sources, leur fraîcheur et la personne qui doit agir comptent autant que la vue.",
+      "link": "Voir l’exemple du tableau de planification"
     }
   },
   "contact": {
@@ -110,11 +118,11 @@
     "hero": {
       "eyebrow": "Contact",
       "title": "Que pourrions-nous simplifier ?",
-      "lede": "Parlez-nous d’une tâche que votre équipe aimerait rendre plus simple.",
+      "lede": "Décrivez à Thibaut la tâche à simplifier, qui l’effectue et l’étape qui pose problème. Quelques lignes suffisent pour commencer.",
       "primary": "Écrire à notre équipe",
       "secondary": "LinkedIn"
     },
-    "emailLabel": "Email",
+    "emailLabel": "Écrire à Thibaut",
     "linkedinLabel": "LinkedIn",
     "subject": "Simplifier un parcours avec TGTC",
     "draft": "Bonjour à l’équipe TG Tech Consulting,\n\nJe vous contacte au sujet de :\n\nContexte du projet :\n\nMerci.",
@@ -126,14 +134,14 @@
       "namePlaceholder": "Votre nom",
       "emailPlaceholder": "vous@entreprise.com",
       "companyPlaceholder": "Nom de l’entreprise",
-      "workflowPlaceholder": "La tâche, vos outils et ce qui complique le travail.",
+      "workflowPlaceholder": "Quelle tâche ? Qui l’effectue ? Quelle étape pose problème ? Aucune donnée confidentielle n’est nécessaire.",
       "prepare": "Préparer l’email",
       "copy": "Copier le message",
       "copied": "Message copié. Collez-le dans votre application email.",
       "copyFailed": "La copie est indisponible. Vous pouvez nous écrire directement à l’adresse ci-dessus.",
-      "hint": "Ouvre votre application email. Vous relisez et envoyez le message.",
+      "hint": "Ouvre votre application email. Vous relisez et envoyez le message. N’incluez pas de données confidentielles ni d’identifiants de connexion.",
       "subject": "Simplifier un parcours avec TGTC",
-      "greeting": "Bonjour à l’équipe TG Tech Consulting,",
+      "greeting": "Bonjour Thibaut,",
       "labels": {
         "name": "Nom",
         "email": "Email",
@@ -178,6 +186,152 @@
         "solutionLabel": "Ce que nous mettons en place"
       }
     },
-    "offerLabel": "Et pour votre équipe ?"
+    "offerLabel": "Et pour votre équipe ?",
+    "ordersLabel": "Explorer votre parcours commandes",
+    "evidenceLimit": "L’illustration utilise des données synthétiques. Ces exemples décrivent des fonctions, pas des résultats clients mesurés ni un produit prêt à installer. Votre configuration, les droits et les tests de recette déterminent le périmètre.",
+    "stockLimit": "L’illustration utilise des données synthétiques. Cette vue sert à examiner stocks et prévisions ; elle ne constitue pas un moteur de disponible à promettre (ATP) vérifié ni une garantie de date de livraison."
+  },
+  "orderWorkflow": {
+    "page": {
+      "title": "Simplifier la préparation des commandes NetSuite",
+      "description": "Trop d’étapes pour préparer une commande NetSuite ? TG Tech vous aide à cadrer un processus, comparer les outils existants et définir une amélioration vérifiable."
+    },
+    "hero": {
+      "audience": "Opérations · Service client · Équipes commerciales",
+      "title": "Préparer une commande.",
+      "emphasis": "Avec moins d’étapes.",
+      "body": "Le client d’un côté, les produits de l’autre, un brouillon à refaire. TG Tech vous aide à simplifier un processus précis dans NetSuite, en vérifiant d’abord ce que vos outils permettent déjà.",
+      "secondary": "Voir le parcours en vidéo"
+    },
+    "example": {
+      "label": "Un point de départ concret",
+      "title": "De la demande client à la commande vérifiée.",
+      "disclosure": "Démonstration synthétique : aucun système NetSuite connecté, aucune commande créée.",
+      "steps": [
+        {
+          "title": "Retrouver le contexte client",
+          "body": "Identifier le client, la personne qui prépare la commande et les informations utiles."
+        },
+        {
+          "title": "Préparer et reprendre le brouillon",
+          "body": "Réunir les lignes et définir ce qui doit être conservé lorsque le travail est interrompu."
+        },
+        {
+          "title": "Rendre une exception visible",
+          "body": "Un prix non confirmé doit avoir un responsable de vérification et rester visible avant la suite."
+        },
+        {
+          "title": "Vérifier la transmission",
+          "body": "Convenir des contrôles avant envoi, de la personne autorisée et du moyen de vérifier la commande créée."
+        }
+      ]
+    },
+    "options": {
+      "title": "Partir de ce que vous avez déjà.",
+      "body": "Une nouvelle interface est une possibilité. Nous comparons trois approches sur la même tâche.",
+      "items": [
+        {
+          "title": "Adapter l’existant",
+          "body": "Vérifier si vos formulaires, paramètres et méthodes de travail peuvent simplifier l’étape difficile."
+        },
+        {
+          "title": "Choisir un produit existant",
+          "body": "Examiner le processus couvert, les accès, les licences et le support avant d’ajouter un outil."
+        },
+        {
+          "title": "Développer une extension ciblée",
+          "body": "S’il reste un manque, définir le plus petit écran ou lien utile et prévoir sa maintenance."
+        }
+      ]
+    },
+    "scope": {
+      "title": "Une première mission que vous pouvez valider.",
+      "body": "Un processus, des utilisateurs identifiés et des limites claires. La proposition précise la modification, les données et accès nécessaires, la recette, la transmission et le support.",
+      "diagnostic": "Si la correction est déjà comprise, cadrons-la directement. Un diagnostic payant n’a de sens que si ses conclusions ont une valeur propre.",
+      "acceptanceTitle": "Exemples de critères de recette",
+      "acceptance": [
+        "Un brouillon peut être repris sans ressaisir ses lignes.",
+        "Un prix non confirmé est visible et a un responsable.",
+        "Un utilisateur autorisé peut effectuer la transmission convenue et en vérifier le résultat."
+      ],
+      "boundary": "Ces critères sont à convenir et tester dans votre environnement, avec votre configuration, vos droits d’accès et vos règles métier."
+    },
+    "evidence": {
+      "label": "Travaux associés",
+      "title": "Des écrans de vente et des brouillons réutilisables.",
+      "body": "Nos travaux documentés d’application commerciale réunissent clients, produits et commandes, avec des paniers enregistrés et des modèles de commande récurrents.",
+      "link": "Lire l’exemple de l’application commerciale",
+      "limit": "Cet exemple décrit des fonctions. Il ne démontre ni adoption actuelle en production, ni économies mesurées, ni produit installable sans adaptation.",
+      "stock": "Le blocage concerne le stock ? Voir le tableau de planification."
+    },
+    "contact": {
+      "label": "Échanger avec Thibaut · TG Tech Consulting",
+      "title": "Quelle étape ralentit votre équipe ?",
+      "questions": "Décrivez la tâche, qui l’effectue et ce qui complique le travail. Nous pourrons discuter des alternatives existantes et d’un premier périmètre utile.",
+      "cta": "Décrire votre processus",
+      "privacy": "Quelques lignes suffisent. N’incluez pas de données confidentielles ni d’identifiants de connexion."
+    },
+    "video": {
+      "label": "Préparation d’une commande — démonstration synthétique",
+      "method": "65 secondes · Sans audio · Sous-titres FR/EN. Montage de 13 captures du parcours exécuté, avec durées de lecture adaptées ; ce n’est pas un enregistrement en temps réel. L’interface présentée est en français.",
+      "transcriptLabel": "Lire la transcription",
+      "download": "Ouvrir la vidéo MP4",
+      "stepsLabel": "Quatre points à examiner pour votre équipe",
+      "transcript": [
+        {
+          "time": "00:00",
+          "text": "Démonstration synthétique : aucun système NetSuite connecté."
+        },
+        {
+          "time": "00:05",
+          "text": "Choisir un client fictif et retrouver le contexte."
+        },
+        {
+          "time": "00:10",
+          "text": "Reprendre les articles d’une commande fictive."
+        },
+        {
+          "time": "00:15",
+          "text": "Ajouter un article au panier."
+        },
+        {
+          "time": "00:20",
+          "text": "Enregistrer le brouillon dans ce navigateur."
+        },
+        {
+          "time": "00:25",
+          "text": "Reprendre le brouillon après rechargement."
+        },
+        {
+          "time": "00:30",
+          "text": "Une ambiguïté bloque la suite du parcours."
+        },
+        {
+          "time": "00:35",
+          "text": "Examiner les références et les prix fictifs."
+        },
+        {
+          "time": "00:40",
+          "text": "Choisir explicitement la référence de démonstration."
+        },
+        {
+          "time": "00:45",
+          "text": "Le panier est recalculé après le choix humain."
+        },
+        {
+          "time": "00:50",
+          "text": "Relire le récapitulatif. Aucune validation serveur."
+        },
+        {
+          "time": "00:55",
+          "text": "Un échec simulé conserve les lignes du panier."
+        },
+        {
+          "time": "01:00",
+          "text": "Reprise terminée. Aucune commande créée."
+        }
+      ],
+      "demo": "Essayer la démo"
+    }
   }
 }

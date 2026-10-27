@@ -14,6 +14,7 @@ export async function Footer() {
         <div className="footer-main">
           <Brand />
           <nav aria-label={t('footer.navigation')}>
+            <Link href="/netsuite-order-workflow">{t('nav.orders')}</Link>
             <Link href="/services">{t('nav.services')}</Link>
             <a href={t('common.linkedinUrl')} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </nav>

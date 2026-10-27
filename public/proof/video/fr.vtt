@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.000
+Démonstration synthétique : aucun système NetSuite connecté.
+
+00:00:05.000 --> 00:00:10.000
+Choisir un client fictif et retrouver le contexte.
+
+00:00:10.000 --> 00:00:15.000
+Reprendre les articles d’une commande fictive.
+
+00:00:15.000 --> 00:00:20.000
+Ajouter un article au panier.
+
+00:00:20.000 --> 00:00:25.000
+Enregistrer le brouillon dans ce navigateur.
+
+00:00:25.000 --> 00:00:30.000
+Reprendre le brouillon après rechargement.
+
+00:00:30.000 --> 00:00:35.000
+Une ambiguïté bloque la suite du parcours.
+
+00:00:35.000 --> 00:00:40.000
+Examiner les références et les prix fictifs.
+
+00:00:40.000 --> 00:00:45.000
+Choisir explicitement la référence de démonstration.
+
+00:00:45.000 --> 00:00:50.000
+Le panier est recalculé après le choix humain.
+
+00:00:50.000 --> 00:00:55.000
+Relire le récapitulatif. Aucune validation serveur.
+
+00:00:55.000 --> 00:01:00.000
+Un échec simulé conserve les lignes du panier.
+
+00:01:00.000 --> 00:01:05.000
+Reprise terminée. Aucune commande créée.

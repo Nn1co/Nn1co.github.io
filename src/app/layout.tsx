@@ -43,12 +43,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       className={`${fontBody.variable} ${fontMono.variable}`}
     >
       <body>
-        <a
-          href="#main"
-          className="skip-link"
-        >
-          {locale === 'fr' ? 'Aller au contenu' : 'Skip to content'}
-        </a>
         {children}
         <Analytics />
         <GoogleAnalytics />

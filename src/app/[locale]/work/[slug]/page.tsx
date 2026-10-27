@@ -64,9 +64,10 @@ export default async function ProjectPage({ params }: Props) {
           {copy.solution.split('\n\n').map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </section>
       </div>
+      <p className="project-evidence-note">{t(project === 'supply-chain-workbench' ? 'stockLimit' : 'evidenceLimit')}</p>
       <section className="project-next">
         <div><h2>{t('offerLabel')}</h2><p>{copy.forYou}</p></div>
-        <Link href="/contact" className="button">{t('contactLabel')}</Link>
+        <Link href={project === 'prp-v2' || project === 'quick-so' ? '/netsuite-order-workflow' : '/contact'} className="button">{t(project === 'prp-v2' || project === 'quick-so' ? 'ordersLabel' : 'contactLabel')}</Link>
       </section>
     </div>
   )

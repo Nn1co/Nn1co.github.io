@@ -27,6 +27,14 @@ The bundled Geist fonts are served locally. Builds do not download Google Fonts.
   contact and project details. Former About URLs redirect to the homepage.
 - Project routes: `/work/quick-so`, `/work/prp-v2`, `/work/supply-chain-workbench`,
   `/work/quoting-assistants`.
+- Order workflow landing page: `/en/netsuite-order-workflow` and
+  `/fr/netsuite-order-workflow`. The same slug preserves the existing locale
+  routing and language switcher. It embeds the verified 65-second synthetic
+  workflow montage, with French/English captions and a text transcript.
+  The interface shown is French; the demonstration creates no real order and
+  does not connect to NetSuite. Public assets are in `public/proof/demo/` and
+  `public/proof/video/`; open their explicit `index.html` paths. The interactive
+  demo stores a draft only in the visitor’s browser.
 - Service anchors: `#netsuite`, `#replacements`, `#ai`.
 - Contact validates a short brief and prepares an email draft or copies the
   message. The visitor reviews and sends it in their own email application;
@@ -54,6 +62,9 @@ is configured and the visitor has not chosen a preference.
 The legal entity, registered address, company/VAT numbers and retention periods
 remain to be confirmed. Unverified experience figures and response-time promises
 are omitted.
+
+The sitemap omits modification dates until reliable per-page editorial dates are
+maintained. Canonicals and language alternates use the configured public origin.
 
 ## Hosting
 

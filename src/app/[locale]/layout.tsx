@@ -27,6 +27,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <a href="#main" className="skip-link">{locale === 'fr' ? 'Aller au contenu' : 'Skip to content'}</a>
       <JsonLd locale={locale} />
       <Header />
       <main id="main" className="relative">

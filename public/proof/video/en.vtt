@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.000
+Synthetic demonstration: no connected NetSuite system.
+
+00:00:05.000 --> 00:00:10.000
+Choose a fictional customer and review the context.
+
+00:00:10.000 --> 00:00:15.000
+Reuse the lines of a fictional order.
+
+00:00:15.000 --> 00:00:20.000
+Add a product to the cart.
+
+00:00:20.000 --> 00:00:25.000
+Save the draft in this browser.
+
+00:00:25.000 --> 00:00:30.000
+Resume the draft after reloading.
+
+00:00:30.000 --> 00:00:35.000
+An ambiguity blocks the next step.
+
+00:00:35.000 --> 00:00:40.000
+Review fictional product references and prices.
+
+00:00:40.000 --> 00:00:45.000
+Explicitly select the demonstration product.
+
+00:00:45.000 --> 00:00:50.000
+The cart is recalculated after the human choice.
+
+00:00:50.000 --> 00:00:55.000
+Review the summary. No server validation.
+
+00:00:55.000 --> 00:01:00.000
+A simulated failure preserves the cart lines.
+
+00:01:00.000 --> 00:01:05.000
+Retry completed. No order was created.

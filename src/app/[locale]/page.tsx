@@ -11,7 +11,7 @@ type Service = { slug: ProjectSlug; kind: 'orders' | 'portal' | 'supply' | 'assi
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'home.page' })
-  return buildMetadata({ locale, path: '/', title: t('title'), description: t('metaDescription'), ogTitle: locale === 'fr' ? 'NetSuite, en plus simple.' : 'Easier NetSuite.', ogSubtitle: locale === 'fr' ? 'Applications sur mesure et assistants IA' : 'Custom applications and AI assistants' })
+  return buildMetadata({ locale, path: '/', title: t('title'), description: t('metaDescription'), ogTitle: locale === 'fr' ? 'NetSuite, en plus simple.' : 'Easier NetSuite.', ogSubtitle: locale === 'fr' ? 'Simplifier la préparation des commandes' : 'Simpler order preparation' })
 }
 
 export default async function HomePage({ params }: Props) {
@@ -25,7 +25,7 @@ export default async function HomePage({ params }: Props) {
         <h1><span>{t('hero.title')}</span>{' '}<em>{t('hero.emphasis')}</em></h1>
         <p>{t('hero.description')}<br />{t('hero.detail')}</p>
         <div className="hero-actions">
-          <Link href="/contact" className="button">{t('hero.primary')}</Link>
+          <Link href="/netsuite-order-workflow" className="button">{t('hero.primary')}</Link>
           <a href="#services" className="text-link">{t('hero.secondary')}</a>
         </div>
       </section>

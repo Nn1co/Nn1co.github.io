@@ -6,7 +6,8 @@
     "close": "Close",
     "home": "Home",
     "primary": "Main navigation",
-    "work": "Our work"
+    "work": "Our work",
+    "orders": "Order workflows"
   },
   "footer": {
     "brand": "TG TECH · CONSULTING",
@@ -36,14 +37,14 @@
   "home": {
     "page": {
       "title": "Easier NetSuite",
-      "metaDescription": "Custom NetSuite applications, alternatives to costly add-ons and connected AI assistants. Practical tools built around your team with TG Tech Consulting."
+      "metaDescription": "Simplify NetSuite order preparation with TG Tech Consulting. Start with one workflow, review your existing tools and scope a practical improvement."
     },
     "hero": {
       "title": "Easier",
       "emphasis": "NetSuite.",
-      "description": "Custom applications and AI assistants.",
-      "detail": "Built around the way your team works.",
-      "primary": "Let’s talk",
+      "description": "Fewer steps to prepare your orders.",
+      "detail": "Start with one workflow. Check your existing tools first.",
+      "primary": "Simplify order preparation",
       "secondary": "Explore our services"
     },
     "services": {
@@ -60,9 +61,9 @@
         {
           "slug": "prp-v2",
           "kind": "portal",
-          "title": "Replace costly\nadd-ons.",
-          "body": "We replace costly, frustrating software with custom applications that make everyday work easier. We keep the features your team relies on, simplify awkward workflows and add the functionality your employees have been missing.",
-          "example": "Replacing a separate sales tool with a NetSuite application."
+          "title": "Tools that fit\nyour team.",
+          "body": "We compare your existing setup, available products and a focused custom application. Keep what works, address what is missing, and include maintenance in the decision.",
+          "example": "Customers, products and saved orders in one application."
         },
         {
           "slug": "quoting-assistants",
@@ -80,7 +81,9 @@
       "metaDescription": "Custom NetSuite applications, tailored alternatives to licensed tools and connected AI assistants. Practical development around your team’s daily work."
     },
     "hero": {
-      "title": "What we build."
+      "title": "What we build.",
+      "body": "Start with a task your team repeats. We review the existing setup before proposing a product or a custom application.",
+      "orders": "Explore order preparation"
     },
     "netsuite": {
       "title": "Custom applications.",
@@ -89,9 +92,9 @@
       ]
     },
     "replacements": {
-      "title": "Replace costly tools.",
+      "title": "Choose the right tool.",
       "paragraphs": [
-        "We replace costly, frustrating software with custom applications that make everyday work easier. We keep the features your team relies on, simplify awkward workflows and add the functionality your employees have been missing."
+        "We compare configuration, existing products and custom development around the features your team actually needs. Licensing, implementation and ongoing support all belong in that decision. Sometimes the right answer is to improve what you already use."
       ]
     },
     "ai": {
@@ -100,6 +103,11 @@
         "We connect AI agents to NetSuite, business documents and your other tools. Employees can ask questions, analyse information and get help with tasks, spending less time searching across systems.",
         "We embed assistants in custom applications to guide users through their work and help them take action directly in the application, with fewer manual steps."
       ]
+    },
+    "stock": {
+      "title": "Stock questions, with context.",
+      "body": "Bring stock, incoming supply and forecasts together to investigate an exception. The source data, its freshness and the next person to act matter as much as the view.",
+      "link": "See the planning workbench example"
     }
   },
   "contact": {
@@ -110,11 +118,11 @@
     "hero": {
       "eyebrow": "Contact",
       "title": "What could be easier?",
-      "lede": "Tell us about one task your team would like to simplify.",
+      "lede": "Tell Thibaut which task needs improving, who performs it and where it gets stuck. A short description is enough to start.",
       "primary": "Email our team",
       "secondary": "LinkedIn"
     },
-    "emailLabel": "Email",
+    "emailLabel": "Email Thibaut",
     "linkedinLabel": "LinkedIn",
     "subject": "A simpler workflow with TGTC",
     "draft": "Hello TG Tech Consulting team,\n\nI am getting in touch about:\n\nProject context:\n\nThank you.",
@@ -126,14 +134,14 @@
       "namePlaceholder": "Your name",
       "emailPlaceholder": "you@company.com",
       "companyPlaceholder": "Company name",
-      "workflowPlaceholder": "The task, the tools you use and where it gets difficult.",
+      "workflowPlaceholder": "Which task? Who performs it? At which step does it get difficult? No confidential records are needed.",
       "prepare": "Prepare email",
       "copy": "Copy message",
       "copied": "Message copied. Paste it into your email application.",
       "copyFailed": "Copying is unavailable. You can email us directly using the address above.",
-      "hint": "Opens your email application. You review and send the message.",
+      "hint": "Opens your email application. You review and send the message. Please leave out confidential data and login details.",
       "subject": "A simpler workflow with TGTC",
-      "greeting": "Hello TG Tech Consulting team,",
+      "greeting": "Hello Thibaut,",
       "labels": {
         "name": "Name",
         "email": "Email",
@@ -178,6 +186,152 @@
         "solutionLabel": "What we implement"
       }
     },
-    "offerLabel": "What would help your team?"
+    "offerLabel": "What would help your team?",
+    "ordersLabel": "Explore your order workflow",
+    "evidenceLimit": "The illustration uses synthetic data. These examples describe application capabilities, not measured customer results or a ready-to-install product. Your configuration, permissions and acceptance tests determine the scope.",
+    "stockLimit": "The illustration uses synthetic data. This is a view for investigating stock and forecasts, not a verified available-to-promise engine or a guarantee of delivery dates."
+  },
+  "orderWorkflow": {
+    "page": {
+      "title": "Simplify NetSuite order preparation",
+      "description": "Too many steps to prepare a NetSuite order? TG Tech helps scope one workflow, compare existing tools and define a practical improvement with clear acceptance checks."
+    },
+    "hero": {
+      "audience": "Operations · Customer service · Sales operations",
+      "title": "Preparing an order.",
+      "emphasis": "With fewer steps.",
+      "body": "Customer details in one place, products in another, a draft to rebuild. TG Tech helps simplify a specific order workflow in NetSuite, starting with what your existing tools can already do.",
+      "secondary": "Watch the workflow"
+    },
+    "example": {
+      "label": "A concrete starting point",
+      "title": "From a customer request to a reviewed order.",
+      "disclosure": "Synthetic demonstration: no connected NetSuite system and no order created.",
+      "steps": [
+        {
+          "title": "Find the customer context",
+          "body": "Identify the customer, the person preparing the order and the information they need."
+        },
+        {
+          "title": "Prepare and resume the draft",
+          "body": "Bring the lines together and define what must be kept when work is interrupted."
+        },
+        {
+          "title": "Make an exception visible",
+          "body": "An unconfirmed price needs a named reviewer. Keep it visible before the order moves on."
+        },
+        {
+          "title": "Check the handoff",
+          "body": "Agree which checks allow submission, who can submit and how to confirm the resulting order."
+        }
+      ]
+    },
+    "options": {
+      "title": "Start with what you already have.",
+      "body": "A new interface is one possible answer. We compare three routes against the same task.",
+      "items": [
+        {
+          "title": "Adjust the existing setup",
+          "body": "Check whether your current forms, settings and working practices can remove the difficult step."
+        },
+        {
+          "title": "Use an existing product",
+          "body": "Assess the workflow fit, access needs, licences and support before adding another tool."
+        },
+        {
+          "title": "Build a focused extension",
+          "body": "When a gap remains, define the smallest useful screen or connection and how it will be maintained."
+        }
+      ]
+    },
+    "scope": {
+      "title": "A first piece of work you can accept.",
+      "body": "One workflow, agreed users and clear boundaries. The proposal defines the change, required data and access, acceptance checks, handover and support.",
+      "diagnostic": "If the correction is already clear, scope it directly. A paid diagnostic only makes sense when its findings are useful in their own right.",
+      "acceptanceTitle": "Example acceptance checks",
+      "acceptance": [
+        "A draft can be resumed without re-entering its lines.",
+        "An unresolved price is visible and has an owner.",
+        "An authorised user can complete the agreed handoff and verify its result."
+      ],
+      "boundary": "These criteria must be agreed and tested in your environment, with your configuration, access rights and business rules."
+    },
+    "evidence": {
+      "label": "Related work",
+      "title": "Order screens and reusable drafts.",
+      "body": "Our documented sales application work brings customer, product and order information together, with saved carts and repeat-order templates.",
+      "link": "Read the sales application example",
+      "limit": "The example describes capabilities. It does not establish current production adoption, measured savings or a product that can be installed unchanged.",
+      "stock": "Is the difficult step a stock question? See the workbench."
+    },
+    "contact": {
+      "label": "Talk to Thibaut · TG Tech Consulting",
+      "title": "Which step slows your team down?",
+      "questions": "Tell us the task, who performs it and where it gets difficult. We can then discuss the existing alternatives and a useful first scope.",
+      "cta": "Describe your workflow",
+      "privacy": "A short description is enough. Please leave out confidential records and login details."
+    },
+    "video": {
+      "label": "Order preparation — synthetic demonstration",
+      "method": "65 seconds · No audio · FR/EN captions. A montage of 13 captures from the executed workflow, with edited reading durations; this is not a realtime screen recording. The interface shown is in French.",
+      "transcriptLabel": "Read the transcript",
+      "download": "Open the MP4 video",
+      "stepsLabel": "Four points to examine for your team",
+      "transcript": [
+        {
+          "time": "00:00",
+          "text": "Synthetic demonstration: no connected NetSuite system."
+        },
+        {
+          "time": "00:05",
+          "text": "Choose a fictional customer and review the context."
+        },
+        {
+          "time": "00:10",
+          "text": "Reuse the lines of a fictional order."
+        },
+        {
+          "time": "00:15",
+          "text": "Add a product to the cart."
+        },
+        {
+          "time": "00:20",
+          "text": "Save the draft in this browser."
+        },
+        {
+          "time": "00:25",
+          "text": "Resume the draft after reloading."
+        },
+        {
+          "time": "00:30",
+          "text": "An ambiguity blocks the next step."
+        },
+        {
+          "time": "00:35",
+          "text": "Review fictional product references and prices."
+        },
+        {
+          "time": "00:40",
+          "text": "Explicitly select the demonstration product."
+        },
+        {
+          "time": "00:45",
+          "text": "The cart is recalculated after the human choice."
+        },
+        {
+          "time": "00:50",
+          "text": "Review the summary. No server validation."
+        },
+        {
+          "time": "00:55",
+          "text": "A simulated failure preserves the cart lines."
+        },
+        {
+          "time": "01:00",
+          "text": "Retry completed. No order was created."
+        }
+      ],
+      "demo": "Try the demo (French interface)"
+    }
   }
 }

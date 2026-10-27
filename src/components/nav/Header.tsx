@@ -18,6 +18,7 @@ export function Header() {
   }, [pathname, locale])
 
   const links = [
+    { href: '/netsuite-order-workflow', label: t('orders') },
     { href: '/services', label: t('services') },
   ]
   const navigation = links.map(({ href, label }) => (
